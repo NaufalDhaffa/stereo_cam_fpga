@@ -105,6 +105,45 @@ Kalau BOOT.BIN baru tidak bisa boot, pemulihannya hanya dengan melepas kartu dan
 
 Alamat papan 169.254.179.10 (link-local, kabel langsung); ubah dengan variabel `BOARD_IP`.
 
+### SSH lewat Ethernet (tanpa konsol serial)
+
+Konsol serial (USB-serial di UART papan) hanya diperlukan kalau jaringan belum jalan. Sehari-hari
+papan diakses lewat Ethernet:
+
+1. Sambungkan kabel Ethernet langsung dari laptop ke papan (tanpa router).
+2. Adaptor Ethernet laptop harus punya alamat di 169.254.x.x / 255.255.0.0. Windows memberinya
+   sendiri (alamat link-local otomatis) bila adaptor diatur "Obtain an IP address automatically"
+   dan tidak ada DHCP; kalau adaptor memakai alamat tetap, tambahkan satu alamat, misalnya
+   169.254.179.1 dengan mask 255.255.0.0. Cek dengan `ipconfig`.
+3. Nyalakan papan dan tunggu sekitar 30 detik sampai boot selesai. Papan selalu memakai
+   169.254.179.10 (`board/network.conf` di kartu SD), dipaksa 100 Mbit/s full duplex.
+4. Masuk:
+
+        stereo board ssh                     shell di papan (login root, tanpa kata sandi)
+        stereo board ssh "perintah"          satu perintah saja
+        stereo board status                  sensor, genlock, bitstream
+
+   atau dengan OpenSSH biasa:
+
+        ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=NUL root@169.254.179.10
+
+   Dua opsi itu perlu karena kunci host papan dibuat baru di setiap boot (sistem berkasnya di
+   RAM); tanpa keduanya `ssh` menolak tersambung setelah papan di-reboot. Untuk menyalin berkas:
+
+        scp -o StrictHostKeyChecking=no -o UserKnownHostsFile=NUL berkas root@169.254.179.10:/mnt/sd/
+
+Partisi boot kartu SD ada di `/mnt/sd` (program papan di `/mnt/sd/stereo`). Ingat `sync` sebelum
+mematikan daya setelah menulis ke kartu.
+
+Kalau ping ke 169.254.179.10 tidak menjawab: pastikan lampu link di port Ethernet papan menyala,
+alamat laptop memang 169.254.x.x / 255.255.0.0, dan papan sudah selesai boot. Konsol serial tetap
+cara cadangan untuk melihat apa yang terjadi saat boot (`stereo uart`).
+
+Lewat router atau switch dengan DHCP: ubah `ADDRESS=dhcp` di `/mnt/sd/stereo/network.conf`
+(lewat `stereo board ssh` atau dengan menyunting kartu di PC), `sync`, reboot; alamat yang didapat
+terlihat di halaman router atau lewat `stereo uart "ip -4 addr"`. Arahkan alat PC ke alamat itu
+dengan variabel `BOARD_IP`, misalnya `set BOARD_IP=192.168.1.50`.
+
 ### Lain-lain
 
     stereo uart "perintah"          konsol serial papan (COM3, 115200), untuk saat jaringan belum ada
