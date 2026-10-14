@@ -372,7 +372,7 @@ hanya pembacaan mentah seperti di atas yang memberi disparitas tepat.
 | `calib/` | Kalibrasi stereo yang dipakai dan pola target untuk dicetak |
 | `constraints/`, `scripts/` | Pin dan skrip alur lama berbasis skrip (tanpa block design), JTAG, simulasi |
 | `sensor/` | Tabel register OV2640 |
-| `docs/` | Protokol rantai irisan |
+| `docs/` | Protokol rantai irisan, anggaran tapeout |
 | `build/` | Hasil build: bitstream, isi kartu SD, BOOT.BIN, log, tabel uji |
 | `ov2640_usb/`, `fx2_stream/` | Salinan lama dari awal pengerjaan; tidak dipakai sistem sekarang |
 
@@ -573,6 +573,7 @@ dijelaskan per kelompok di bagian akhir.
 | `calib/*.pdf` | Pola papan catur dan ChArUco untuk dicetak |
 | `sensor/ov2640_tables.tcl`, `gen_tables.py` | Tabel register OV2640 dan pembuatnya |
 | `docs/matcher_mini_chain.md` | Protokol rantai irisan |
+| `docs/anggaran_tapeout.xlsx` | Anggaran tapeout Tiny Tapeout 1 dan 2 IC: asumsi (bisa diubah), rincian, ringkasan, dan link sumber harga |
 | `constraints/*.xdc` | Constraint alur skrip (top `depth_top` / `cam_usb_top`) |
 | `scripts/build_depth.tcl` | Build alur skrip (`DEPTH_VARIANT=mini` atau `mini1`) |
 | `scripts/build.tcl` | Build "capture saja" |
