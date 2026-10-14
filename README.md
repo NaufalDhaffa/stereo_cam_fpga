@@ -11,10 +11,12 @@ webcam "Stereo Depth Camera" (gambar kiri dan disparitas berdampingan, 400 x 148
 ## Daftar isi
 
 1. [Perintah yang bisa dijalankan dari mana saja](#perintah-yang-bisa-dijalankan-dari-mana-saja)
-2. [Fungsi setiap folder](#fungsi-setiap-folder)
-3. [Fungsi setiap berkas](#fungsi-setiap-berkas)
-4. [Membangun ulang](#membangun-ulang)
-5. [Catatan dan batasan](#catatan-dan-batasan)
+2. [Algoritma: dari kamera sampai USB](#algoritma-dari-kamera-sampai-usb)
+3. [Format data USB dan cara membacanya](#format-data-usb-dan-cara-membacanya)
+4. [Fungsi setiap folder](#fungsi-setiap-folder)
+5. [Fungsi setiap berkas](#fungsi-setiap-berkas)
+6. [Membangun ulang](#membangun-ulang)
+7. [Catatan dan batasan](#catatan-dan-batasan)
 
 ## Perintah yang bisa dijalankan dari mana saja
 
@@ -151,7 +153,203 @@ dengan variabel `BOARD_IP`, misalnya `set BOARD_IP=192.168.1.50`.
     stereo fx2_eeprom --probe       EEPROM modul FX2LP: baca, tulis firmware webcam, hapus
     stereo fx2_uvc                  muat firmware webcam ke RAM FX2LP (tanpa EEPROM)
     stereo compare_slices report    perbandingan 1 dan 2 irisan dari tangkapan di papan
+    stereo uvc_format [--frame]     data dummy yang dikirim lewat USB dan cara membacanya
     stereo                          daftar semua alat
+
+## Algoritma: dari kamera sampai USB
+
+Seluruh rantai berjalan di papan tanpa PC. PS (Linux) hanya mengatur sensor dan menjaga kedua
+kamera seirama; semua pengolahan gambar ada di PL (FPGA). Tiga domain clock: 200 MHz (FCLK0,
+pengambilan kamera dan sisi USB), 25 MHz (FCLK1, pemrosesan), 48 MHz (IFCLK dari FX2LP).
+
+```
+OV2640 kiri  ─┐                                                   ┌─ slice 0 ─┐
+              ├─ cam_input ─ rectify_census ─ FIFO ─ chain_hub ─┤           ├─ chain_hub ─ frame_format ─ usb_stream ─ FX2LP ─ USB ─ PC
+OV2640 kanan ─┘  (capture,    (rektifikasi,          (bus turun)  └─ slice 1 ─┘  (uji kiri-kanan) (payload UVC)  (FIFO, Slave FIFO)
+                 luma, 2x2,    census)                              (tape-out)
+                 line buffer)
+```
+
+### 0. Sensor dan PS
+
+| | |
+|---|---|
+| Masukan | Cahaya; register sensor lewat SCCB dari PS (`board/stereo_cam.py`) |
+| Proses | OV2640 mode CIF dipotong 400 x 296, RGB565, 15 fps (CLKRC 0x83), osilator 12 MHz di modul. PS mengukur selisih awal frame kedua kamera (dari PL, GPIO EMIO) dan menyetel register panjang frame kamera yang lebih cepat sampai kamera 1 tertinggal tepat 4,365 ms (genlock) |
+| Keluaran | Pin DVP per kamera: data 8 bit, PCLK, HREF, VSYNC; 2 byte per piksel |
+| Kegunaan | Dua gambar yang diambil hampir bersamaan, dengan selisih yang diharapkan tabel rektifikasi |
+
+### 1. Pengambilan (`cam_capture`, 2 buah, 200 MHz)
+
+| | |
+|---|---|
+| Masukan | Pin DVP |
+| Proses | Semua pin dicuplik 200 MHz; tepi naik PCLK baru diterima setelah dua cuplikan rendah lalu dua tinggi (denyut pendek dari kabel jumper diabaikan). Byte diambil selama HREF tinggi; tepi naik VSYNC memulai frame dan mencatat waktunya dalam mikrodetik |
+| Keluaran | Aliran byte bertanda, waktu awal frame; juga stream mentah dengan kepala 32 byte untuk alat PC |
+| Kegunaan | Masukan luma; waktu awal frame untuk genlock |
+
+### 2. Luma dan binning (`luma_tap`, `luma_bin2`, 200 MHz)
+
+| | |
+|---|---|
+| Masukan | Byte RGB565, byte tinggi dulu |
+| Proses | R, G, B diperlebar ke 8 bit, Y = (77 R + 150 G + 29 B) >> 8. Tiap frame dipaksa tepat 400 x 296. Lalu rata-rata 2 x 2 dibulatkan: 200 x 148 |
+| Keluaran | Luma 8 bit per piksel, 200 x 148 |
+| Kegunaan | Pencocokan cukup dengan kecerahan; resolusi lebih kecil supaya matcher sempat |
+
+### 3. Line buffer (`rect_linebuf`, tulis 200 MHz, baca 25 MHz)
+
+| | |
+|---|---|
+| Masukan | Luma 200 x 148 per kamera |
+| Proses | Cincin 16 baris terakhir di block RAM dua-clock; jumlah baris yang sudah lengkap dikirim dalam kode Gray ke domain 25 MHz |
+| Keluaran | Akses baca acak ke 16 baris terakhir; jumlah baris lengkap; alamat baris 0 |
+| Kegunaan | Rektifikasi butuh beberapa baris sumber sekaligus untuk satu baris keluaran |
+
+### 4. Penjadwal dan rektifikasi (`depth_frontend`: `rectify`, 2 buah, 25 MHz)
+
+| | |
+|---|---|
+| Masukan | Line buffer kedua kamera; tabel simpul `cfg/*/cam*_nodes.hex`, tabel kebutuhan baris `cam*_need.hex` |
+| Proses | Penjadwal memulai baris keluaran y bila kedua kamera sudah punya semua baris sumber yang dibutuhkan dan FIFO di depan hub hampir kosong. Untuk tiap piksel: tabel simpul setiap 16 piksel memberi koordinat sumber dalam 1/16 piksel; empat simpul di sekitarnya dicampur, lalu empat piksel sumber dicampur (bilinear). Satu piksel tiap 10 clock |
+| Keluaran | Luma terektifikasi + bendera `ok` (sumbernya di dalam gambar), baris demi baris |
+| Kegunaan | Setelah rektifikasi, titik yang sama di dunia berada di baris yang sama di kedua gambar, jadi pencarian cukup sepanjang satu baris |
+
+### 5. Census (`census`, 2 buah, 25 MHz)
+
+| | |
+|---|---|
+| Masukan | Luma terektifikasi |
+| Proses | Penghalusan 3 x 3 (bobot 1-2-1). Lalu jendela 9 baris x 17 kolom (+-4, +-8) dengan tetangga setiap 2 piksel: 5 x 9 - 1 = 44 perbandingan, satu bit per tetangga, 1 bila tetangga lebih gelap dari pusat. Valid bila seluruh jendela berisi piksel terektifikasi yang sah |
+| Keluaran | Tanda tangan 44 bit + bit valid per piksel |
+| Kegunaan | Pencocokan dengan pola terang-gelap, bukan nilai kecerahan, jadi tahan terhadap beda kecerahan dan kontras antar-kamera |
+
+### 6. FIFO dan hub (`depth_frontend`, `chain_hub`, 25 MHz)
+
+| | |
+|---|---|
+| Masukan | Pasangan tanda tangan kiri dan kanan per piksel, satu baris ditampung di FIFO 256 entri |
+| Proses | Tiap piksel mendapat satu slot: 31 clock (1 irisan) atau 34 clock (2 irisan). Di slot itu hub mengirim bingkai bus turun 7 bit per clock ke semua irisan: kepala (`sync`), tanda tangan kiri, untuk tiap irisan p tanda tangan kanan yang ditunda DMIN + 16 p piksel, dan nilai balik piksel sebelumnya (`gmin`, `kstar`, biaya tepi). Setelah satu baris, 16 N + 2 slot pembilas |
+| Keluaran | Bus turun `dl` ke semua irisan |
+| Kegunaan | Irisan tidak menyimpan gambar sama sekali; hub yang memegang data dan menunda tanda tangan kanan untuk jendela tiap irisan |
+
+### 7. Irisan matcher (`tt_um_stereo_slice`, modul tape-out, 25 MHz)
+
+Irisan p menangani 16 disparitas d = 7 + 16 p sampai 22 + 16 p, satu disparitas per clock.
+
+| | |
+|---|---|
+| Masukan | Bus turun (`ui_in`), rantai naik dari irisan di bawahnya (`uio_in`) |
+| Proses | (1) Biaya: jarak Hamming tanda tangan kiri dan kanan (0 sampai 44), dirata-rata atas 3 piksel berurutan. (2) SGM satu arah, kiri ke kanan: L(x, d) = C(x, d) + min(L(x-1, d), L(x-1, d+-1) + P1, gmin + P2) - gmin, dengan P1 = 15, P2 = 73, dibatasi 127; nilai tepi jendela datang dari irisan tetangga. (3) Pemenang: biaya terendah, seri ke indeks terendah. (4) Runner-up di luar pemenang +-1; lolos bila (runner-up - terbaik) x 16 >= runner-up x 3. (5) Sub-piksel: parabola lewat dua tetangga pemenang, hasil dalam 1/16 piksel. (6) Catatan pemenang gambar kanan untuk uji kiri-kanan |
+| Keluaran | Rantai naik (`uo_out`) ke irisan di atasnya; irisan teratas ke hub: kode disparitas |
+| Kegunaan | Rantai N irisan berperilaku persis seperti satu matcher 16 N disparitas (terbukti bit demi bit di simulasi). Menambah irisan = memperlebar rentang disparitas = menjangkau benda lebih dekat |
+
+### 8. Uji akhir di hub (`chain_hub`)
+
+| | |
+|---|---|
+| Masukan | Hasil rantai per piksel, satu baris |
+| Proses | Uji rentang (pemenang di ujung jendela tidak bisa diparabola dan ditolak) dan uji kiri-kanan: pemenang dilihat dari gambar kanan harus menunjuk balik ke piksel yang sama |
+| Keluaran | Disparitas per piksel, 12 bit dalam 1/16 piksel, 0 = tidak ada; posisi x, y; tanda awal frame |
+| Kegunaan | Membuang pencocokan yang meragukan (oklusi, tekstur berulang) |
+
+### 9. Pembentuk payload (`frame_format`, `uvc_lines`, 25 MHz)
+
+| | |
+|---|---|
+| Masukan | Disparitas dari hub; baris kiri terektifikasi (dari langkah 4, ditahan di FIFO sampai disparitas baris yang sama datang) |
+| Proses | Mode webcam: satu payload USB Video Class per baris (lihat format di bawah). Baris hanya dikirim bila FIFO di belakang punya ruang untuk seluruhnya; kalau tidak, seluruh baris dibuang, tidak pernah sebagian. (Mode alat PC: kepala 32 byte per frame lalu 2 byte per piksel.) |
+| Keluaran | Byte payload + tanda byte terakhir |
+| Kegunaan | Bentuk yang dikenali Windows sebagai kamera biasa, tanpa driver tambahan |
+
+### 10. Ke USB (`usb_stream`, `fx2_writer`, firmware `fx2/uvc/uvc.c`)
+
+| | |
+|---|---|
+| Masukan | Byte payload (25 MHz) |
+| Proses | FIFO 25 MHz ke 200 MHz, FIFO 200 MHz ke 48 MHz (16 KiB), lalu Slave FIFO 8 bit ke endpoint 6 FX2LP. Paket USB 512 byte; byte terakhir payload memicu PKTEND sehingga paket terakhir pendek, dan paket pendek itulah akhir payload. FX2LP mengumumkan dirinya sebagai kamera UVC YUY2 400 x 148 pada 15 fps, endpoint bulk |
+| Keluaran | Paket USB bulk ke PC, sekitar 1,78 MB/s |
+| Kegunaan | PC menerima frame lewat driver kamera bawaan Windows |
+
+### 11. Di PC (`host/webcam.py`, `host/mini_rviz.py`)
+
+| | |
+|---|---|
+| Masukan | Frame 400 x 148 YUY2 (Windows sudah membuang kepala payload) |
+| Proses | Baca mentah (OpenCV, backend MSMF, tanpa konversi warna), pisahkan kiri dan disparitas, filter median dan pembersih bintik (`stream.finished`), topeng piksel yang di luar rektifikasi; jarak = f x B / d |
+| Keluaran | Gambar depth berwarna, jarak per piksel, titik 3D (RViz) |
+| Kegunaan | Tampilan, pengukuran jarak, peta 3D |
+
+## Format data USB dan cara membacanya
+
+### Satu baris = satu payload, 802 byte
+
+| Byte | Isi |
+|---|---|
+| 0 | `0x02`: panjang kepala payload |
+| 1 | `0x80 \| akhir_frame << 1 \| bit_frame` (bit_frame berganti tiap frame; akhir_frame = 1 di baris 147) |
+| 2 sampai 401 | gambar kiri, 200 piksel x 2 byte: `luma, 0x80` |
+| 402 sampai 801 | disparitas, 200 piksel x 2 byte: `d >> 2, 0x80 \| (d & 3)`, d dalam 1/16 piksel, 0 = tidak ada |
+
+Satu frame = 148 payload; di USB tiap payload menjadi paket 512 + 290 byte. Tanpa kepala, satu
+baris adalah 800 byte YUY2, jadi program melihat gambar 400 x 148: kiri abu-abu, kanan depth
+(makin terang makin dekat).
+
+### Data dummy
+
+`stereo uvc_format` membuat satu baris dummy persis seperti yang dikirim logika, lalu membacanya
+kembali. Baris dummy: gradasi abu-abu, 30 piksel pertama tanpa disparitas, latar 7,5 px, benda
+dekat di piksel 80 sampai 119 dengan 21,5625 px:
+
+```
+row 10 as one payload: 802 bytes = 2 header + 400 left + 400 disparity
+over USB in 2 bulk packets: 512 + 290 bytes
+
+start of the payload (header, then the left picture):
+  0000: 02 81 28 80 28 80 29 80 2a 80 2b 80 2c 80 2c 80
+  0010: 2d 80 2e 80 2f 80 30 80 30 80 31 80 32 80 33 80
+
+the disparity part, pixels 78 to 85 (byte 558):
+  022e: 1e 80 1e 80 56 81 56 81 56 81 56 81 56 81 56 81
+
+read back: {'end_of_frame': False, 'frame_bit': 1}
+  x=  0  luma  40  disparity    0/16 =  0.000 px  no disparity
+  x= 29  luma  63  disparity    0/16 =  0.000 px  no disparity
+  x= 30  luma  64  disparity  120/16 =  7.500 px  distance 1.91 m
+  x= 79  luma 103  disparity  120/16 =  7.500 px  distance 1.91 m
+  x= 80  luma 104  disparity  345/16 = 21.562 px  distance 0.66 m
+  x=100  luma 120  disparity  345/16 = 21.562 px  distance 0.66 m
+  x=119  luma 135  disparity  345/16 = 21.562 px  distance 0.66 m
+  x=120  luma 136  disparity  120/16 =  7.500 px  distance 1.91 m
+```
+
+Contoh membaca dua byte disparitas: `56 81` berarti d = (0x56 << 2) | (0x81 & 3) = 344 + 1 =
+345, yaitu 345 / 16 = 21,5625 piksel, dan jarak = 262,5 x 54,45 / 21,5625 = 663 mm.
+`1e 80` berarti d = 120 = 7,5 piksel = 1,91 m. `00 80` berarti tidak ada disparitas.
+
+`stereo uvc_format --frame` menyusun satu frame dummy penuh dan membacanya lewat pembaca yang sama
+dengan `stereo stream`; hasilnya harus identik dengan yang dikirim.
+
+### Membaca dari program sendiri
+
+```python
+import cv2, numpy as np
+
+cap = cv2.VideoCapture(0, cv2.CAP_MSMF)          # MSMF: frame dikirim apa adanya
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 400)
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 148)
+cap.set(cv2.CAP_PROP_CONVERT_RGB, 0)             # jangan diubah ke RGB: byte disparitas akan rusak
+ok, frame = cap.read()
+raw = np.asarray(frame, np.uint8).reshape(148, 400, 2)
+left = raw[:, :200, 0]                                            # luma kiri, 200 x 148
+d16 = (raw[:, 200:, 0].astype(np.uint16) << 2) | (raw[:, 200:, 1] & 3)   # disparitas, 1/16 px
+dist_mm = np.where(d16 > 0, 262.5 * 54.45 * 16 / np.maximum(d16, 1), 0)
+```
+
+Indeks kamera (`0` di atas) bergantung pada laptop; `host/webcam.py` mencarinya sendiri. Jangan
+memakai backend DirectShow: ia mengonversi warna dan merusak byte disparitas. Program lain yang
+membaca kamera ini (aplikasi kamera Windows, OBS) melihat gambar yang benar secara visual, tetapi
+hanya pembacaan mentah seperti di atas yang memberi disparitas tepat.
 
 ## Fungsi setiap folder
 
@@ -295,6 +493,7 @@ dijelaskan per kelompok di bagian akhir.
 | `board.py` | Status, ganti bitstream, shell lewat SSH | SSH |
 | `vivado.py`, `vitis.py`, `xilinx.py` | Pembuka GUI Vivado / Vitis dan pencari instalasinya | Vivado, Vitis |
 | `compare_slices.py` | Tangkap dan bandingkan 1 dan 2 irisan | papan boot biasa |
+| `uvc_format.py` | Format payload USB: data dummy, cara membacanya (`stereo uvc_format`) | tidak ada |
 | `uart.py`, `uart_put.py` | Perintah dan salin berkas lewat konsol serial | USB-serial |
 | `fx2_eeprom.py` | Baca, cadangkan, tulis, hapus EEPROM FX2LP | FX2LP |
 | `fx2_uvc.py` | Muat firmware webcam ke RAM FX2LP | FX2LP |
