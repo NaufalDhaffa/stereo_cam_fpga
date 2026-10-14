@@ -13,10 +13,11 @@ webcam "Stereo Depth Camera" (gambar kiri dan disparitas berdampingan, 400 x 148
 1. [Perintah yang bisa dijalankan dari mana saja](#perintah-yang-bisa-dijalankan-dari-mana-saja)
 2. [Algoritma: dari kamera sampai USB](#algoritma-dari-kamera-sampai-usb)
 3. [Format data USB dan cara membacanya](#format-data-usb-dan-cara-membacanya)
-4. [Fungsi setiap folder](#fungsi-setiap-folder)
-5. [Fungsi setiap berkas](#fungsi-setiap-berkas)
-6. [Membangun ulang](#membangun-ulang)
-7. [Catatan dan batasan](#catatan-dan-batasan)
+4. [Anggaran tapeout](#anggaran-tapeout)
+5. [Fungsi setiap folder](#fungsi-setiap-folder)
+6. [Fungsi setiap berkas](#fungsi-setiap-berkas)
+7. [Membangun ulang](#membangun-ulang)
+8. [Catatan dan batasan](#catatan-dan-batasan)
 
 ## Perintah yang bisa dijalankan dari mana saja
 
@@ -350,6 +351,45 @@ Indeks kamera (`0` di atas) bergantung pada laptop; `host/webcam.py` mencarinya 
 memakai backend DirectShow: ia mengonversi warna dan merusak byte disparitas. Program lain yang
 membaca kamera ini (aplikasi kamera Windows, OBS) melihat gambar yang benar secara visual, tetapi
 hanya pembacaan mentah seperti di atas yang memberi disparitas tepat.
+
+## Anggaran tapeout
+
+Perkiraan biaya membuat chip irisan di shuttle Tiny Tapeout SKY26d (tutup 30 November 2026), sampai
+diterima di Indonesia. Rincian, rumus, dan semua asumsi ada di
+[`docs/anggaran_tapeout.xlsx`](docs/anggaran_tapeout.xlsx); ubah sel biru berlatar kuning di lembar
+Asumsi (misalnya kurs saat membayar) dan seluruh anggaran ikut berubah.
+
+| Pos | 1 IC | 2 IC |
+|---|---|---|
+| Desain 4x2, 8 petak x €70 (dibayar sekali) | €560 | €560 |
+| Devkit (demo board + breakout berisi 1 chip), €300 | €300 | €600 |
+| Ongkir Worldwide Economy, €15 per devkit | €15 | €30 |
+| **Dibayar ke Tiny Tapeout** | **Rp 17.937.500** | **Rp 24.395.000** |
+| Pajak impor (bea masuk 7,5%, PPN 11%, PPh 10% dengan NPWP) | Rp 1.942.093 | Rp 3.884.186 |
+| Biaya kartu / selisih kurs (3%) | Rp 538.125 | Rp 731.850 |
+| Papan interface ke EBAZ4205 | Rp 460.000 | Rp 660.000 |
+| **Total dengan NPWP** | **Rp 20.877.718** | **Rp 29.671.036** |
+| Total tanpa NPWP (PPh 20%) | Rp 21.571.899 | Rp 31.059.399 |
+
+Kurs dianggap Rp 20.500 per euro. Biaya desain hanya sekali: setiap devkit berisi satu chip bersama
+yang memuat irisan kita, dan karena di chip itu hanya satu proyek aktif pada satu waktu, rantai 2
+irisan butuh 2 chip fisik, yaitu 2 devkit.
+
+Yang perlu dicek sebelum memesan: harga dan ketersediaan 4x2 di kalkulator saat itu, harga early
+bird (tidak dihitung), ongkir bila 2 devkit dikirim satu paket, tarif pajak terhadap PMK 50/2026,
+dan pin EBAZ4205 untuk hub (17 + N pin; header DATA1 sampai DATA3 sudah terpakai, cek J3/J5).
+
+Sumber:
+[kalkulator Tiny Tapeout](https://app.tinytapeout.com/calculator?tiles=1&pcbs=1),
+[jadwal shuttle](https://tinytapeout.com/chips/),
+[FAQ Tiny Tapeout](https://tinytapeout.com/faq/),
+[eeNews Europe](https://www.eenewseurope.com/en/tiny-tapeout-sees-industrial-boost-as-it-recovers-from-efabless-closure/),
+[DDTC News: bea masuk barang kiriman](https://news.ddtc.co.id/berita/nasional/1808844/tarif-bea-masuk-produk-tertentu-disederhanakan-pelayanan-lebih-cepat),
+[PMK 50/2026](https://jdih.kemenkeu.go.id/dok/pmk-50-tahun-2026/overview),
+[DHL: de minimis 2026](https://www.dhl.com/discover/en-id/logistics-advice/import-export-advice/2026-de-minimis-shipping-rules),
+[Janio: pajak impor Indonesia](https://www.janio.asia/resources/articles/tackling-indonesian-customs-clearance-procedures-for-ecommerce-merchants),
+[kurs EUR/IDR](https://id.tradingeconomics.com/euridr:cur),
+[JLCPCB](https://jlcpcb.com/). Diakses 14 Oktober 2026.
 
 ## Fungsi setiap folder
 
