@@ -1,0 +1,62 @@
+# Tiny Tapeout project information
+project:
+  title:        "Stereo matcher slice"      # Project title
+  author:       ""      # Your name
+  discord:      ""      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
+  description:  "16 disparities of a semi-global stereo matcher; identical chips chain to widen the disparity range"      # One line description of what your project does
+  language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
+  clock_hz:     25000000       # Clock frequency in Hz (or 0 if not applicable)
+
+  # How many tiles your design occupies? A single tile is about 167x108 uM.
+  tiles: "4x2"          # Valid values: 1x1, 1x2, 2x2, 3x2, 4x2, 6x2 or 8x2
+
+  # Your top module name must start with "tt_um_". Make it unique by including your github username:
+  top_module:  "tt_um_stereo_slice"
+
+  # List your project's source files here.
+  # Source files must be in ./src and you must list each source file separately, one per line.
+  # Don't forget to also update `PROJECT_SOURCES` in test/Makefile.
+  source_files:
+    - "tt_um_stereo_slice.v"
+    - "mini_slice.v"
+    - "ms_ctrl.v"
+    - "ms_cost.v"
+    - "ms_path.v"
+    - "ms_pick.v"
+    - "ms_up.v"
+
+# The pinout of your project. Leave unused pins blank. DO NOT delete or add any pins.
+# This section is for the datasheet/website. Use descriptive names (e.g., RX, TX, MOSI, SCL, SEG_A, etc.).
+pinout:
+  # Inputs
+  ui[0]: "DOWN0"
+  ui[1]: "DOWN1"
+  ui[2]: "DOWN2"
+  ui[3]: "DOWN3"
+  ui[4]: "DOWN4"
+  ui[5]: "DOWN5"
+  ui[6]: "DOWN6"
+  ui[7]: "SYNC"
+
+  # Outputs
+  uo[0]: "UP_OUT0"
+  uo[1]: "UP_OUT1"
+  uo[2]: "UP_OUT2"
+  uo[3]: "UP_OUT3"
+  uo[4]: "UP_OUT4"
+  uo[5]: "UP_OUT5"
+  uo[6]: "UP_OUT6"
+  uo[7]: "UP_OUT7"
+
+  # Bidirectional pins
+  uio[0]: "UP_IN0"
+  uio[1]: "UP_IN1"
+  uio[2]: "UP_IN2"
+  uio[3]: "UP_IN3"
+  uio[4]: "UP_IN4"
+  uio[5]: "UP_IN5"
+  uio[6]: "UP_IN6"
+  uio[7]: "UP_IN7"
+
+# Do not change!
+yaml_version: 6

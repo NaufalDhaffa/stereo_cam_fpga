@@ -1,0 +1,74 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Class: rviz_default_plugins/Grid
+      Name: Grid
+      Enabled: true
+      Cell Size: 0.5
+      Plane Cell Count: 8
+      Color: 110; 110; 110
+    - Class: rviz_default_plugins/Axes
+      Name: Camera
+      Enabled: true
+      Length: 0.15
+      Radius: 0.01
+      Reference Frame: <Fixed Frame>
+    - Class: rviz_default_plugins/PointCloud2
+      Name: Points
+      Enabled: true
+      Topic:
+        Value: /stereo/points
+        Depth: 5
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Durability Policy: Volatile
+      Style: Points
+      Size (Pixels): 4
+      Color Transformer: RGB8
+      Position Transformer: XYZ
+      Decay Time: 0
+    - Class: rviz_default_plugins/Image
+      Name: Depth
+      Enabled: true
+      Topic:
+        Value: /stereo/depth_color
+        Depth: 5
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Durability Policy: Volatile
+    - Class: rviz_default_plugins/Image
+      Name: Left
+      Enabled: true
+      Topic:
+        Value: /stereo/left
+        Depth: 5
+        Reliability Policy: Reliable
+        History Policy: Keep Last
+        Durability Policy: Volatile
+  Global Options:
+    Background Color: 30; 30; 30
+    Fixed Frame: camera
+    Frame Rate: 30
+  Tools:
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Measure
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Name: Current View
+      Distance: 3.0
+      Focal Point:
+        X: 1.0
+        Y: 0
+        Z: 0
+      Pitch: 0.45
+      Yaw: 3.6
+      Target Frame: <Fixed Frame>
+Window Geometry:
+  Width: 1400
+  Height: 850

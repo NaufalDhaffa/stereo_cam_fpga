@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.Xil/
+*.jou
+*.log
+# build outputs: only the mini system's bitstream, its tables and the SD card content are kept
+/build/*
+!/build/mini/
+!/build/golden_minisys/
+!/build/sdcard/
+/build/mini/vivado/
+# test runs
+/asic/tt/test/sim_build/
+/asic/tt/test/results.xml
+/asic/tt/test/*.fst
+/fx2/uvc/obj/

@@ -1,0 +1,48 @@
+{
+ "tiles": "4x2",
+ "exit": 0,
+ "design__instance__count": 11379,
+ "design__instance__area": 104966,
+ "design__instance__utilization": 0.703603,
+ "timing__setup__ws": 2.8484415632429125,
+ "timing__hold__ws": 0.03860456508177514,
+ "route__wirelength": 266658,
+ "route__drc_errors": 0,
+ "magic__drc_error__count": 0,
+ "design__lvs_error__count": 0,
+ "antenna__violating__nets": 2,
+ "design__max_slew_violation__count": 0,
+ "design__max_cap_violation__count": 0
+}
+{
+ "tiles": "4x2",
+ "exit": 0,
+ "design__instance__count": 11379,
+ "design__instance__area": 104966,
+ "design__instance__utilization": 0.703603,
+ "timing__setup__ws": 2.8484415632429125,
+ "timing__hold__ws": 0.03860456508177514,
+ "route__wirelength": 266658,
+ "route__drc_errors": 0,
+ "magic__drc_error__count": 0,
+ "design__lvs_error__count": 0,
+ "antenna__violating__nets": 2,
+ "design__max_slew_violation__count": 0,
+ "design__max_cap_violation__count": 0
+}
+{
+ "tiles": "4x2",
+ "exit": 0,
+ "design__instance__count": 11379,
+ "design__instance__area": 104966,
+ "design__instance__utilization": 0.703603,
+ "timing__setup__ws": 2.8484415632429125,
+ "timing__hold__ws": 0.03860456508177514,
+ "route__wirelength": 266658,
+ "route__drc_errors": 0,
+ "magic__drc_error__count": 0,
+ "design__lvs_error__count": 0,
+ "antenna__violating__nets": 2,
+ "design__max_slew_violation__count": 0,
+ "design__max_cap_violation__count": 0
+}

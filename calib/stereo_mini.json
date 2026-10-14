@@ -1,0 +1,18 @@
+{
+ "model": "pinhole",
+ "derived_from": "stereo_cif.npz, binned 2 x 2",
+ "size": [
+  200,
+  148
+ ],
+ "focal_px": {
+  "left": 245.8259791853774,
+  "right": 230.48529500557032,
+  "rectified": 262.49614065031676
+ },
+ "baseline_mm": 54.45467739490931,
+ "line_window": {
+  "left": 12,
+  "right": 8
+ }
+}

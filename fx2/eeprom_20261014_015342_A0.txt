@@ -1,0 +1,6 @@
+EEPROM papan CY7C68013A, alamat I2C 0xA0
+isi seragam, jenis alamat tidak dapat ditentukan tanpa menulis
+4096 byte dibaca, 0 byte sampai byte bukan-FF terakhir
+isi: kosong (FF): FX2 memakai identitas bawaan 04B4:8613
+baca ulang cocok
+16 byte pertama: ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff ff

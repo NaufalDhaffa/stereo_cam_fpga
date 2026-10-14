@@ -1,0 +1,29 @@
+/include/ "system-conf.dtsi"
+/ {
+};
+
+/* Ethernet: 4-bit MII through EMIO to the IP101GA (PHY address 0), 100 Mbit/s */
+&gem0 {
+	status = "okay";
+	phy-mode = "mii";
+	phy-handle = <&phy0>;
+	phy0: ethernet-phy@0 {
+		reg = <0>;
+		max-speed = <100>;
+	};
+};
+
+/* The sensors' SCCB buses are driven by board/stereo_cam.py through /dev/mem,
+ * register by register as the JTAG script did; no kernel driver on them. */
+&i2c0 {
+	status = "disabled";
+};
+&i2c1 {
+	status = "disabled";
+};
+
+/* The PL runs on FCLK0 and FCLK1 and no kernel driver claims them: keep them
+ * running (otherwise Linux stops them when it has booted). */
+&clkc {
+	fclk-enable = <0x3>;
+};

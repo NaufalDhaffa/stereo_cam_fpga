@@ -1,0 +1,51 @@
+{
+ "params": {
+  "PREFILTER": true,
+  "CENSUS_KIND": "s17x9",
+  "HBOX": 3,
+  "PATHS": [
+   "LR",
+   "TB"
+  ],
+  "P1_48": 16,
+  "P2_48": 80,
+  "P2_EDGE_48": 0,
+  "L_BITS": 7,
+  "UNIQUENESS_16": 3,
+  "LR_CHECK": true,
+  "MEDIAN": 3,
+  "MEDIAN_V": 5,
+  "DESPECKLE": 14
+ },
+ "score": {
+  "score": 0.1469781600233951,
+  "good": 0.43240117777666887,
+  "edge": 0.21024364372469662,
+  "bad": 0.08085316343454949,
+  "streak": 0.9694394320760893,
+  "valid": 0.4193316666666666
+ },
+ "fpga": {
+  "census": 128.0,
+  "sgm": 614.4,
+  "sgm_rl": 0.0,
+  "post": 88.0,
+  "depth_table": 32.768,
+  "total": 863.168,
+  "units": 16,
+  "fps": 23.674242424242426,
+  "lut": 9280.4
+ },
+ "scenes": [
+  "data/scene_1013_a:1",
+  "data/scene_1013_b:1",
+  "data/scene_1013_c:1",
+  "data/scene_1013_d:1",
+  "data/scene_1013_e:1"
+ ],
+ "budget_kbit": 980,
+ "budget_lut": 14000,
+ "fps_min": 15,
+ "evaluated": 192,
+ "date": "2026-10-13 13:17:38"
+}

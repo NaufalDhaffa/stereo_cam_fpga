@@ -1,0 +1,11 @@
+#!/bin/sh
+### BEGIN INIT INFO
+# Provides:          stereo-autorun
+# Required-Start:    $local_fs $network
+# Default-Start:     5
+# Short-Description: Stereo camera start-up from the SD card
+### END INIT INFO
+case "$1" in
+    start) /usr/bin/stereo-autorun.sh & ;;
+esac
+exit 0

@@ -1,0 +1,11 @@
+[Unit]
+Description=Stereo camera start-up from the SD card
+After=local-fs.target network.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/stereo-autorun.sh
+
+[Install]
+WantedBy=multi-user.target
