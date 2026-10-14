@@ -39,7 +39,8 @@ These are local runs; what counts for a shuttle is the GitHub Action of the temp
 
 Copy `build/sdcard/*` to the first (FAT) partition of the SD card. The board boots in about 30 s,
 takes 192.168.2.10 and starts the cameras. The serial console is 115200 8N1, login `root`.
-The FX2LP needs its RESET button pressed after plugging in to start as a webcam.
+The FX2LP starts as a webcam when plugged in: its EEPROM holds the firmware, and J2 is left open
+with the address pin pulled up to 3.3 V (with the J2 jumper fitted it is the original logic analyzer again).
 
 ## Open points
 
