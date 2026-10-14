@@ -1,0 +1,631 @@
+
+*** Running vivado
+    with args -log system_usb_stream_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_usb_stream_0_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Oct 14 08:43:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_usb_stream_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 525.477 ; gain = 218.105
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_usb_stream_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 38188
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1289.516 ; gain = 540.531
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_usb_stream_0_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_usb_stream_0_0/synth/system_usb_stream_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'usb_stream' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:8]
+	Parameter FIFO_AW bound to: 13 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'BUFG' [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6155] done synthesizing module 'BUFG' (0#1) [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:2678]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 4096 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 3072 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0002 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+WARNING: [Synth 8-7071] port 'full' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'overflow' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'prog_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'rd_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'underflow' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'almost_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'sbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7071] port 'dbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+WARNING: [Synth 8-7023] instance 'u_xfifo' of module 'xpm_fifo_async' has 26 connections declared, but only 14 given [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:62]
+INFO: [Synth 8-6157] synthesizing module 'byte_fifo' [D:/stereo-depth-cam/rtl/byte_fifo.v:12]
+	Parameter AW bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'byte_fifo' (0#1) [D:/stereo-depth-cam/rtl/byte_fifo.v:12]
+INFO: [Synth 8-6157] synthesizing module 'stream_mux' [D:/stereo-depth-cam/rtl/stream_mux.v:12]
+	Parameter AW bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'stream_mux' (0#1) [D:/stereo-depth-cam/rtl/stream_mux.v:12]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 16384 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 16368 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0002 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized3' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized3' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized4' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized4' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+WARNING: [Synth 8-7071] port 'full' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'overflow' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'prog_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'rd_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'underflow' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'almost_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'sbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7071] port 'dbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+WARNING: [Synth 8-7023] instance 'u_fifo' of module 'xpm_fifo_async' has 26 connections declared, but only 14 given [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:107]
+INFO: [Synth 8-6157] synthesizing module 'fx2_writer' [D:/stereo-depth-cam/rtl/fx2_writer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'fx2_writer' (0#1) [D:/stereo-depth-cam/rtl/fx2_writer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'usb_stream' (0#1) [D:/stereo-depth-cam/rtl/blocks/usb_stream.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'system_usb_stream_0_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_usb_stream_0_0/synth/system_usb_stream_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+INFO: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[63] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[62] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[61] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[60] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[59] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[58] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[57] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[56] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[55] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[54] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[53] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[52] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[51] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[50] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[49] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[48] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[47] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[46] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[45] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[44] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[43] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[42] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[41] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[40] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[39] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[38] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[37] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[36] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[35] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[34] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[33] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[32] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[31] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[30] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[29] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[28] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[27] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[26] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[25] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[24] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[23] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[22] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[19] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[18] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[17] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[16] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[15] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[14] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[13] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[12] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[11] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[10] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[9] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[8] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[7] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[6] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[5] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[4] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[3] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[2] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[1] in module usb_stream is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[0] in module usb_stream is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1438.641 ; gain = 689.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1438.641 ; gain = 689.656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1438.641 ; gain = 689.656
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.029 . Memory (MB): peak = 1438.641 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_usb_stream_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_usb_stream_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_usb_stream_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_usb_stream_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1490.500 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.042 . Memory (MB): peak = 1491.148 ; gain = 0.648
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.148 ; gain = 742.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.148 ; gain = 742.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1491.148 ; gain = 742.164
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stream_mux'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                S_SETTLE |                              000 |                              000
+               S_SETTLE2 |                              001 |                              101
+                  S_PICK |                              010 |                              001
+                   S_HDR |                              011 |                              010
+                  S_DATA |                              100 |                              011
+                   S_PAD |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'stream_mux'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1491.148 ; gain = 742.164
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   21 Bit       Adders := 3     
+	   4 Input   15 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 3     
+	   4 Input   14 Bit       Adders := 4     
+	   4 Input   13 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 3     
+	   4 Input   12 Bit       Adders := 3     
+	   2 Input    9 Bit       Adders := 4     
+	   2 Input    3 Bit       Adders := 1     
+	   4 Input    2 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 3     
++---XORs : 
+	   2 Input     15 Bit         XORs := 2     
+	   2 Input     14 Bit         XORs := 2     
+	   2 Input     13 Bit         XORs := 2     
+	   2 Input     12 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 100   
++---Registers : 
+	               21 Bit    Registers := 3     
+	               15 Bit    Registers := 13    
+	               14 Bit    Registers := 12    
+	               13 Bit    Registers := 14    
+	               12 Bit    Registers := 11    
+	                9 Bit    Registers := 9     
+	                8 Bit    Registers := 5     
+	                3 Bit    Registers := 7     
+	                2 Bit    Registers := 11    
+	                1 Bit    Registers := 42    
++---RAMs : 
+	             144K Bit	(16384 X 9 bit)          RAMs := 1     
+	              64K Bit	(8192 X 8 bit)          RAMs := 1     
+	              36K Bit	(4096 X 9 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   21 Bit        Muxes := 12    
+	   4 Input   21 Bit        Muxes := 3     
+	   6 Input   21 Bit        Muxes := 3     
+	   2 Input   13 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 4     
+	   6 Input    9 Bit        Muxes := 2     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 2     
+	   6 Input    8 Bit        Muxes := 1     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 16    
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 7     
+	   5 Input    2 Bit        Muxes := 2     
+	   2 Input    2 Bit        Muxes := 71    
+	   4 Input    2 Bit        Muxes := 14    
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 39    
+	   6 Input    1 Bit        Muxes := 15    
+	   5 Input    1 Bit        Muxes := 6     
+	   4 Input    1 Bit        Muxes := 9     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1494.285 ; gain = 745.301
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                             | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\inst/u_xfifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(NO_CHANGE)     |   | R | Port A and B     | 0      | 1      | 
+|system_usb_stream_0_0                                                                   | inst/u_cfifo2/mem_reg            | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|\inst/u_fifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst   | gen_wr_a.gen_word_narrow.mem_reg | 16 K x 9(NO_CHANGE)    | W |   | 16 K x 9(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1631.137 ; gain = 882.152
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1632.574 ; gain = 883.590
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                             | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|\inst/u_xfifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(NO_CHANGE)     |   | R | Port A and B     | 0      | 1      | 
+|system_usb_stream_0_0                                                                   | inst/u_cfifo2/mem_reg            | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|\inst/u_fifo /\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst   | gen_wr_a.gen_word_narrow.mem_reg | 16 K x 9(NO_CHANGE)    | W |   | 16 K x 9(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++----------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_cfifo2/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_cfifo2/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1661.723 ; gain = 912.738
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4163] Replicating register \inst/u_fx2/flag_q0_reg  to handle IOB=TRUE attribute
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1889.879 ; gain = 1140.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1889.879 ; gain = 1140.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1889.879 ; gain = 1140.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1889.879 ; gain = 1140.895
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1890.871 ; gain = 1141.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1890.871 ; gain = 1141.887
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |    99|
+|3     |LUT1     |    11|
+|4     |LUT2     |   169|
+|5     |LUT3     |   105|
+|6     |LUT4     |    59|
+|7     |LUT5     |    77|
+|8     |LUT6     |   141|
+|9     |RAMB18E1 |     1|
+|10    |RAMB36E1 |     7|
+|13    |FDRE     |   865|
+|14    |FDSE     |    42|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1890.871 ; gain = 1141.887
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1890.871 ; gain = 1089.379
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1890.871 ; gain = 1141.887
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 1890.871 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 107 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+WARNING: [Constraints 18-5572] Instance inst/u_fx2/flag_q0_reg has IOB constraint set, However, the instance does not seem to have valid I/O connection to be placed into I/O. The constraint on the instance will be ignored.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1903.703 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: bc7efd4e
+INFO: [Common 17-83] Releasing license: Synthesis
+239 Infos, 37 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1903.703 ; gain = 1358.254
+INFO: [Coretcl 2-1174] Renamed 42 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1903.703 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/system_usb_stream_0_0_synth_1/system_usb_stream_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_usb_stream_0_0_utilization_synth.rpt -pb system_usb_stream_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:43:52 2026...

@@ -1,0 +1,16 @@
+create libxil.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/xadcps/src/libxadcps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/uartps/src/libuartps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/sdps/src/libsdps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scuwdt/src/libscuwdt.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scutimer/src/libscutimer.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/scugic/src/libscugic.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/nandps/src/libnandps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/iicps/src/libiicps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/gpiops/src/libgpiops.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/emacps/src/libemacps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/dmaps/src/libdmaps.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/devcfg/src/libdevcfg.a
+addlib D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/zynq_fsbl_bsp/libsrc/build_configs/gen_bsp/libsrc/coresightps_dcc/src/libcoresightps_dcc.a
+save
+end

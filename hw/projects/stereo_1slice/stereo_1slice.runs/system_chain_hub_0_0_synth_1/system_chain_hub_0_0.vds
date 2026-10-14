@@ -1,0 +1,351 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Oct 14 08:42:23 2026
+# Process ID         : 25680
+# Current directory  : D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/system_chain_hub_0_0_synth_1
+# Command line       : vivado.exe -log system_chain_hub_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_chain_hub_0_0.tcl
+# Log file           : D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/system_chain_hub_0_0_synth_1/system_chain_hub_0_0.vds
+# Journal file       : D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/system_chain_hub_0_0_synth_1\vivado.jou
+# Running On         : LAPTOP-THBQET7J
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16390 MB
+# Swap memory        : 25810 MB
+# Total Virtual      : 42200 MB
+# Available Virtual  : 12410 MB
+#-----------------------------------------------------------
+source system_chain_hub_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 523.301 ; gain = 220.059
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_chain_hub_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 40816
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1288.301 ; gain = 540.066
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_chain_hub_0_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_chain_hub_0_0/synth/system_chain_hub_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'chain_hub' [D:/stereo-depth-cam/rtl/blocks/chain_hub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mini_hub' [D:/stereo-depth-cam/rtl/mini/mini_hub.v:18]
+	Parameter N bound to: 1 - type: integer 
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+	Parameter DMIN bound to: 7 - type: integer 
+	Parameter P1 bound to: 15 - type: integer 
+	Parameter P2 bound to: 73 - type: integer 
+	Parameter UNIQ bound to: 3 - type: integer 
+	Parameter RX bound to: 8 - type: integer 
+	Parameter RY bound to: 4 - type: integer 
+	Parameter LOOP bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mini_hub' (0#1) [D:/stereo-depth-cam/rtl/mini/mini_hub.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'chain_hub' (0#1) [D:/stereo-depth-cam/rtl/blocks/chain_hub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'system_chain_hub_0_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_chain_hub_0_0/synth/system_chain_hub_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element record.bi_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:230]
+WARNING: [Synth 8-6014] Unused sequential element record.di_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:231]
+WARNING: [Synth 8-6014] Unused sequential element record.fi_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:232]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1418.160 ; gain = 669.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1418.160 ; gain = 669.926
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1418.160 ; gain = 669.926
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1418.160 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1496.750 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 1496.977 ; gain = 0.227
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 6     
+	   3 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 3     
+	   2 Input    8 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 2     
+	   3 Input    7 Bit       Adders := 1     
+	   2 Input    3 Bit       Adders := 4     
++---Registers : 
+	               45 Bit    Registers := 2     
+	               13 Bit    Registers := 1     
+	               12 Bit    Registers := 1     
+	               10 Bit    Registers := 5     
+	                8 Bit    Registers := 5     
+	                7 Bit    Registers := 4     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 2     
++---RAMs : 
+	              22K Bit	(512 X 45 bit)          RAMs := 1     
+	               6K Bit	(512 X 13 bit)          RAMs := 1     
+	               3K Bit	(512 X 7 bit)          RAMs := 1     
+	               56 Bit	(8 X 7 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   45 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   10 Bit        Muxes := 3     
+	   8 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 7     
+	   8 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 4     
+	   8 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   8 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 21    
+	   8 Input    1 Bit        Muxes := 15    
+	   3 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port slice_ena driven by constant 1
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[7] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[6] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[5] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[4] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[3] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[2] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[1] driven by constant 0
+INFO: [Synth 8-3917] design system_chain_hub_0_0 has port chain_bottom[0] driven by constant 0
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|system_chain_hub_0_0 | inst/u_hub/fin_reg | 512 x 13(READ_FIRST)   | W |   | 512 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|system_chain_hub_0_0 | inst/u_hub/drw_reg | 512 x 7(READ_FIRST)    | W |   | 512 x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------+-----------------------+-----------+----------------------+---------------+
+|Module Name          | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++---------------------+-----------------------+-----------+----------------------+---------------+
+|system_chain_hub_0_0 | inst/u_hub/r_lbot_reg | Implied   | 8 x 7                | RAM32M x 2    | 
+|system_chain_hub_0_0 | inst/u_hub/rdel_reg   | Implied   | 512 x 45             | RAM64M x 240  | 
++---------------------+-----------------------+-----------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name          | RTL Object         | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|system_chain_hub_0_0 | inst/u_hub/fin_reg | 512 x 13(READ_FIRST)   | W |   | 512 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|system_chain_hub_0_0 | inst/u_hub/drw_reg | 512 x 7(READ_FIRST)    | W |   | 512 x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
++---------------------+--------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++---------------------+-----------------------+-----------+----------------------+---------------+
+|Module Name          | RTL Object            | Inference | Size (Depth x Width) | Primitives    | 
++---------------------+-----------------------+-----------+----------------------+---------------+
+|system_chain_hub_0_0 | inst/u_hub/r_lbot_reg | Implied   | 8 x 7                | RAM32M x 2    | 
+|system_chain_hub_0_0 | inst/u_hub/rdel_reg   | Implied   | 512 x 45             | RAM64M x 240  | 
++---------------------+-----------------------+-----------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_hub/fin_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_hub/drw_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1496.977 ; gain = 748.742
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    12|
+|2     |LUT1     |    15|
+|3     |LUT2     |    61|
+|4     |LUT3     |    44|
+|5     |LUT4     |    65|
+|6     |LUT5     |   109|
+|7     |LUT6     |   302|
+|8     |MUXF7    |    93|
+|9     |RAM32M   |     1|
+|10    |RAM32X1D |     1|
+|11    |RAM64M   |   240|
+|12    |RAMB18E1 |     2|
+|13    |FDRE     |   239|
+|14    |FDSE     |     7|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1700.711 ; gain = 873.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1700.711 ; gain = 952.477
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1712.711 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 349 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'system_chain_hub_0_0' is not ideal for floorplanning, since the cellview 'mini_hub' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1814.531 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 242 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM64M => RAM64M (RAMD64E(x4)): 240 instances
+
+Synth Design complete | Checksum: 89b2dd98
+INFO: [Common 17-83] Releasing license: Synthesis
+35 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1814.531 ; gain = 1273.051
+INFO: [Coretcl 2-1174] Renamed 2 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1814.531 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/system_chain_hub_0_0_synth_1/system_chain_hub_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_chain_hub_0_0_utilization_synth.rpt -pb system_chain_hub_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:43:02 2026...

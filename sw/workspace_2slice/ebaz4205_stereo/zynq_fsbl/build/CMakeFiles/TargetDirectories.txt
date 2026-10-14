@@ -1,0 +1,4 @@
+D:/stereo-depth-cam/sw/workspace_2slice/ebaz4205_stereo/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+D:/stereo-depth-cam/sw/workspace_2slice/ebaz4205_stereo/zynq_fsbl/build/CMakeFiles/print_build_info.dir
+D:/stereo-depth-cam/sw/workspace_2slice/ebaz4205_stereo/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+D:/stereo-depth-cam/sw/workspace_2slice/ebaz4205_stereo/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

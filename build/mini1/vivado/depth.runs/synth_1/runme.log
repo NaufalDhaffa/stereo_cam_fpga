@@ -1,0 +1,1287 @@
+
+*** Running vivado
+    with args -log depth_top.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source depth_top.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Oct 14 08:11:01 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source depth_top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design D:/stereo-depth-cam/build/mini1/vivado/depth.srcs/sources_1/bd/system/system.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ system_gpio_slice_0
+system_xlconst_rxd_hi_0
+system_xlconcat_rxd_0
+system_xlslice_txd_0
+system_xlconst_eth_misc_0
+Command: synth_design -top depth_top -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 17824
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1296.203 ; gain = 541.453
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:1]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:2]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:3]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:4]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:5]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:6]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:7]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:8]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:9]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:10]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:11]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:12]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:13]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:14]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:15]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/rect_cfg.vh:16]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:1]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:2]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:3]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:4]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:5]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:6]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:7]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:8]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:9]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [D:/stereo-depth-cam/build/golden_mini1sys/match_cfg.vh:10]
+INFO: [Synth 8-6157] synthesizing module 'depth_top' [D:/stereo-depth-cam/rtl/depth_top.v:27]
+INFO: [Synth 8-6157] synthesizing module 'luma_bin2' [D:/stereo-depth-cam/rtl/luma_bin2.v:4]
+	Parameter W bound to: 400 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'luma_bin2' (0#1) [D:/stereo-depth-cam/rtl/luma_bin2.v:4]
+INFO: [Synth 8-6157] synthesizing module 'depth_mini' [D:/stereo-depth-cam/rtl/depth_mini.v:17]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter LINES0 bound to: 16 - type: integer 
+	Parameter LINES1 bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter PREFILTER bound to: 1 - type: integer 
+	Parameter CENSUS_RY bound to: 4 - type: integer 
+	Parameter CENSUS_RX bound to: 8 - type: integer 
+	Parameter CENSUS_STEP bound to: 2 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+	Parameter DMIN bound to: 7 - type: integer 
+	Parameter SGM_P1 bound to: 15 - type: integer 
+	Parameter SGM_P2 bound to: 73 - type: integer 
+	Parameter UNIQ bound to: 3 - type: integer 
+	Parameter SLICES bound to: 1 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'cam0_need.hex' is read successfully [D:/stereo-depth-cam/rtl/depth_mini.v:82]
+INFO: [Synth 8-3876] $readmem data file 'cam1_need.hex' is read successfully [D:/stereo-depth-cam/rtl/depth_mini.v:83]
+INFO: [Synth 8-6157] synthesizing module 'tt_um_stereo_slice' [D:/stereo-depth-cam/rtl/mini/tt_um_stereo_slice.v:4]
+INFO: [Synth 8-6157] synthesizing module 'mini_slice' [D:/stereo-depth-cam/rtl/mini/mini_slice.v:51]
+INFO: [Synth 8-6157] synthesizing module 'ms_ctrl' [D:/stereo-depth-cam/rtl/mini/ms_ctrl.v:3]
+	Parameter NBITS bound to: 44 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ms_ctrl' (0#1) [D:/stereo-depth-cam/rtl/mini/ms_ctrl.v:3]
+INFO: [Synth 8-6157] synthesizing module 'ms_cost' [D:/stereo-depth-cam/rtl/mini/ms_cost.v:4]
+	Parameter NBITS bound to: 44 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'ms_cost' (0#1) [D:/stereo-depth-cam/rtl/mini/ms_cost.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ms_path' [D:/stereo-depth-cam/rtl/mini/ms_path.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ms_path' (0#1) [D:/stereo-depth-cam/rtl/mini/ms_path.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ms_pick' [D:/stereo-depth-cam/rtl/mini/ms_pick.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'ms_pick' (0#1) [D:/stereo-depth-cam/rtl/mini/ms_pick.v:4]
+INFO: [Synth 8-6157] synthesizing module 'ms_up' [D:/stereo-depth-cam/rtl/mini/ms_up.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'ms_up' (0#1) [D:/stereo-depth-cam/rtl/mini/ms_up.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mini_slice' (0#1) [D:/stereo-depth-cam/rtl/mini/mini_slice.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'tt_um_stereo_slice' (0#1) [D:/stereo-depth-cam/rtl/mini/tt_um_stereo_slice.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rectify' [D:/stereo-depth-cam/rtl/rectify.v:28]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter LINES bound to: 16 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter CYC bound to: 10 - type: integer 
+	Parameter NODE_FILE bound to: cam0_nodes.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'cam0_nodes.hex' is read successfully [D:/stereo-depth-cam/rtl/rectify.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'rectify' (0#1) [D:/stereo-depth-cam/rtl/rectify.v:28]
+INFO: [Synth 8-6157] synthesizing module 'rectify__parameterized0' [D:/stereo-depth-cam/rtl/rectify.v:28]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter LINES bound to: 16 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter CYC bound to: 10 - type: integer 
+	Parameter NODE_FILE bound to: cam1_nodes.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'cam1_nodes.hex' is read successfully [D:/stereo-depth-cam/rtl/rectify.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'rectify__parameterized0' (0#1) [D:/stereo-depth-cam/rtl/rectify.v:28]
+INFO: [Synth 8-6157] synthesizing module 'census' [D:/stereo-depth-cam/rtl/census.v:25]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter PREFILTER bound to: 1 - type: integer 
+	Parameter RY bound to: 4 - type: integer 
+	Parameter RX bound to: 8 - type: integer 
+	Parameter STEP bound to: 2 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w__parameterized0' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 72 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w__parameterized0' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'census' (0#1) [D:/stereo-depth-cam/rtl/census.v:25]
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w__parameterized1' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 90 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w__parameterized1' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6157] synthesizing module 'mini_hub' [D:/stereo-depth-cam/rtl/mini/mini_hub.v:18]
+	Parameter N bound to: 1 - type: integer 
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+	Parameter DMIN bound to: 7 - type: integer 
+	Parameter P1 bound to: 15 - type: integer 
+	Parameter P2 bound to: 73 - type: integer 
+	Parameter UNIQ bound to: 3 - type: integer 
+	Parameter RX bound to: 8 - type: integer 
+	Parameter RY bound to: 4 - type: integer 
+	Parameter LOOP bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mini_hub' (0#1) [D:/stereo-depth-cam/rtl/mini/mini_hub.v:18]
+INFO: [Synth 8-6157] synthesizing module 'uvc_lines' [D:/stereo-depth-cam/rtl/uvc_lines.v:19]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w__parameterized2' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 12 - type: integer 
+	Parameter DW bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w__parameterized2' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'uvc_lines' (0#1) [D:/stereo-depth-cam/rtl/uvc_lines.v:19]
+INFO: [Synth 8-6155] done synthesizing module 'depth_mini' (0#1) [D:/stereo-depth-cam/rtl/depth_mini.v:17]
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6157] synthesizing module 'system' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6157] synthesizing module 'system_gpio_slice_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_gpio_slice_0/synth/system_gpio_slice_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system_gpio_slice_0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_gpio_slice_0/synth/system_gpio_slice_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_ps7_0_0' [D:/stereo-depth-cam/build/mini1/vivado/depth.runs/synth_1/.Xil/Vivado-2788-LAPTOP-THBQET7J/realtime/system_ps7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps7_0_0' (0#1) [D:/stereo-depth-cam/build/mini1/vivado/depth.runs/synth_1/.Xil/Vivado-2788-LAPTOP-THBQET7J/realtime/system_ps7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'system_ps7_0_0' is unconnected for instance 'ps7_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:166]
+WARNING: [Synth 8-7071] port 'GPIO_T' of module 'system_ps7_0_0' is unconnected for instance 'ps7_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:166]
+WARNING: [Synth 8-7071] port 'FCLK_RESET0_N' of module 'system_ps7_0_0' is unconnected for instance 'ps7_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:166]
+WARNING: [Synth 8-7023] instance 'ps7_0' of module 'system_ps7_0_0' has 54 connections declared, but only 51 given [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:166]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_rxd_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconcat_rxd_0/synth/system_xlconcat_rxd_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_rxd_0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconcat_rxd_0/synth/system_xlconcat_rxd_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconst_eth_misc_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconst_eth_misc_0/synth/system_xlconst_eth_misc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconst_eth_misc_0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconst_eth_misc_0/synth/system_xlconst_eth_misc_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconst_rxd_hi_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconst_rxd_hi_0/synth/system_xlconst_rxd_hi_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconst_rxd_hi_0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlconst_rxd_hi_0/synth/system_xlconst_rxd_hi_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_xlslice_txd_0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlslice_txd_0/synth/system_xlslice_txd_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice__parameterized0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlslice_txd_0' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_xlslice_txd_0/synth/system_xlslice_txd_0.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/synth/system.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [D:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'cam_capture' [D:/stereo-depth-cam/rtl/cam_capture.v:33]
+INFO: [Synth 8-6155] done synthesizing module 'cam_capture' (0#1) [D:/stereo-depth-cam/rtl/cam_capture.v:33]
+INFO: [Synth 8-6157] synthesizing module 'luma_tap' [D:/stereo-depth-cam/rtl/luma_tap.v:12]
+	Parameter W bound to: 400 - type: integer 
+	Parameter H bound to: 296 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'luma_tap' (0#1) [D:/stereo-depth-cam/rtl/luma_tap.v:12]
+INFO: [Synth 8-6157] synthesizing module 'rect_linebuf' [D:/stereo-depth-cam/rtl/rect_linebuf.v:15]
+	Parameter W bound to: 200 - type: integer 
+	Parameter LINES bound to: 16 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'rect_linebuf' (0#1) [D:/stereo-depth-cam/rtl/rect_linebuf.v:15]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 4096 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 3072 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0002 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1927]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_sync_rst' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_sync_rst' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1059]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1639]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+WARNING: [Synth 8-7071] port 'full' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'overflow' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'prog_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'rd_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'underflow' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'almost_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'sbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7071] port 'dbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_xfifo' [D:/stereo-depth-cam/rtl/depth_top.v:290]
+WARNING: [Synth 8-7023] instance 'u_xfifo' of module 'xpm_fifo_async' has 26 connections declared, but only 14 given [D:/stereo-depth-cam/rtl/depth_top.v:290]
+INFO: [Synth 8-6157] synthesizing module 'byte_fifo' [D:/stereo-depth-cam/rtl/byte_fifo.v:12]
+	Parameter AW bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'byte_fifo' (0#1) [D:/stereo-depth-cam/rtl/byte_fifo.v:12]
+INFO: [Synth 8-6157] synthesizing module 'stream_mux' [D:/stereo-depth-cam/rtl/stream_mux.v:12]
+	Parameter AW bound to: 13 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'stream_mux' (0#1) [D:/stereo-depth-cam/rtl/stream_mux.v:12]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_async__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter RELATED_CLOCKS bound to: 0 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 16384 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 16368 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 0002 - type: string 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter CDC_SYNC_STAGES bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:54]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized1' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized1' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized3' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized3' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_vec__parameterized2' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_vec__parameterized2' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1905]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_gray__parameterized4' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_gray__parameterized4' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:283]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1220]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1287]
+INFO: [Synth 8-226] default block is never used [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1309]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1879]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:53]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_async__parameterized0' (0#1) [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:2173]
+WARNING: [Synth 8-7071] port 'full' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'wr_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'overflow' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'almost_full' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'wr_ack' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'prog_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'rd_data_count' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'underflow' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'almost_empty' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'data_valid' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'sbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7071] port 'dbiterr' of module 'xpm_fifo_async' is unconnected for instance 'u_fifo' [D:/stereo-depth-cam/rtl/depth_top.v:343]
+WARNING: [Synth 8-7023] instance 'u_fifo' of module 'xpm_fifo_async' has 26 connections declared, but only 14 given [D:/stereo-depth-cam/rtl/depth_top.v:343]
+INFO: [Synth 8-6157] synthesizing module 'fx2_writer' [D:/stereo-depth-cam/rtl/fx2_writer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'fx2_writer' (0#1) [D:/stereo-depth-cam/rtl/fx2_writer.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'depth_top' (0#1) [D:/stereo-depth-cam/rtl/depth_top.v:27]
+WARNING: [Synth 8-3936] Found unconnected internal register 'ui_r_reg' and it is trimmed from '8' to '7' bits. [D:/stereo-depth-cam/rtl/mini/ms_ctrl.v:43]
+WARNING: [Synth 8-6014] Unused sequential element record.bi_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:230]
+WARNING: [Synth 8-6014] Unused sequential element record.di_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:231]
+WARNING: [Synth 8-6014] Unused sequential element record.fi_reg was removed.  [D:/stereo-depth-cam/rtl/mini/mini_hub.v:232]
+WARNING: [Synth 8-3936] Found unconnected internal register 'sel_reg' and it is trimmed from '4' to '1' bits. [D:/stereo-depth-cam/rtl/rect_linebuf.v:67]
+WARNING: [Synth 8-6014] Unused sequential element sel_reg was removed.  [D:/stereo-depth-cam/rtl/rect_linebuf.v:67]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3087]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element dest_out_bin_ff_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:417]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1404]
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[15] in module rect_linebuf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[14] in module rect_linebuf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[13] in module rect_linebuf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rd_addr[12] in module rect_linebuf is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_5_xlslice__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1491.105 ; gain = 736.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1491.105 ; gain = 736.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1491.105 ; gain = 736.355
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1491.105 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_ps7_0_0/system_ps7_0_0/system_ps7_0_0_in_context.xdc] for cell 'u_ps/system_i/ps7_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/build/mini1/vivado/depth.gen/sources_1/bd/system/ip/system_ps7_0_0/system_ps7_0_0/system_ps7_0_0_in_context.xdc] for cell 'u_ps/system_i/ps7_0'
+Parsing XDC File [D:/stereo-depth-cam/constraints/cam2_data3.xdc]
+Finished Parsing XDC File [D:/stereo-depth-cam/constraints/cam2_data3.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/stereo-depth-cam/constraints/cam2_data3.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/depth_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/depth_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/stereo-depth-cam/constraints/ethernet.xdc]
+Finished Parsing XDC File [D:/stereo-depth-cam/constraints/ethernet.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/stereo-depth-cam/constraints/ethernet.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/depth_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/depth_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/stereo-depth-cam/build/mini1/vivado/depth.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/stereo-depth-cam/build/mini1/vivado/depth.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/stereo-depth-cam/constraints/cam_usb.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [D:/stereo-depth-cam/constraints/cam_usb.xdc:51]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/stereo-depth-cam/constraints/cam_usb.xdc:51]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_0]'. [D:/stereo-depth-cam/constraints/cam_usb.xdc:51]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/stereo-depth-cam/constraints/cam_usb.xdc:51]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/stereo-depth-cam/constraints/cam_usb.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/stereo-depth-cam/constraints/cam_usb.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/depth_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/stereo-depth-cam/constraints/cam_usb.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/depth_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/depth_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/stereo-depth-cam/constraints/depth.xdc]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_0]'. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_1]'. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group '. [D:/stereo-depth-cam/constraints/depth.xdc:8]
+Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
+Finished Parsing XDC File [D:/stereo-depth-cam/constraints/depth.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/depth_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/depth_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/depth_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/depth_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 14 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1522.023 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.100 . Memory (MB): peak = 1522.023 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1522.023 ; gain = 767.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1522.023 ; gain = 767.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1522.023 ; gain = 767.273
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'pw_s_reg' and it is trimmed from '8' to '7' bits. [D:/stereo-depth-cam/rtl/mini/ms_up.v:39]
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rectify'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rectify__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'st_reg' in module 'uvc_lines'
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'stream_mux'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                   S_PRE |                               01 |                               01
+                   S_RUN |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rectify'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                   S_PRE |                               01 |                               01
+                   S_RUN |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rectify__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                              000 |                              000
+                  S_SYNC |                              001 |                              001
+                   S_HDR |                              010 |                              010
+                  S_LEFT |                              011 |                              011
+                 S_DEPTH |                              100 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'st_reg' using encoding 'sequential' in module 'uvc_lines'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_wrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               WRST_IDLE |                            00001 |                              000
+                 WRST_IN |                            00010 |                              010
+                WRST_OUT |                            00100 |                              111
+               WRST_EXIT |                            01000 |                              110
+            WRST_GO2IDLE |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_wrst_state_reg' using encoding 'one-hot' in module 'xpm_fifo_rst'
+INFO: [Synth 8-5552] Implemented safe state 'default_state' for state register 'gen_rst_ic.curr_rrst_state_reg' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+               RRST_IDLE |                               00 |                               00
+                 RRST_IN |                               01 |                               10
+                RRST_OUT |                               10 |                               11
+               RRST_EXIT |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_rst_ic.curr_rrst_state_reg' using encoding 'sequential' in module 'xpm_fifo_rst'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                S_SETTLE |                              000 |                              000
+               S_SETTLE2 |                              001 |                              101
+                  S_PICK |                              010 |                              001
+                   S_HDR |                              011 |                              010
+                  S_DATA |                              100 |                              011
+                   S_PAD |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'stream_mux'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 1914.906 ; gain = 1160.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input   24 Bit       Adders := 1     
+	   2 Input   21 Bit       Adders := 3     
+	   2 Input   17 Bit       Adders := 5     
+	   2 Input   16 Bit       Adders := 18    
+	   3 Input   16 Bit       Adders := 2     
+	   4 Input   15 Bit       Adders := 2     
+	   2 Input   15 Bit       Adders := 3     
+	   3 Input   14 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 2     
+	   4 Input   14 Bit       Adders := 6     
+	   2 Input   13 Bit       Adders := 6     
+	   4 Input   13 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 1     
+	   4 Input   12 Bit       Adders := 3     
+	   3 Input   11 Bit       Adders := 6     
+	   2 Input   11 Bit       Adders := 8     
+	   2 Input   10 Bit       Adders := 21    
+	   3 Input   10 Bit       Adders := 2     
+	   4 Input   10 Bit       Adders := 5     
+	   2 Input    9 Bit       Adders := 11    
+	   3 Input    9 Bit       Adders := 1     
+	   4 Input    8 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 12    
+	   3 Input    8 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 7     
+	   3 Input    7 Bit       Adders := 3     
+	   5 Input    7 Bit       Adders := 1     
+	   4 Input    6 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 14    
+	   2 Input    4 Bit       Adders := 16    
+	   6 Input    3 Bit       Adders := 8     
+	   2 Input    3 Bit       Adders := 9     
+	   2 Input    2 Bit       Adders := 5     
+	   4 Input    2 Bit       Adders := 2     
++---XORs : 
+	   2 Input     44 Bit         XORs := 1     
+	   2 Input     15 Bit         XORs := 2     
+	   2 Input     14 Bit         XORs := 2     
+	   2 Input     13 Bit         XORs := 2     
+	   2 Input     12 Bit         XORs := 2     
+	   2 Input     10 Bit         XORs := 2     
+	   2 Input      1 Bit         XORs := 120   
++---Registers : 
+	               90 Bit    Registers := 1     
+	               72 Bit    Registers := 2     
+	               49 Bit    Registers := 2     
+	               45 Bit    Registers := 2     
+	               44 Bit    Registers := 5     
+	               32 Bit    Registers := 22    
+	               24 Bit    Registers := 1     
+	               21 Bit    Registers := 3     
+	               18 Bit    Registers := 4     
+	               17 Bit    Registers := 10    
+	               16 Bit    Registers := 30    
+	               15 Bit    Registers := 31    
+	               14 Bit    Registers := 18    
+	               13 Bit    Registers := 19    
+	               12 Bit    Registers := 12    
+	               11 Bit    Registers := 4     
+	               10 Bit    Registers := 66    
+	                9 Bit    Registers := 19    
+	                8 Bit    Registers := 245   
+	                7 Bit    Registers := 20    
+	                6 Bit    Registers := 15    
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 19    
+	                3 Bit    Registers := 20    
+	                2 Bit    Registers := 28    
+	                1 Bit    Registers := 175   
++---RAMs : 
+	             144K Bit	(16384 X 9 bit)          RAMs := 1     
+	              64K Bit	(2048 X 32 bit)          RAMs := 2     
+	              64K Bit	(8192 X 8 bit)          RAMs := 3     
+	              36K Bit	(4096 X 9 bit)          RAMs := 2     
+	              32K Bit	(4096 X 8 bit)          RAMs := 2     
+	              22K Bit	(256 X 90 bit)          RAMs := 1     
+	              22K Bit	(512 X 45 bit)          RAMs := 1     
+	              18K Bit	(256 X 72 bit)          RAMs := 2     
+	               6K Bit	(512 X 13 bit)          RAMs := 1     
+	               4K Bit	(256 X 17 bit)          RAMs := 2     
+	               3K Bit	(512 X 7 bit)          RAMs := 1     
+	               2K Bit	(256 X 9 bit)          RAMs := 2     
+	               2K Bit	(256 X 10 bit)          RAMs := 1     
+	              112 Bit	(16 X 7 bit)          RAMs := 1     
+	               56 Bit	(8 X 7 bit)          RAMs := 1     
++---ROMs : 
+	                    ROMs := 2     
++---Muxes : 
+	   2 Input   49 Bit        Muxes := 6     
+	   3 Input   49 Bit        Muxes := 2     
+	   2 Input   45 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 8     
+	   2 Input   21 Bit        Muxes := 12    
+	   4 Input   21 Bit        Muxes := 3     
+	   6 Input   21 Bit        Muxes := 3     
+	   2 Input   16 Bit        Muxes := 7     
+	   2 Input   15 Bit        Muxes := 4     
+	   2 Input   13 Bit        Muxes := 8     
+	   2 Input   12 Bit        Muxes := 1     
+	   4 Input   11 Bit        Muxes := 4     
+	   2 Input   11 Bit        Muxes := 14    
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 8     
+	   8 Input   10 Bit        Muxes := 3     
+	   5 Input   10 Bit        Muxes := 1     
+	   2 Input    9 Bit        Muxes := 5     
+	   3 Input    9 Bit        Muxes := 2     
+	   6 Input    9 Bit        Muxes := 2     
+	   2 Input    8 Bit        Muxes := 48    
+	   4 Input    8 Bit        Muxes := 5     
+	   8 Input    8 Bit        Muxes := 2     
+	   3 Input    8 Bit        Muxes := 3     
+	   6 Input    8 Bit        Muxes := 2     
+	   5 Input    8 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 17    
+	   8 Input    7 Bit        Muxes := 1     
+	   4 Input    7 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 22    
+	   4 Input    5 Bit        Muxes := 2     
+	   6 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 5     
+	   4 Input    4 Bit        Muxes := 2     
+	   8 Input    4 Bit        Muxes := 1     
+	   4 Input    3 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 10    
+	   5 Input    3 Bit        Muxes := 2     
+	   3 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 19    
+	   2 Input    2 Bit        Muxes := 74    
+	   5 Input    2 Bit        Muxes := 3     
+	   6 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 230   
+	   3 Input    1 Bit        Muxes := 21    
+	   4 Input    1 Bit        Muxes := 55    
+	   6 Input    1 Bit        Muxes := 25    
+	   8 Input    1 Bit        Muxes := 15    
+	   5 Input    1 Bit        Muxes := 17    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'y0_reg' and it is trimmed from '14' to '11' bits. [D:/stereo-depth-cam/rtl/rectify.v:182]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0_reg' and it is trimmed from '14' to '10' bits. [D:/stereo-depth-cam/rtl/rectify.v:212]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP mx2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: register bx_reg is absorbed into DSP mx2_reg.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: operator mx20 is absorbed into DSP mx2_reg.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP sx_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register tx_reg is absorbed into DSP sx_full.
+DSP Report: register mx1_reg is absorbed into DSP sx_full.
+DSP Report: operator mx10 is absorbed into DSP sx_full.
+DSP Report: operator sx_full is absorbed into DSP sx_full.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP my2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: register by_reg is absorbed into DSP my2_reg.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: operator my20 is absorbed into DSP my2_reg.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP sy_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register ty_reg is absorbed into DSP sy_full.
+DSP Report: register my1_reg is absorbed into DSP sy_full.
+DSP Report: operator my10 is absorbed into DSP sy_full.
+DSP Report: operator sy_full is absorbed into DSP sy_full.
+DSP Report: Generating DSP row_sum_reg, operation Mode is: C'+A*(B:0xc8).
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w0 is absorbed into DSP row_sum_reg.
+DSP Report: Generating DSP mix1, operation Mode is: A2*B''.
+DSP Report: register fy_reg is absorbed into DSP mix1.
+DSP Report: register fy2_reg is absorbed into DSP mix1.
+DSP Report: register bot_reg is absorbed into DSP mix1.
+DSP Report: operator mix1 is absorbed into DSP mix1.
+DSP Report: Generating DSP mix, operation Mode is: PCIN+A2*B.
+DSP Report: register top_reg is absorbed into DSP mix.
+DSP Report: operator mix is absorbed into DSP mix.
+DSP Report: operator mix1 is absorbed into DSP mix.
+WARNING: [Synth 8-3936] Found unconnected internal register 'y0_reg' and it is trimmed from '14' to '11' bits. [D:/stereo-depth-cam/rtl/rectify.v:182]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0_reg' and it is trimmed from '14' to '10' bits. [D:/stereo-depth-cam/rtl/rectify.v:212]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP mx2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: register bx_reg is absorbed into DSP mx2_reg.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: operator mx20 is absorbed into DSP mx2_reg.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP sx_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register tx_reg is absorbed into DSP sx_full.
+DSP Report: register mx1_reg is absorbed into DSP sx_full.
+DSP Report: operator mx10 is absorbed into DSP sx_full.
+DSP Report: operator sx_full is absorbed into DSP sx_full.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP my2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: register by_reg is absorbed into DSP my2_reg.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: operator my20 is absorbed into DSP my2_reg.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP sy_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register ty_reg is absorbed into DSP sy_full.
+DSP Report: register my1_reg is absorbed into DSP sy_full.
+DSP Report: operator my10 is absorbed into DSP sy_full.
+DSP Report: operator sy_full is absorbed into DSP sy_full.
+DSP Report: Generating DSP row_sum_reg, operation Mode is: C'+A*(B:0xc8).
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w0 is absorbed into DSP row_sum_reg.
+DSP Report: Generating DSP mix1, operation Mode is: A2*B''.
+DSP Report: register fy_reg is absorbed into DSP mix1.
+DSP Report: register fy2_reg is absorbed into DSP mix1.
+DSP Report: register bot_reg is absorbed into DSP mix1.
+DSP Report: operator mix1 is absorbed into DSP mix1.
+DSP Report: Generating DSP mix, operation Mode is: PCIN+A2*B.
+DSP Report: register top_reg is absorbed into DSP mix.
+DSP Report: operator mix is absorbed into DSP mix.
+DSP Report: operator mix1 is absorbed into DSP mix.
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-3936] Found unconnected internal register 'hi_reg' and it is trimmed from '8' to '3' bits. [D:/stereo-depth-cam/rtl/luma_tap.v:64]
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:13 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+ Sort Area is  mx2_reg_11 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_11 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_3 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_3 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  my2_reg_14 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  my2_reg_14 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  my2_reg_9 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  my2_reg_9 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  mix1_16 : 0 0 : 297 697 : Used 1 time 0
+ Sort Area is  mix1_16 : 0 1 : 400 697 : Used 1 time 0
+ Sort Area is  mix1_c : 0 0 : 297 697 : Used 1 time 0
+ Sort Area is  mix1_c : 0 1 : 400 697 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_12 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_13 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_6 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_8 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_10 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_f : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_0 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_2 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  row_sum_reg_15 : 0 0 : 255 255 : Used 1 time 0
+ Sort Area is  row_sum_reg_a : 0 0 : 255 255 : Used 1 time 0
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++------------+------------+---------------+----------------+
+|Module Name | RTL Object | Depth x Width | Implemented As | 
++------------+------------+---------------+----------------+
+|depth_mini  | n0_reg     | 256x9         | Block RAM      | 
+|depth_mini  | n1_reg     | 256x9         | Block RAM      | 
++------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|luma_bin2:                                                                       | pair_sum_reg                     | 256 x 9(READ_FIRST)    | W |   | 256 x 9(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|luma_bin2:                                                                       | pair_sum_reg                     | 256 x 9(READ_FIRST)    | W |   | 256 x 9(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rectify:                                                                         | nodes_reg                        | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rectify__parameterized0:                                                         | nodes_reg                        | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|census:                                                                          | u_vram/mem_reg                   | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                                                                          | u_cram/mem_reg                   | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|census:                                                                          | u_vram/mem_reg                   | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                                                                          | u_cram/mem_reg                   | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\g_mini.u_depth                                                                  | u_fifo/mem_reg                   | 256 x 90(READ_FIRST)   | W |   | 256 x 90(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|\g_mini.u_depth /u_hub                                                           | fin_reg                          | 512 x 13(READ_FIRST)   | W |   | 512 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\g_mini.u_depth /u_hub                                                           | drw_reg                          | 512 x 7(READ_FIRST)    | W |   | 512 x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\g_mini.u_depth /u_uvc                                                           | u_left/mem_reg                   | 4 K x 9(READ_FIRST)    | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|\g_mini.u_depth /u_uvc                                                           | drow_reg                         | 256 x 10(READ_FIRST)   | W |   | 256 x 10(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rect_linebuf:                                                                    | g_slice[0].m_reg                 | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|rect_linebuf:                                                                    | g_slice[0].m_reg                 | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_xfifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(NO_CHANGE)     |   | R | Port A and B     | 0      | 1      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|u_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst   | gen_wr_a.gen_word_narrow.mem_reg | 16 K x 9(NO_CHANGE)    | W |   | 16 K x 9(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+|Module Name                                    | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+|\g_mini.u_depth /\g_slice[0].u/u_slice /u_cost | hist_reg   | Implied   | 16 x 12              | RAM16X1S x 12  | 
+|\g_mini.u_depth /\g_slice[0].u/u_slice /u_path | lr_reg     | Implied   | 16 x 7               | RAM16X1D x 7   | 
+|\g_mini.u_depth /u_hub                         | r_lbot_reg | Implied   | 8 x 7                | RAM32M x 2     | 
+|\g_mini.u_depth /u_hub                         | rdel_reg   | Implied   | 512 x 45             | RAM64M x 240   | 
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | C'+A*(B:0xc8) | 11     | 9      | 17     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A2*B''        | 12     | 4      | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A2*B     | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | C'+A*(B:0xc8) | 11     | 9      | 17     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A2*B''        | 12     | 4      | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A2*B     | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:18 ; elapsed = 00:01:20 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|luma_bin2:                                                                       | pair_sum_reg                     | 256 x 9(READ_FIRST)    | W |   | 256 x 9(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|luma_bin2:                                                                       | pair_sum_reg                     | 256 x 9(READ_FIRST)    | W |   | 256 x 9(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|rectify:                                                                         | nodes_reg                        | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rectify__parameterized0:                                                         | nodes_reg                        | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|census:                                                                          | u_vram/mem_reg                   | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                                                                          | u_cram/mem_reg                   | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|census:                                                                          | u_vram/mem_reg                   | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                                                                          | u_cram/mem_reg                   | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\g_mini.u_depth                                                                  | u_fifo/mem_reg                   | 256 x 90(READ_FIRST)   | W |   | 256 x 90(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|\g_mini.u_depth /u_hub                                                           | fin_reg                          | 512 x 13(READ_FIRST)   | W |   | 512 x 13(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|\g_mini.u_depth /u_hub                                                           | drw_reg                          | 512 x 7(READ_FIRST)    | W |   | 512 x 7(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|\g_mini.u_depth /u_uvc                                                           | u_left/mem_reg                   | 4 K x 9(READ_FIRST)    | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|\g_mini.u_depth /u_uvc                                                           | drow_reg                         | 256 x 10(READ_FIRST)   | W |   | 256 x 10(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|rect_linebuf:                                                                    | g_slice[0].m_reg                 | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|rect_linebuf:                                                                    | g_slice[0].m_reg                 | 4 K x 8(NO_CHANGE)     | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|u_xfifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(NO_CHANGE)     | W |   | 4 K x 9(NO_CHANGE)     |   | R | Port A and B     | 0      | 1      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|byte_fifo:                                                                       | mem_reg                          | 8 K x 8(READ_FIRST)    | W |   | 8 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 2      | 
+|u_fifo/\gnuram_async_fifo.xpm_fifo_base_inst /\gen_sdpram.xpm_memory_base_inst   | gen_wr_a.gen_word_narrow.mem_reg | 16 K x 9(NO_CHANGE)    | W |   | 16 K x 9(NO_CHANGE)    |   | R | Port A and B     | 1      | 4      | 
++---------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+|Module Name                                    | RTL Object | Inference | Size (Depth x Width) | Primitives     | 
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+|\g_mini.u_depth /\g_slice[0].u/u_slice /u_cost | hist_reg   | Implied   | 16 x 12              | RAM16X1S x 12  | 
+|\g_mini.u_depth /\g_slice[0].u/u_slice /u_path | lr_reg     | Implied   | 16 x 7               | RAM16X1D x 7   | 
+|\g_mini.u_depth /u_hub                         | r_lbot_reg | Implied   | 8 x 7                | RAM32M x 2     | 
+|\g_mini.u_depth /u_hub                         | rdel_reg   | Implied   | 512 x 45             | RAM64M x 240   | 
++-----------------------------------------------+------------+-----------+----------------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance g_bin.u_bin0/pair_sum_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_bin.u_bin1/pair_sum_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_rect0/nodes_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_rect0/nodes_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_rect1/nodes_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_rect1/nodes_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_cen0/u_vram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_cen0/u_cram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_cen1/u_vram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_cen1/u_cram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_fifo/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_hub/fin_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_hub/drw_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_uvc/u_left/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/u_uvc/drow_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/n0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance g_mini.u_depth/n1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_buf0/g_slice[0].m_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_buf1/g_slice[0].m_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo0/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo0/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo1/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo1/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo2/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance u_cfifo2/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:28 ; elapsed = 00:01:30 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4163] Replicating register \u_fx2/flag_q0_reg  to handle IOB=TRUE attribute
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:32 ; elapsed = 00:01:34 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name          | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|depth_top   | u_luma0/wr_en_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
+|depth_top   | u_luma1/wr_en_reg | 3      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name   | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | rs_reg[15] | 44     | 44         | 44     | 0       | 0      | 0      | 0      | 
++------------+------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | (C'+A*B)'    | 30     | 8      | 16     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A'*B''       | 12     | 4      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A'*B    | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | (C'+A*B)'    | 30     | 8      | 16     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A'*B''       | 12     | 4      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A'*B    | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++------+---------------+----------+
+|      |BlackBox name  |Instances |
++------+---------------+----------+
+|1     |system_ps7_0_0 |         1|
++------+---------------+----------+
+
+Report Cell Usage: 
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |system_ps7_0 |     1|
+|2     |BUFG         |     1|
+|3     |CARRY4       |   864|
+|4     |DSP48E1      |    22|
+|9     |LUT1         |   243|
+|10    |LUT2         |  1486|
+|11    |LUT3         |  1032|
+|12    |LUT4         |  1518|
+|13    |LUT5         |   735|
+|14    |LUT6         |  1793|
+|15    |MUXF7        |   121|
+|16    |MUXF8        |    14|
+|17    |RAM16X1D     |     7|
+|18    |RAM16X1S     |    12|
+|19    |RAM32M       |     1|
+|20    |RAM32X1D     |     1|
+|21    |RAM64M       |   240|
+|22    |RAMB18E1     |    11|
+|27    |RAMB36E1     |    21|
+|37    |SRL16E       |    46|
+|38    |FDCE         |     2|
+|39    |FDRE         |  6100|
+|40    |FDSE         |   109|
+|41    |IBUF         |    31|
+|42    |IOBUF        |     5|
+|43    |OBUF         |    20|
++------+-------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 96 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:21 ; elapsed = 00:01:32 . Memory (MB): peak = 2176.688 ; gain = 1391.020
+Synthesis Optimization Complete : Time (s): cpu = 00:01:34 ; elapsed = 00:01:36 . Memory (MB): peak = 2176.688 ; gain = 1421.938
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.138 . Memory (MB): peak = 2176.688 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1319 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2176.961 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 266 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 7 instances
+  RAM16X1S => RAM32X1S (RAMS32): 12 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 1 instance 
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM64M => RAM64M (RAMD64E(x4)): 240 instances
+
+Synth Design complete | Checksum: 80b6d009
+INFO: [Common 17-83] Releasing license: Synthesis
+246 Infos, 194 Warnings, 6 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:41 ; elapsed = 00:01:46 . Memory (MB): peak = 2176.961 ; gain = 1633.871
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2176.961 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/build/mini1/vivado/depth.runs/synth_1/depth_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file depth_top_utilization_synth.rpt -pb depth_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:12:55 2026...

@@ -1,0 +1,403 @@
+
+*** Running vivado
+    with args -log system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Oct 14 08:44:15 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+INFO: [Project 1-5698] Found the below utility IPs instantiated in block design D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.srcs/sources_1/bd/system/system.bd which have equivalent inline hdl with improved performance and reduced diskspace.
+It is recommended to migrate these utility IPs to inline hdl  using the command upgrade_project -migrate_to_inline_hdl.  The utility IPs may be deprecated in future releases.
+More information on inline hdl is available in UG994.
+Utility IP Component Instances:
+ system_eth_rxd_hi_0
+system_eth_rxd_concat_0
+system_eth_txd_slice_0
+system_eth_zero_0
+Command: synth_design -top system_wrapper -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 20928
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1295.434 ; gain = 540.469
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [D:/Xilinx/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6157] synthesizing module 'system' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:14]
+INFO: [Synth 8-6157] synthesizing module 'system_cam_input_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_cam_input_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_cam_input_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_cam_input_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_chain_hub_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_chain_hub_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_chain_hub_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_chain_hub_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'chain_n' of module 'system_chain_hub_0_0' is unconnected for instance 'chain_hub_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:289]
+WARNING: [Synth 8-7023] instance 'chain_hub_0' of module 'system_chain_hub_0_0' has 20 connections declared, but only 19 given [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:289]
+INFO: [Synth 8-6157] synthesizing module 'system_eth_rxd_concat_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_rxd_concat_0/synth/system_eth_rxd_concat_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_7_xlconcat' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_7_xlconcat' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/9c1a/hdl/xlconcat_v2_1_vl_rfs.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'system_eth_rxd_concat_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_rxd_concat_0/synth/system_eth_rxd_concat_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_eth_rxd_hi_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_rxd_hi_0/synth/system_eth_rxd_hi_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_eth_rxd_hi_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_rxd_hi_0/synth/system_eth_rxd_hi_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_eth_txd_slice_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_txd_slice_0/synth/system_eth_txd_slice_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_5_xlslice' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_5_xlslice' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/6792/hdl/xlslice_v1_0_vl_rfs.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'system_eth_txd_slice_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_txd_slice_0/synth/system_eth_txd_slice_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_eth_zero_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_zero_0/synth/system_eth_zero_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_10_xlconstant__parameterized0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ipshared/a165/hdl/xlconstant_v1_1_vl_rfs.v:68]
+INFO: [Synth 8-6155] done synthesizing module 'system_eth_zero_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_eth_zero_0/synth/system_eth_zero_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'system_frame_format_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_frame_format_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_frame_format_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_frame_format_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_processing_system7_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_processing_system7_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'ENET0_GMII_TX_ER' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:337]
+WARNING: [Synth 8-7071] port 'GPIO_T' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:337]
+WARNING: [Synth 8-7071] port 'FCLK_RESET0_N' of module 'system_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:337]
+WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'system_processing_system7_0_0' has 54 connections declared, but only 51 given [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:337]
+INFO: [Synth 8-6157] synthesizing module 'system_ps_status_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_ps_status_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps_status_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_ps_status_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_rectify_census_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_rectify_census_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rectify_census_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_rectify_census_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tapeout_chain_imp_1EUHJCZ' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:458]
+INFO: [Synth 8-6157] synthesizing module 'system_slice_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_slice_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_slice_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_slice_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'uio_out' of module 'system_slice_0_0' is unconnected for instance 'slice_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:479]
+WARNING: [Synth 8-7071] port 'uio_oe' of module 'system_slice_0_0' is unconnected for instance 'slice_0' [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:479]
+WARNING: [Synth 8-7023] instance 'slice_0' of module 'system_slice_0_0' has 8 connections declared, but only 6 given [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:479]
+INFO: [Synth 8-6155] done synthesizing module 'tapeout_chain_imp_1EUHJCZ' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:458]
+INFO: [Synth 8-6157] synthesizing module 'system_usb_stream_0_0' [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_usb_stream_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_usb_stream_0_0' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/.Xil/Vivado-18744-LAPTOP-THBQET7J/realtime/system_usb_stream_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/synth/system.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (0#1) [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/hdl/system_wrapper.v:13]
+WARNING: [Synth 8-7129] Port Din[7] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[6] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[5] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port Din[4] in module xlslice_v1_0_5_xlslice is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In9[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In10[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In11[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In12[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In13[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In14[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In15[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In16[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In17[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In18[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In19[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In20[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In21[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In22[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In23[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In24[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In25[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In26[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In27[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In28[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In29[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In30[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In31[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In32[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In33[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In34[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In35[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In36[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In37[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In38[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In39[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In40[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In41[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In42[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In43[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In44[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In45[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In46[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In47[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In48[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In49[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In50[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In51[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In52[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In53[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In54[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In55[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In56[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In57[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In58[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In59[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In60[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In61[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In62[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In63[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In64[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In65[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In66[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In67[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In68[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In69[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In70[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In71[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In72[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In73[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In74[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In75[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In76[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In77[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In78[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In79[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In80[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In81[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In82[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In83[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In84[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In85[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In86[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In87[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In88[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In89[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_7_xlconcat is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1423.168 ; gain = 668.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1423.168 ; gain = 668.203
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1423.168 ; gain = 668.203
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1423.168 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_processing_system7_0_0/system_processing_system7_0_0/system_processing_system7_0_0_in_context.xdc] for cell 'system_i/processing_system7_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_cam_input_0_0/system_cam_input_0_0/system_cam_input_0_0_in_context.xdc] for cell 'system_i/cam_input_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_cam_input_0_0/system_cam_input_0_0/system_cam_input_0_0_in_context.xdc] for cell 'system_i/cam_input_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_rectify_census_0_0/system_rectify_census_0_0/system_rectify_census_0_0_in_context.xdc] for cell 'system_i/rectify_census_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_rectify_census_0_0/system_rectify_census_0_0/system_rectify_census_0_0_in_context.xdc] for cell 'system_i/rectify_census_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_chain_hub_0_0/system_chain_hub_0_0/system_chain_hub_0_0_in_context.xdc] for cell 'system_i/chain_hub_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_chain_hub_0_0/system_chain_hub_0_0/system_chain_hub_0_0_in_context.xdc] for cell 'system_i/chain_hub_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_frame_format_0_0/system_frame_format_0_0/system_frame_format_0_0_in_context.xdc] for cell 'system_i/frame_format_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_frame_format_0_0/system_frame_format_0_0/system_frame_format_0_0_in_context.xdc] for cell 'system_i/frame_format_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_usb_stream_0_0/system_usb_stream_0_0/system_usb_stream_0_0_in_context.xdc] for cell 'system_i/usb_stream_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_usb_stream_0_0/system_usb_stream_0_0/system_usb_stream_0_0_in_context.xdc] for cell 'system_i/usb_stream_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_ps_status_0_0/system_ps_status_0_0/system_ps_status_0_0_in_context.xdc] for cell 'system_i/ps_status_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_ps_status_0_0/system_ps_status_0_0/system_ps_status_0_0_in_context.xdc] for cell 'system_i/ps_status_0'
+Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_slice_0_0/system_slice_0_0/system_slice_0_0_in_context.xdc] for cell 'system_i/tapeout_chain/slice_0'
+Finished Parsing XDC File [d:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.gen/sources_1/bd/system/ip/system_slice_0_0/system_slice_0_0/system_slice_0_0_in_context.xdc] for cell 'system_i/tapeout_chain/slice_0'
+Parsing XDC File [D:/stereo-depth-cam/hw/constraints/stereo_cam_pins.xdc]
+Finished Parsing XDC File [D:/stereo-depth-cam/hw/constraints/stereo_cam_pins.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/stereo-depth-cam/hw/constraints/stereo_cam_pins.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1447.910 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1447.910 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.910 ; gain = 692.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.910 ; gain = 692.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.910 ; gain = 692.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.910 ; gain = 692.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1447.910 ; gain = 692.945
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1600.746 ; gain = 845.781
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1601.098 ; gain = 846.133
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1611.188 ; gain = 856.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |system_cam_input_0_0          |         1|
+|2     |system_chain_hub_0_0          |         1|
+|3     |system_frame_format_0_0       |         1|
+|4     |system_processing_system7_0_0 |         1|
+|5     |system_ps_status_0_0          |         1|
+|6     |system_rectify_census_0_0     |         1|
+|7     |system_usb_stream_0_0         |         1|
+|8     |system_slice_0_0              |         1|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+----------------------------+------+
+|      |Cell                        |Count |
++------+----------------------------+------+
+|1     |system_cam_input_0          |     1|
+|2     |system_chain_hub_0          |     1|
+|3     |system_frame_format_0       |     1|
+|4     |system_processing_system7_0 |     1|
+|5     |system_ps_status_0          |     1|
+|6     |system_rectify_census_0     |     1|
+|7     |system_slice_0              |     1|
+|8     |system_usb_stream_0         |     1|
+|9     |IBUF                        |    31|
+|10    |IOBUF                       |     5|
+|11    |OBUF                        |    20|
++------+----------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1860.133 ; gain = 1080.426
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1860.133 ; gain = 1105.168
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1860.133 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1872.867 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 5 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 5 instances
+
+Synth Design complete | Checksum: eb42c9ef
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 109 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 1872.867 ; gain = 1328.766
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1872.867 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/hw/projects/stereo_1slice/stereo_1slice.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:44:54 2026...

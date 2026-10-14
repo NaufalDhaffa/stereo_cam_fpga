@@ -1,0 +1,331 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Sat Oct 10 21:26:42 2026
+| Host         : LAPTOP-THBQET7J running 64-bit major release  (build 9200)
+| Command      : report_timing_summary -file C:/Users/naufal/AppData/Roaming/Claude/scratch-workspaces/502858dc-a738-4eab-b5fa-de3e5814dbc4/470fefda-53d4-4cf1-bf2b-b532d97be442/scratch-2026-10-10-6a7ed9/fx2_stream/build/timing.rpt
+| Design       : fx2_stream_test
+| Device       : 7z010-clg400
+| Speed File   : -1  PRODUCTION 1.12 2019-11-22
+| Design State : Routed
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+  Inter-SLR Compensation                     :  Conservative
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+------------------------------------------------------------------------------------------------
+| Report Methodology
+| ------------------
+------------------------------------------------------------------------------------------------
+
+No report available as report_methodology has not been run prior. Run report_methodology on the current design for the summary of methodology violations.
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (0)
+6. checking no_output_delay (2)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (0)
+------------------------------
+ There are 0 input ports with no input delay specified.
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (2)
+-------------------------------
+ There are 0 ports with no output delay specified.
+
+ There are 2 ports with no output delay but user has a false path constraint (MEDIUM)
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -0.003       -0.003                      1                  197        0.000        0.000                      0                  197        9.916        0.000                       0                   106  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock      Waveform(ns)       Period(ns)      Frequency(MHz)
+-----      ------------       ----------      --------------
+fx2_ifclk  {0.000 10.416}     20.833          48.001          
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+fx2_ifclk          -0.003       -0.003                      1                  197        0.000        0.000                      0                  197        9.916        0.000                       0                   106  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  fx2_ifclk
+  To Clock:  fx2_ifclk
+
+Setup :            1  Failing Endpoint ,  Worst Slack       -0.003ns,  Total Violation       -0.003ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.000ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        9.916ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -0.003ns  (required time - arrival time)
+  Source:                 fx2_slwr_n_reg/C
+                            (rising edge-triggered cell FDSE clocked by fx2_ifclk  {rise@0.000ns fall@10.417ns period=20.833ns})
+  Destination:            fx2_slwr_n
+                            (output port clocked by fx2_ifclk  {rise@0.000ns fall@10.417ns period=20.833ns})
+  Path Group:             fx2_ifclk
+  Path Type:              Max at Slow Process Corner
+  Requirement:            20.833ns  (fx2_ifclk rise@20.833ns - fx2_ifclk rise@0.000ns)
+  Data Path Delay:        3.990ns  (logic 3.989ns (99.975%)  route 0.001ns (0.025%))
+  Logic Levels:           1  (OBUF=1)
+  Output Delay:           11.400ns
+  Clock Path Skew:        -5.411ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.000ns = ( 20.833 - 20.833 ) 
+    Source Clock Delay      (SCD):    5.411ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fx2_ifclk rise edge)
+                                                      0.000     0.000 r  
+    J18                                               0.000     0.000 r  fx2_ifclk (IN)
+                         net (fo=0)                   0.000     0.000    fx2_ifclk
+    J18                  IBUF (Prop_ibuf_I_O)         1.479     1.479 r  fx2_ifclk_IBUF_inst/O
+                         net (fo=1, routed)           2.076     3.555    fx2_ifclk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.101     3.656 r  fx2_ifclk_IBUF_BUFG_inst/O
+                         net (fo=105, routed)         1.755     5.411    fx2_ifclk_IBUF_BUFG
+    OLOGIC_X0Y65         FDSE                                         r  fx2_slwr_n_reg/C
+  -------------------------------------------------------------------    -------------------
+    OLOGIC_X0Y65         FDSE (Prop_fdse_C_Q)         0.472     5.883 r  fx2_slwr_n_reg/Q
+                         net (fo=1, routed)           0.001     5.884    fx2_slwr_n_OBUF
+    H20                  OBUF (Prop_obuf_I_O)         3.517     9.401 r  fx2_slwr_n_OBUF_inst/O
+                         net (fo=0)                   0.000     9.401    fx2_slwr_n
+    H20                                                               r  fx2_slwr_n (OUT)
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fx2_ifclk rise edge)
+                                                     20.833    20.833 r  
+                         clock pessimism              0.000    20.833    
+                         clock uncertainty           -0.035    20.798    
+                         output delay               -11.400     9.398    
+  -------------------------------------------------------------------
+                         required time                          9.398    
+                         arrival time                          -9.401    
+  -------------------------------------------------------------------
+                         slack                                 -0.003    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.000ns  (arrival time - required time)
+  Source:                 fx2_flagb_n
+                            (input port clocked by fx2_ifclk  {rise@0.000ns fall@10.417ns period=20.833ns})
+  Destination:            flag_q_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by fx2_ifclk  {rise@0.000ns fall@10.417ns period=20.833ns})
+  Path Group:             fx2_ifclk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (fx2_ifclk rise@0.000ns - fx2_ifclk rise@0.000ns)
+  Data Path Delay:        2.173ns  (logic 2.173ns (100.000%)  route 0.000ns (0.000%))
+  Logic Levels:           2  (IBUF=1 ZHOLD_DELAY=1)
+  Input Delay:            0.000ns
+  Clock Path Skew:        1.995ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.995ns
+    Source Clock Delay      (SCD):    0.000ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock fx2_ifclk rise edge)
+                                                      0.000     0.000 r  
+                         input delay                  0.000     0.000    
+    J20                                               0.000     0.000 r  fx2_flagb_n (IN)
+                         net (fo=0)                   0.000     0.000    fx2_flagb_n
+    J20                  IBUF (Prop_ibuf_I_O)         0.232     0.232 r  fx2_flagb_n_IBUF_inst/O
+                         net (fo=1, routed)           0.000     0.232    fx2_flagb_n_IBUF
+    ILOGIC_X0Y66         ZHOLD_DELAY (Prop_zhold_delay_DLYIN_DLYIFF)
+                                                      1.941     2.173 r  flag_q_reg[0]_OPT_INSERTED/DLYIFF
+                         net (fo=1, routed)           0.000     2.173    OPT_ZHD_N_flag_q_reg[0]
+    ILOGIC_X0Y66         FDRE                                         r  flag_q_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock fx2_ifclk rise edge)
+                                                      0.000     0.000 r  
+    J18                                               0.000     0.000 r  fx2_ifclk (IN)
+                         net (fo=0)                   0.000     0.000    fx2_ifclk
+    J18                  IBUF (Prop_ibuf_I_O)         0.434     0.434 r  fx2_ifclk_IBUF_inst/O
+                         net (fo=1, routed)           0.683     1.117    fx2_ifclk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.146 r  fx2_ifclk_IBUF_BUFG_inst/O
+                         net (fo=105, routed)         0.849     1.995    fx2_ifclk_IBUF_BUFG
+    ILOGIC_X0Y66         FDRE                                         r  flag_q_reg[0]/C
+                         clock pessimism              0.000     1.995    
+                         clock uncertainty            0.035     2.031    
+    ILOGIC_X0Y66         FDRE (Hold_fdre_C_D)         0.142     2.173    flag_q_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -2.173    
+                         arrival time                           2.173    
+  -------------------------------------------------------------------
+                         slack                                  0.000    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         fx2_ifclk
+Waveform(ns):       { 0.000 10.417 }
+Period(ns):         20.833
+Sources:            { fx2_ifclk }
+
+Check Type        Corner  Lib Pin  Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location        Pin
+Min Period        n/a     BUFG/I   n/a            2.155         20.833      18.678     BUFGCTRL_X0Y16  fx2_ifclk_IBUF_BUFG_inst/I
+Low Pulse Width   Slow    FDRE/C   n/a            0.500         10.416      9.916      SLICE_X43Y35    beat_reg[0]/C
+High Pulse Width  Slow    FDRE/C   n/a            0.500         10.416      9.916      SLICE_X43Y35    beat_reg[0]/C
+
+
+

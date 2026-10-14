@@ -1,0 +1,4 @@
+D:/stereo-depth-cam/sw/workspace_2slice/stereo_cam/build/CMakeFiles/stereo_cam.elf.dir
+D:/stereo-depth-cam/sw/workspace_2slice/stereo_cam/build/CMakeFiles/print_build_info.dir
+D:/stereo-depth-cam/sw/workspace_2slice/stereo_cam/build/CMakeFiles/edit_cache.dir
+D:/stereo-depth-cam/sw/workspace_2slice/stereo_cam/build/CMakeFiles/rebuild_cache.dir

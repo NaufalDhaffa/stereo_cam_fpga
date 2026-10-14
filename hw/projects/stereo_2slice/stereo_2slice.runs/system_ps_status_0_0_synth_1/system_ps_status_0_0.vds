@@ -1,0 +1,298 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Wed Oct 14 08:36:12 2026
+# Process ID         : 26532
+# Current directory  : D:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.runs/system_ps_status_0_0_synth_1
+# Command line       : vivado.exe -log system_ps_status_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_ps_status_0_0.tcl
+# Log file           : D:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.runs/system_ps_status_0_0_synth_1/system_ps_status_0_0.vds
+# Journal file       : D:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.runs/system_ps_status_0_0_synth_1\vivado.jou
+# Running On         : LAPTOP-THBQET7J
+# Platform           : Windows Server 2016 or Windows 10
+# Operating System   : 26200
+# Processor Detail   : AMD Ryzen 7 8845HS w/ Radeon 780M Graphics
+# CPU Frequency      : 3793 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16390 MB
+# Swap memory        : 25810 MB
+# Total Virtual      : 42200 MB
+# Available Virtual  : 6836 MB
+#-----------------------------------------------------------
+source system_ps_status_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 525.441 ; gain = 218.395
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_ps_status_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 15624
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1290.352 ; gain = 540.703
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_ps_status_0_0' [d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/ip/system_ps_status_0_0/synth/system_ps_status_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'ps_status' [D:/stereo-depth-cam/rtl/blocks/ps_status.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'ps_status' (0#1) [D:/stereo-depth-cam/rtl/blocks/ps_status.v:16]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps_status_0_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/ip/system_ps_status_0_0/synth/system_ps_status_0_0.v:53]
+INFO: [Synth 8-7129] Port gpio_o[63] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[62] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[61] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[60] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[59] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[58] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[57] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[56] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[55] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[54] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[53] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[52] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[51] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[50] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[49] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[48] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[47] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[46] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[45] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[44] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[43] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[42] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[41] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[40] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[39] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[38] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[37] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[36] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[35] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[34] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[33] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[32] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[31] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[30] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[29] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[28] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[27] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[26] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[25] in module ps_status is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[24] in module ps_status is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1415.523 ; gain = 665.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1415.523 ; gain = 665.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1415.523 ; gain = 665.875
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1415.523 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1424.836 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1425.055 ; gain = 0.219
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1425.055 ; gain = 675.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1425.055 ; gain = 675.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1425.055 ; gain = 675.406
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1425.055 ; gain = 675.406
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   4 Input    8 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7129] Port gpio_o[63] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[62] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[61] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[60] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[59] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[58] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[57] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[56] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[55] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[54] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[53] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[52] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[51] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[50] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[49] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[48] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[47] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[46] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[45] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[44] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[43] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[42] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[41] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[40] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[39] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[38] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[37] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[36] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[35] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[34] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[33] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[32] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[31] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[30] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[29] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[28] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[27] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[26] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[25] in module system_ps_status_0_0 is either unconnected or has no load
+INFO: [Synth 8-7129] Port gpio_o[24] in module system_ps_status_0_0 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1438.504 ; gain = 688.855
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1438.504 ; gain = 688.855
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1448.043 ; gain = 698.395
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT2 |     1|
+|2     |LUT3 |     1|
+|3     |LUT6 |     8|
+|4     |FDRE |     1|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:12 ; elapsed = 00:00:19 . Memory (MB): peak = 1687.609 ; gain = 928.430
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1687.609 ; gain = 937.961
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1699.785 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1800.926 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: e3c93f3
+INFO: [Common 17-83] Releasing license: Synthesis
+100 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1800.926 ; gain = 1258.008
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1800.926 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.runs/system_ps_status_0_0_synth_1/system_ps_status_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_ps_status_0_0_utilization_synth.rpt -pb system_ps_status_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:36:46 2026...

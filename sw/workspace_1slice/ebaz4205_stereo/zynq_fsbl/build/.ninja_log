@@ -1,0 +1,16 @@
+# ninja log v5
+2	165	0	CMakeFiles/print_build_info	4d43552ec8ed5804
+2	165	0	D:/stereo-depth-cam/sw/workspace_1slice/ebaz4205_stereo/zynq_fsbl/build/CMakeFiles/print_build_info	4d43552ec8ed5804
+165	287	8136458795604039	CMakeFiles/fsbl.elf.dir/fsbl_handoff.S.obj	b35e9ee112c5e40c
+173	328	8136458796436155	CMakeFiles/fsbl.elf.dir/fsbl_hooks.c.obj	e25dfabba6b49bb9
+205	364	8136458796792859	CMakeFiles/fsbl.elf.dir/md5.c.obj	e9588a0ec52d6ea4
+181	368	8136458796792859	CMakeFiles/fsbl.elf.dir/image_mover.c.obj	eb03b6dbd341ddb2
+254	376	8136458796968370	CMakeFiles/fsbl.elf.dir/rsa.c.obj	8a54c2b33a180f38
+195	382	8136458797020573	CMakeFiles/fsbl.elf.dir/main.c.obj	740b9223ec3d8e85
+214	383	8136458797030594	CMakeFiles/fsbl.elf.dir/nand.c.obj	42462f5d5f6fd1c0
+224	386	8136458797070606	CMakeFiles/fsbl.elf.dir/nor.c.obj	ba4fccc9b2291fcf
+244	393	8136458797135221	CMakeFiles/fsbl.elf.dir/qspi.c.obj	930554ce0585d62c
+234	399	8136458797206346	CMakeFiles/fsbl.elf.dir/pcap.c.obj	275fa417fd33a472
+265	418	8136458797402070	CMakeFiles/fsbl.elf.dir/sd.c.obj	1c4956b67729af10
+275	438	8136458797614677	CMakeFiles/fsbl.elf.dir/ps7_init.c.obj	31df735dd158b0cb
+438	637	8136458798973591	fsbl.elf	2ad4c068cf108b54

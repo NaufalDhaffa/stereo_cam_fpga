@@ -1,0 +1,1 @@
+-nolog -timescale "1ns/1ps" "tb_depth_mini" -s "sim" 

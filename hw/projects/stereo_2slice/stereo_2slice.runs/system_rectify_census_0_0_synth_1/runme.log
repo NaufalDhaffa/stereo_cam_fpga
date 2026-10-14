@@ -1,0 +1,602 @@
+
+*** Running vivado
+    with args -log system_rectify_census_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_rectify_census_0_0.tcl
+
+
+
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 19:35:11 GMT 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Oct 14 08:35:32 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source system_rectify_census_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 525.422 ; gain = 222.469
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/2025.2/Vivado/data/ip'.
+Command: synth_design -top system_rectify_census_0_0 -part xc7z010clg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 40008
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1287.824 ; gain = 539.875
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_rectify_census_0_0' [d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/ip/system_rectify_census_0_0/synth/system_rectify_census_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'rectify_census' [D:/stereo-depth-cam/rtl/blocks/rectify_census.v:4]
+INFO: [Synth 8-6157] synthesizing module 'depth_frontend' [D:/stereo-depth-cam/rtl/blocks/depth_frontend.v:10]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter LINES0 bound to: 16 - type: integer 
+	Parameter LINES1 bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter PREFILTER bound to: 1 - type: integer 
+	Parameter CENSUS_RY bound to: 4 - type: integer 
+	Parameter CENSUS_RX bound to: 8 - type: integer 
+	Parameter CENSUS_STEP bound to: 2 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'cam0_need.hex' is read successfully [D:/stereo-depth-cam/rtl/blocks/depth_frontend.v:72]
+INFO: [Synth 8-3876] $readmem data file 'cam1_need.hex' is read successfully [D:/stereo-depth-cam/rtl/blocks/depth_frontend.v:73]
+INFO: [Synth 8-6157] synthesizing module 'rectify' [D:/stereo-depth-cam/rtl/rectify.v:28]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter LINES bound to: 16 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter CYC bound to: 10 - type: integer 
+	Parameter NODE_FILE bound to: cam0_nodes.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'cam0_nodes.hex' is read successfully [D:/stereo-depth-cam/rtl/rectify.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'rectify' (0#1) [D:/stereo-depth-cam/rtl/rectify.v:28]
+INFO: [Synth 8-6157] synthesizing module 'rectify__parameterized0' [D:/stereo-depth-cam/rtl/rectify.v:28]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter LINES bound to: 16 - type: integer 
+	Parameter AW bound to: 16 - type: integer 
+	Parameter NODES_X bound to: 14 - type: integer 
+	Parameter CYC bound to: 10 - type: integer 
+	Parameter NODE_FILE bound to: cam1_nodes.hex - type: string 
+INFO: [Synth 8-3876] $readmem data file 'cam1_nodes.hex' is read successfully [D:/stereo-depth-cam/rtl/rectify.v:65]
+INFO: [Synth 8-6155] done synthesizing module 'rectify__parameterized0' (0#1) [D:/stereo-depth-cam/rtl/rectify.v:28]
+INFO: [Synth 8-6157] synthesizing module 'census' [D:/stereo-depth-cam/rtl/census.v:25]
+	Parameter W bound to: 200 - type: integer 
+	Parameter H bound to: 148 - type: integer 
+	Parameter PREFILTER bound to: 1 - type: integer 
+	Parameter RY bound to: 4 - type: integer 
+	Parameter RX bound to: 8 - type: integer 
+	Parameter STEP bound to: 2 - type: integer 
+	Parameter NBITS bound to: 44 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w__parameterized0' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 72 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w__parameterized0' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'census' (0#1) [D:/stereo-depth-cam/rtl/census.v:25]
+INFO: [Synth 8-6157] synthesizing module 'mem_1r1w__parameterized1' [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+	Parameter AW bound to: 8 - type: integer 
+	Parameter DW bound to: 90 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'mem_1r1w__parameterized1' (0#1) [D:/stereo-depth-cam/rtl/mem_1r1w.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'depth_frontend' (0#1) [D:/stereo-depth-cam/rtl/blocks/depth_frontend.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'rectify_census' (0#1) [D:/stereo-depth-cam/rtl/blocks/rectify_census.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'system_rectify_census_0_0' (0#1) [d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/ip/system_rectify_census_0_0/synth/system_rectify_census_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.383 ; gain = 685.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.383 ; gain = 685.434
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1433.383 ; gain = 685.434
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1433.383 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1507.852 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.088 . Memory (MB): peak = 1507.945 ; gain = 0.094
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1507.945 ; gain = 759.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1507.945 ; gain = 759.996
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1507.945 ; gain = 759.996
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rectify'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'rectify__parameterized0'
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register y_reg_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                   S_PRE |                               01 |                               01
+                   S_RUN |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rectify'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  S_IDLE |                               00 |                               00
+                   S_PRE |                               01 |                               01
+                   S_RUN |                               10 |                               10
+                  iSTATE |                               11 |                               11
+*
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'rectify__parameterized0'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1874.480 ; gain = 1126.531
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   17 Bit       Adders := 4     
+	   2 Input   16 Bit       Adders := 14    
+	   3 Input   16 Bit       Adders := 2     
+	   2 Input   14 Bit       Adders := 2     
+	   2 Input   13 Bit       Adders := 2     
+	   3 Input   11 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 11    
+	   4 Input   10 Bit       Adders := 4     
+	   2 Input    9 Bit       Adders := 3     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 8     
+	   2 Input    4 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 3     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	               90 Bit    Registers := 1     
+	               72 Bit    Registers := 2     
+	               44 Bit    Registers := 4     
+	               32 Bit    Registers := 14    
+	               18 Bit    Registers := 4     
+	               17 Bit    Registers := 6     
+	               16 Bit    Registers := 12    
+	               14 Bit    Registers := 4     
+	               13 Bit    Registers := 2     
+	               10 Bit    Registers := 51    
+	                9 Bit    Registers := 7     
+	                8 Bit    Registers := 186   
+	                6 Bit    Registers := 14    
+	                4 Bit    Registers := 15    
+	                3 Bit    Registers := 6     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 47    
++---RAMs : 
+	              64K Bit	(2048 X 32 bit)          RAMs := 2     
+	              22K Bit	(256 X 90 bit)          RAMs := 1     
+	              18K Bit	(256 X 72 bit)          RAMs := 2     
+	               4K Bit	(256 X 17 bit)          RAMs := 2     
++---ROMs : 
+	                    ROMs := 2     
++---Muxes : 
+	   4 Input   32 Bit        Muxes := 8     
+	   2 Input   16 Bit        Muxes := 4     
+	   4 Input   11 Bit        Muxes := 2     
+	   4 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 3     
+	   2 Input    8 Bit        Muxes := 4     
+	   2 Input    5 Bit        Muxes := 2     
+	   4 Input    5 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 2     
+	   4 Input    3 Bit        Muxes := 3     
+	   3 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 53    
+	   4 Input    1 Bit        Muxes := 46    
+	   6 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-3936] Found unconnected internal register 'y0_reg' and it is trimmed from '14' to '11' bits. [D:/stereo-depth-cam/rtl/rectify.v:182]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0_reg' and it is trimmed from '14' to '10' bits. [D:/stereo-depth-cam/rtl/rectify.v:212]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP mx2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: register bx_reg is absorbed into DSP mx2_reg.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: operator mx20 is absorbed into DSP mx2_reg.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP sx_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register tx_reg is absorbed into DSP sx_full.
+DSP Report: register mx1_reg is absorbed into DSP sx_full.
+DSP Report: operator mx10 is absorbed into DSP sx_full.
+DSP Report: operator sx_full is absorbed into DSP sx_full.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP my2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: register by_reg is absorbed into DSP my2_reg.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: operator my20 is absorbed into DSP my2_reg.
+DSP Report: Generating DSP blend_nodes_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: operator blend_nodes_return0 is absorbed into DSP blend_nodes_return0.
+DSP Report: Generating DSP sy_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register ty_reg is absorbed into DSP sy_full.
+DSP Report: register my1_reg is absorbed into DSP sy_full.
+DSP Report: operator my10 is absorbed into DSP sy_full.
+DSP Report: operator sy_full is absorbed into DSP sy_full.
+DSP Report: Generating DSP row_sum_reg, operation Mode is: C'+A*(B:0xc8).
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w0 is absorbed into DSP row_sum_reg.
+DSP Report: Generating DSP mix1, operation Mode is: A2*B''.
+DSP Report: register fy_reg is absorbed into DSP mix1.
+DSP Report: register fy2_reg is absorbed into DSP mix1.
+DSP Report: register bot_reg is absorbed into DSP mix1.
+DSP Report: operator mix1 is absorbed into DSP mix1.
+DSP Report: Generating DSP mix, operation Mode is: PCIN+A2*B.
+DSP Report: register top_reg is absorbed into DSP mix.
+DSP Report: operator mix is absorbed into DSP mix.
+DSP Report: operator mix1 is absorbed into DSP mix.
+WARNING: [Synth 8-3936] Found unconnected internal register 'y0_reg' and it is trimmed from '14' to '11' bits. [D:/stereo-depth-cam/rtl/rectify.v:182]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'my1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:179]
+WARNING: [Synth 8-3936] Found unconnected internal register 'x0_reg' and it is trimmed from '14' to '10' bits. [D:/stereo-depth-cam/rtl/rectify.v:212]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx2_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+WARNING: [Synth 8-3936] Found unconnected internal register 'mx1_reg' and it is trimmed from '27' to '26' bits. [D:/stereo-depth-cam/rtl/rectify.v:178]
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP mx2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: register bx_reg is absorbed into DSP mx2_reg.
+DSP Report: register mx2_reg is absorbed into DSP mx2_reg.
+DSP Report: operator mx20 is absorbed into DSP mx2_reg.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A*B.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP sx_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register tx_reg is absorbed into DSP sx_full.
+DSP Report: register mx1_reg is absorbed into DSP sx_full.
+DSP Report: operator mx10 is absorbed into DSP sx_full.
+DSP Report: operator sx_full is absorbed into DSP sx_full.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP my2_reg, operation Mode is: (A2*B2)'.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: register by_reg is absorbed into DSP my2_reg.
+DSP Report: register my2_reg is absorbed into DSP my2_reg.
+DSP Report: operator my20 is absorbed into DSP my2_reg.
+DSP Report: Generating DSP blend_nodes0_return0, operation Mode is: A2*B.
+DSP Report: register blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: operator blend_nodes0_return0 is absorbed into DSP blend_nodes0_return0.
+DSP Report: Generating DSP sy_full, operation Mode is: PCIN+(A2*B)'.
+DSP Report: register ty_reg is absorbed into DSP sy_full.
+DSP Report: register my1_reg is absorbed into DSP sy_full.
+DSP Report: operator my10 is absorbed into DSP sy_full.
+DSP Report: operator sy_full is absorbed into DSP sy_full.
+DSP Report: Generating DSP row_sum_reg, operation Mode is: C'+A*(B:0xc8).
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: register row_sum_reg is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w is absorbed into DSP row_sum_reg.
+DSP Report: operator row_w0 is absorbed into DSP row_sum_reg.
+DSP Report: Generating DSP mix1, operation Mode is: A2*B''.
+DSP Report: register fy_reg is absorbed into DSP mix1.
+DSP Report: register fy2_reg is absorbed into DSP mix1.
+DSP Report: register bot_reg is absorbed into DSP mix1.
+DSP Report: operator mix1 is absorbed into DSP mix1.
+DSP Report: Generating DSP mix, operation Mode is: PCIN+A2*B.
+DSP Report: register top_reg is absorbed into DSP mix.
+DSP Report: operator mix is absorbed into DSP mix.
+DSP Report: operator mix1 is absorbed into DSP mix.
+WARNING: [Synth 8-6040] Register y_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+WARNING: [Synth 8-6040] Register y_reg_rep_rep driving address of a ROM cannot be packed in BRAM/URAM because of presence of initial value.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+ Sort Area is  mx2_reg_11 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_11 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_3 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  mx2_reg_3 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  my2_reg_14 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  my2_reg_14 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  my2_reg_9 : 0 0 : 677 1540 : Used 1 time 0
+ Sort Area is  my2_reg_9 : 0 1 : 863 1540 : Used 1 time 0
+ Sort Area is  mix1_16 : 0 0 : 297 697 : Used 1 time 0
+ Sort Area is  mix1_16 : 0 1 : 400 697 : Used 1 time 0
+ Sort Area is  mix1_c : 0 0 : 297 697 : Used 1 time 0
+ Sort Area is  mix1_c : 0 1 : 400 697 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_12 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_13 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_6 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_8 : 0 0 : 585 585 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_10 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes0_return0_f : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_0 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  blend_nodes_return0_2 : 0 0 : 569 569 : Used 1 time 0
+ Sort Area is  row_sum_reg_15 : 0 0 : 255 255 : Used 1 time 0
+ Sort Area is  row_sum_reg_a : 0 0 : 255 255 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping Report
++---------------+------------+---------------+----------------+
+|Module Name    | RTL Object | Depth x Width | Implemented As | 
++---------------+------------+---------------+----------------+
+|depth_frontend | n0_reg     | 256x9         | Block RAM      | 
+|depth_frontend | n1_reg     | 256x9         | Block RAM      | 
++---------------+------------+---------------+----------------+
+
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rectify:                 | nodes_reg      | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rectify__parameterized0: | nodes_reg      | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|census:                  | u_vram/mem_reg | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                  | u_cram/mem_reg | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|census:                  | u_vram/mem_reg | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                  | u_cram/mem_reg | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\inst/u_front            | u_fifo/mem_reg | 256 x 90(READ_FIRST)   | W |   | 256 x 90(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping   | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | C'+A*(B:0xc8) | 11     | 9      | 17     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A2*B''        | 12     | 4      | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A2*B     | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A*B           | 16     | 6      | -      | -      | 22     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A2*B2)'      | 21     | 5      | -      | -      | 27     | 1    | 1    | -    | -    | -     | 1    | 0    | 
+|rectify     | A2*B          | 16     | 6      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A2*B)'  | 21     | 6      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | C'+A*(B:0xc8) | 11     | 9      | 17     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A2*B''        | 12     | 4      | -      | -      | 16     | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A2*B     | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+---------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name              | RTL Object     | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|rectify:                 | nodes_reg      | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|rectify__parameterized0: | nodes_reg      | 2 K x 32(READ_FIRST)   | W |   | 2 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 2      | 
+|census:                  | u_vram/mem_reg | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                  | u_cram/mem_reg | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|census:                  | u_vram/mem_reg | 256 x 17(READ_FIRST)   | W |   | 256 x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|census:                  | u_cram/mem_reg | 256 x 72(READ_FIRST)   | W |   | 256 x 72(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|\inst/u_front            | u_fifo/mem_reg | 256 x 90(READ_FIRST)   | W |   | 256 x 90(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
++-------------------------+----------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_rect0/nodes_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_rect0/nodes_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_rect1/nodes_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_rect1/nodes_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_cen0/u_vram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_cen0/u_cram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_cen1/u_vram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_cen1/u_cram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_fifo/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/u_fifo/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/n0_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance inst/u_front/n1_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:50 ; elapsed = 00:00:51 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | (C'+A*B)'    | 30     | 8      | 16     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A'*B''       | 12     | 4      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A'*B    | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | (A'*B')'     | 30     | 4      | -      | -      | 0      | 1    | 1    | -    | -    | -     | 0    | 1    | 
+|rectify     | A'*B         | 30     | 5      | -      | -      | 22     | 1    | 0    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+(A'*B)' | 30     | 5      | -      | -      | 26     | 1    | 0    | -    | -    | -     | 1    | 0    | 
+|rectify     | (C'+A*B)'    | 30     | 8      | 16     | -      | 20     | 0    | 0    | 1    | -    | -     | 0    | 1    | 
+|rectify     | A'*B''       | 12     | 4      | -      | -      | 0      | 1    | 2    | -    | -    | -     | 0    | 0    | 
+|rectify     | PCIN+A'*B    | 12     | 5      | -      | -      | 16     | 1    | 0    | -    | -    | -     | 0    | 0    | 
++------------+--------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   440|
+|2     |DSP48E1  |    22|
+|3     |LUT1     |   137|
+|4     |LUT2     |   689|
+|5     |LUT3     |   532|
+|6     |LUT4     |   899|
+|7     |LUT5     |   269|
+|8     |LUT6     |   569|
+|9     |RAMB18E1 |     5|
+|10    |RAMB36E1 |     7|
+|11    |FDRE     |  2882|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 2118.172 ; gain = 1295.660
+Synthesis Optimization Complete : Time (s): cpu = 00:00:54 ; elapsed = 00:00:55 . Memory (MB): peak = 2118.172 ; gain = 1370.223
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.055 . Memory (MB): peak = 2118.172 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 474 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2118.172 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 6052b773
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 16 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2118.172 ; gain = 1575.172
+INFO: [Coretcl 2-1174] Renamed 11 cell refs.
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 2118.172 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.runs/system_rectify_census_0_0_synth_1/system_rectify_census_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file system_rectify_census_0_0_utilization_synth.rpt -pb system_rectify_census_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 14 08:36:44 2026...

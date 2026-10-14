@@ -1,0 +1,8 @@
+# ninja log v5
+1	159	0	CMakeFiles/print_build_info	b20bbc86cd549de0
+1	159	0	D:/stereo-depth-cam/sw/workspace_2slice/stereo_cam/build/CMakeFiles/print_build_info	b20bbc86cd549de0
+168	318	8136459457950051	CMakeFiles/stereo_cam.elf.dir/main.c.obj	25b06b618dba9e2
+175	319	8136459457960167	CMakeFiles/stereo_cam.elf.dir/ov2640.c.obj	86d5f4856bc8d4c9
+160	332	8136459458096102	CMakeFiles/stereo_cam.elf.dir/genlock.c.obj	e93c0aa1c93d6d8b
+182	332	8136459458096102	CMakeFiles/stereo_cam.elf.dir/sccb.c.obj	1d3e238445a978c8
+332	546	8136459459638607	stereo_cam.elf	64c2f31285e4205a

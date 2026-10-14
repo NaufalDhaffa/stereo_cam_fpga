@@ -1,0 +1,11 @@
+08:51:41 INFO  : updated workspace path: D:\stereo-depth-cam\sw\workspace_2slice
+08:53:08 INFO  : updated workspace path: D:\stereo-depth-cam\sw\workspace_2slice
+08:53:08 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1429020669322127784 -r D:\stereo-depth-cam\sw\workspace_2slice\_ide\.wsdata\.repo.yaml
+08:53:08 INFO  : Embedded Template List generated successfully
+08:54:17 INFO  : connection terminated
+08:54:17 INFO  : connection terminated
+08:54:17 INFO  : scheduling shutdown timer for 2 seconds ...
+08:54:17 INFO  : scheduling shutdown timer for 2 seconds ...
+08:54:19 INFO  : Terminating Vitis C++ Server
+08:54:19 INFO  : Terminating Vitis C++ Server
+08:54:19 INFO  : Vitis C++ Server terminated

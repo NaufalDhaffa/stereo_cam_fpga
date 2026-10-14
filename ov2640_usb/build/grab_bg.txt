@@ -1,0 +1,6 @@
+received 2.01 MB in 50.00 s (0.0 MB/s)
+frame  2022:    14359 bytes, 3200 bytes/line x 1200 lines, PCLK 24.00 MHz, 200.0 ms TRUNCATED  <-- incomplete
+frame  2023:    11799 bytes, 3200 bytes/line x 1200 lines, PCLK 24.00 MHz, 200.0 ms TRUNCATED  <-- incomplete
+0 complete frames, 250 incomplete
+no complete frame found
+first bytes: 63 2c 63 2c 6b 2b 6b 4b 6b 4c 6b 4c 63 0d 63 2d 63 0c 6b 0c 63 0b 63 0b 63 2c 63 2c 63 0d 63 0d 63 0d 63 2d 63 2c 6b 2c 63 4c 63 4c 63 4c 63 4c
