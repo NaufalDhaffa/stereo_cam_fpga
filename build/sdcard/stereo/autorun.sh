@@ -2,7 +2,7 @@
 # Started at boot from the SD card (by the stereo-autorun service of the image):
 # network, the bitstream chosen over ssh (if any), then the camera program.
 D="$(cd "$(dirname "$0")" && pwd)"
-ADDRESS=192.168.2.10/24; GATEWAY=; SPEED=100
+ADDRESS=169.254.179.10/24; GATEWAY=; SPEED=100
 [ -f "$D/network.conf" ] && . "$D/network.conf"
 # the interface name depends on the image (eth0, or enx<MAC> when udev renames it)
 IF=$(ls /sys/class/net | grep -E "^(eth|en)" | head -n 1)

@@ -1,0 +1,69 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Oct 14 08:13:09 2026
+| Host         : LAPTOP-THBQET7J running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -file D:/stereo-depth-cam/build/mini1/utilization_synth_hier.rpt
+| Design       : depth_top
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Synthesized
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++------------------------------------------+-----------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|                 Instance                 |                           Module                          | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++------------------------------------------+-----------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| depth_top                                |                                                     (top) |       6598 |       5560 |     992 |   46 | 6233 |     21 |     11 |         22 |
+|   (depth_top)                            |                                                     (top) |         27 |         27 |       0 |    0 |  271 |      0 |      0 |          0 |
+|   g_bin.u_bin0                           |                                                 luma_bin2 |         35 |         35 |       0 |    0 |   57 |      0 |      1 |          0 |
+|   g_bin.u_bin1                           |                                               luma_bin2_0 |         35 |         35 |       0 |    0 |   57 |      0 |      1 |          0 |
+|   g_mini.u_depth                         |                                                depth_mini |       5264 |       4228 |     992 |   44 | 3864 |      8 |      8 |         22 |
+|     (g_mini.u_depth)                     |                                                depth_mini |         86 |         86 |       0 |    0 |  239 |      0 |      2 |          0 |
+|     g_slice[0].u                         |                                        tt_um_stereo_slice |       1223 |       1153 |      26 |   44 |  614 |      0 |      0 |          0 |
+|       u_slice                            |                                                mini_slice |       1219 |       1149 |      26 |   44 |  612 |      0 |      0 |          0 |
+|         u_cost                           |                                                   ms_cost |        201 |        145 |      12 |   44 |   61 |      0 |      0 |          0 |
+|         u_ctrl                           |                                                   ms_ctrl |        541 |        541 |       0 |    0 |  173 |      0 |      0 |          0 |
+|         u_pick                           |                                                   ms_pick |         69 |         69 |       0 |    0 |  279 |      0 |      0 |          0 |
+|         u_up                             |                                                     ms_up |        384 |        384 |       0 |    0 |   59 |      0 |      0 |          0 |
+|     u_cen0                               |                                                    census |        271 |        271 |       0 |    0 |  938 |      1 |      1 |          0 |
+|       (u_cen0)                           |                                                    census |        251 |        251 |       0 |    0 |  938 |      0 |      0 |          0 |
+|     u_cen1                               |                                                  census_6 |        256 |        256 |       0 |    0 |  917 |      1 |      1 |          0 |
+|       (u_cen1)                           |                                                  census_6 |        236 |        236 |       0 |    0 |  917 |      0 |      0 |          0 |
+|     u_hub                                |                                                  mini_hub |       1583 |        617 |     966 |    0 |  220 |      0 |      2 |          0 |
+|     u_rect0                              |                                                   rectify |        915 |        915 |       0 |    0 |  437 |      2 |      0 |         11 |
+|     u_rect1                              |                                   rectify__parameterized0 |        859 |        859 |       0 |    0 |  435 |      2 |      0 |         11 |
+|     u_uvc                                |                                                 uvc_lines |         70 |         70 |       0 |    0 |   64 |      1 |      1 |          0 |
+|       (u_uvc)                            |                                                 uvc_lines |         48 |         48 |       0 |    0 |   64 |      0 |      1 |          0 |
+|   u_buf0                                 |                                              rect_linebuf |         39 |         39 |       0 |    0 |   63 |      1 |      0 |          0 |
+|   u_buf1                                 |                                            rect_linebuf_1 |         39 |         39 |       0 |    0 |   63 |      1 |      0 |          0 |
+|   u_cap                                  |                                               cam_capture |        127 |        127 |       0 |    0 |  324 |      0 |      0 |          0 |
+|   u_cap2                                 |                                             cam_capture_2 |        163 |        163 |       0 |    0 |  324 |      0 |      0 |          0 |
+|   u_cfifo0                               |                                                 byte_fifo |         37 |         37 |       0 |    0 |   54 |      2 |      0 |          0 |
+|   u_cfifo1                               |                                               byte_fifo_3 |         37 |         37 |       0 |    0 |   54 |      2 |      0 |          0 |
+|   u_cfifo2                               |                                               byte_fifo_4 |         43 |         43 |       0 |    0 |   54 |      2 |      0 |          0 |
+|   u_fifo                                 |                            xpm_fifo_async__parameterized0 |        140 |        140 |       0 |    0 |  343 |      4 |      1 |          0 |
+|     gnuram_async_fifo.xpm_fifo_base_inst |                             xpm_fifo_base__parameterized0 |        140 |        140 |       0 |    0 |  343 |      4 |      1 |          0 |
+|       gen_cdc_pntr.wr_pntr_cdc_dc_inst   |                              xpm_cdc_gray__parameterized3 |          7 |          7 |       0 |    0 |   75 |      0 |      0 |          0 |
+|   u_fx2                                  |                                                fx2_writer |         27 |         27 |       0 |    0 |   53 |      0 |      0 |          0 |
+|   u_luma0                                |                                                  luma_tap |        121 |        120 |       0 |    1 |  103 |      0 |      0 |          0 |
+|   u_luma1                                |                                                luma_tap_5 |        121 |        120 |       0 |    1 |  103 |      0 |      0 |          0 |
+|   u_mux                                  |                                                stream_mux |        126 |        126 |       0 |    0 |  125 |      0 |      0 |          0 |
+|   u_ps                                   |                                            system_wrapper |         94 |         94 |       0 |    0 |   22 |      0 |      0 |          0 |
+|     system_i                             |                                                    system |         93 |         93 |       0 |    0 |   22 |      0 |      0 |          0 |
+|       ps7_0                              |                                            system_ps7_0_0 |         93 |         93 |       0 |    0 |   22 |      0 |      0 |          0 |
+|         inst                             | system_ps7_0_0_processing_system7_v5_5_processing_system7 |         93 |         93 |       0 |    0 |   22 |      0 |      0 |          0 |
+|   u_xfifo                                |                                            xpm_fifo_async |        123 |        123 |       0 |    0 |  299 |      1 |      0 |          0 |
+|     gnuram_async_fifo.xpm_fifo_base_inst |                                             xpm_fifo_base |        123 |        123 |       0 |    0 |  299 |      1 |      0 |          0 |
+|       gen_cdc_pntr.wr_pntr_cdc_dc_inst   |                              xpm_cdc_gray__parameterized0 |          6 |          6 |       0 |    0 |   65 |      0 |      0 |          0 |
++------------------------------------------+-----------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+
+

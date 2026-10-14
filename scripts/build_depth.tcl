@@ -18,6 +18,11 @@ if {$variant eq "mini"} {
   set out  [file join $root build mini]
   set gold [file join $root build golden_minisys]
   set fclk1 25
+} elseif {$variant eq "mini1"} {
+  # the same system with a chain of one slice (16 disparities): golden_minisys with SLICES = 1
+  set out  [file join $root build mini1]
+  set gold [file join $root build golden_mini1sys]
+  set fclk1 25
 } else {
   set out  [file join $root build depth]
   set gold [file join $root build golden]
@@ -174,6 +179,9 @@ report_utilization -file [file join $out utilization_synth.rpt]
 report_utilization -hierarchical -file [file join $out utilization_synth_hier.rpt]
 close_design
 
+# the 200 MHz output stage has little margin: let the tool optimise once more after placement and after routing
+set_property STEPS.PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
+set_property STEPS.POST_ROUTE_PHYS_OPT_DESIGN.IS_ENABLED true [get_runs impl_1]
 launch_runs impl_1 -to_step write_bitstream -jobs 4
 wait_on_run impl_1
 if {[get_property PROGRESS [get_runs impl_1]] != "100%"} { error "implementation failed" }

@@ -226,12 +226,13 @@ class Board:
         return found
 
     def fclk1(self, mhz):
-        """Processing clock from the 1000 MHz IO PLL: two dividers of 1 .. 63."""
-        want = 1000.0 / mhz
+        """Processing clock from the IO PLL (33.333 MHz times its feedback divider): two dividers of 1 .. 63."""
+        pll = 100.0 / 3 * ((self.slcr.r(0x108) >> 12) & 0x7F)
+        want = pll / mhz
         d0, d1 = min(((a, b) for a in range(1, 64) for b in range(1, 64)), key=lambda p: (abs(p[0] * p[1] - want), p[1]))
         self.slcr.w(0x008, 0xDF0D)
         self.slcr.w(0x180, (self.slcr.r(0x180) & ~0x03F03F00) | (d1 << 20) | (d0 << 8))
-        print(f"FCLK1 = {1000.0 / (d0 * d1):.3f} MHz")
+        print(f"FCLK1 = {pll / (d0 * d1):.3f} MHz (IO PLL {pll:.0f} MHz)")
 
 
 def read_tables(path):

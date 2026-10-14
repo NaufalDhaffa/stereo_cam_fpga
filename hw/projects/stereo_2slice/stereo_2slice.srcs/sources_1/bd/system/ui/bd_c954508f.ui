@@ -1,0 +1,13 @@
+{
+   "comment_0":"tapeout_chain: 2 x tt_um_stereo_slice, the Tiny Tapeout module (asic/tt). 16 disparities per slice; chain_hub_0 broadcasts the census signatures (dl), the result travels from slice to slice (uo_out -> uio_in) and back to the hub (ul).",
+   "commentid":"comment_0|",
+   "font_comment_0":"14",
+   "linktoobj_comment_0":"",
+   "linktotype_comment_0":"bd_design"
+}
+{
+   "da_ps7_cnt":"1"
+}
+{
+   "/comment_0":"comment_0"
+}

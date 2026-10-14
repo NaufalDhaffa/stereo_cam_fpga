@@ -16,6 +16,8 @@ Push-Location $work
 try {
     $src = @(Get-ChildItem (Join-Path $root "rtl\*.v") | Where-Object { $_.Name -notmatch '^(cam_usb_top|fx2_writer|cam_mux|cam_capture|byte_fifo)\.v$' } | ForEach-Object FullName)
     $src += @(Get-ChildItem (Join-Path $root "rtl\mini\*.v") | ForEach-Object FullName)
+    $src += @(Get-ChildItem (Join-Path $root "rtllocks\*.v") | Where-Object { $_.Name -match '^(depth_frontend|frame_format)\.v$' } | ForEach-Object FullName)
+    $src += @("depth_frontend.v", "frame_format.v" | ForEach-Object { Join-Path $root "rtl\blocks\$_" })
     $src += (Join-Path $root "rtl\tb\$Top.v")
     & "$vivado\xvlog.bat" -nolog -i $work @src
     if ($LASTEXITCODE -ne 0) { throw "xvlog failed" }

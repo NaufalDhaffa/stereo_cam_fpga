@@ -1,0 +1,65 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (win64) Build 6299465 Fri Nov 14 19:35:11 GMT 2025
+| Date         : Wed Oct 14 08:41:35 2026
+| Host         : LAPTOP-THBQET7J running 64-bit major release  (build 9200)
+| Command      : report_utilization -hierarchical -hierarchical_depth 4 -file D:/stereo-depth-cam/hw/export/stereo_2slice/utilization_hier.rpt
+| Design       : system_wrapper
+| Device       : xc7z010clg400-1
+| Speed File   : -1
+| Design State : Physopt postRoute
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Utilization Design Information
+
+Table of Contents
+-----------------
+1. Utilization by Hierarchy
+
+1. Utilization by Hierarchy
+---------------------------
+
++----------------------+------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+|       Instance       |                        Module                        | Total LUTs | Logic LUTs | LUTRAMs | SRLs |  FFs | RAMB36 | RAMB18 | DSP Blocks |
++----------------------+------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+| system_wrapper       |                                                (top) |       7634 |       6578 |    1006 |   50 | 6674 |     21 |     11 |         22 |
+|   (system_wrapper)   |                                                (top) |          0 |          0 |       0 |    0 |    0 |      0 |      0 |          0 |
+|   system_i           |                                               system |       7634 |       6578 |    1006 |   50 | 6674 |     21 |     11 |         22 |
+|     usb_stream_0     |                                system_usb_stream_0_0 |        409 |        409 |       0 |    0 |  667 |      7 |      1 |          0 |
+|       inst           |                     system_usb_stream_0_0_usb_stream |        409 |        409 |       0 |    0 |  667 |      7 |      1 |          0 |
+|         u_xfifo      |                 system_usb_stream_0_0_xpm_fifo_async |         92 |         92 |       0 |    0 |  191 |      1 |      0 |          0 |
+|         u_cfifo2     |                      system_usb_stream_0_0_byte_fifo |         40 |         40 |       0 |    0 |   54 |      2 |      0 |          0 |
+|         u_fifo       | system_usb_stream_0_0_xpm_fifo_async__parameterized0 |        110 |        110 |       0 |    0 |  221 |      4 |      1 |          0 |
+|         u_mux        |                     system_usb_stream_0_0_stream_mux |        139 |        139 |       0 |    0 |  125 |      0 |      0 |          0 |
+|     cam_input_0      |                                 system_cam_input_0_0 |        765 |        763 |       0 |    2 | 1439 |      6 |      2 |          0 |
+|       inst           |                       system_cam_input_0_0_cam_input |        765 |        763 |       0 |    2 | 1439 |      6 |      2 |          0 |
+|         (inst)       |                       system_cam_input_0_0_cam_input |         26 |         26 |       0 |    0 |  237 |      0 |      0 |          0 |
+|         g_bin.u_bin0 |                       system_cam_input_0_0_luma_bin2 |         33 |         33 |       0 |    0 |   57 |      0 |      1 |          0 |
+|         g_bin.u_bin1 |                     system_cam_input_0_0_luma_bin2_0 |         33 |         33 |       0 |    0 |   57 |      0 |      1 |          0 |
+|         u_buf0       |                    system_cam_input_0_0_rect_linebuf |         48 |         48 |       0 |    0 |   63 |      1 |      0 |          0 |
+|         u_buf1       |                  system_cam_input_0_0_rect_linebuf_1 |         48 |         48 |       0 |    0 |   63 |      1 |      0 |          0 |
+|         u_cap        |                     system_cam_input_0_0_cam_capture |        119 |        119 |       0 |    0 |  324 |      0 |      0 |          0 |
+|         u_cap2       |                   system_cam_input_0_0_cam_capture_2 |        155 |        155 |       0 |    0 |  324 |      0 |      0 |          0 |
+|         u_cfifo0     |                       system_cam_input_0_0_byte_fifo |         27 |         27 |       0 |    0 |   54 |      2 |      0 |          0 |
+|         u_cfifo1     |                     system_cam_input_0_0_byte_fifo_3 |         33 |         33 |       0 |    0 |   54 |      2 |      0 |          0 |
+|         u_luma0      |                        system_cam_input_0_0_luma_tap |        124 |        123 |       0 |    1 |  103 |      0 |      0 |          0 |
+|         u_luma1      |                      system_cam_input_0_0_luma_tap_4 |        124 |        123 |       0 |    1 |  103 |      0 |      0 |          0 |
+|     chain_hub_0      |                                 system_chain_hub_0_0 |       1483 |        517 |     966 |    0 |  240 |      0 |      2 |          0 |
+|       inst           |                       system_chain_hub_0_0_chain_hub |       1483 |        517 |     966 |    0 |  240 |      0 |      2 |          0 |
+|         u_hub        |                        system_chain_hub_0_0_mini_hub |       1483 |        517 |     966 |    0 |  240 |      0 |      2 |          0 |
+|     frame_format_0   |                              system_frame_format_0_0 |        132 |        132 |       0 |    0 |  164 |      1 |      1 |          0 |
+|       inst           |                 system_frame_format_0_0_frame_format |        132 |        132 |       0 |    0 |  164 |      1 |      1 |          0 |
+|         (inst)       |                 system_frame_format_0_0_frame_format |         58 |         58 |       0 |    0 |  100 |      0 |      0 |          0 |
+|         u_uvc        |                    system_frame_format_0_0_uvc_lines |         74 |         74 |       0 |    0 |   64 |      1 |      1 |          0 |
+|     rectify_census_0 |                            system_rectify_census_0_0 |       2290 |       2290 |       0 |    0 | 2876 |      7 |      5 |         22 |
+|       inst           |             system_rectify_census_0_0_rectify_census |       2290 |       2290 |       0 |    0 | 2876 |      7 |      5 |         22 |
+|         u_front      |             system_rectify_census_0_0_depth_frontend |       2273 |       2273 |       0 |    0 | 2876 |      7 |      5 |         22 |
+|     tapeout_chain    |                            tapeout_chain_imp_1EUHJCZ |       2543 |       2455 |      40 |   48 | 1277 |      0 |      0 |          0 |
+|       slice_0        |                                     system_slice_0_0 |       1254 |       1210 |      20 |   24 |  624 |      0 |      0 |          0 |
+|         inst         |                  system_slice_0_0_tt_um_stereo_slice |       1254 |       1210 |      20 |   24 |  624 |      0 |      0 |          0 |
+|       slice_1        |                                     system_slice_1_0 |       1289 |       1245 |      20 |   24 |  653 |      0 |      0 |          0 |
+|         inst         |                  system_slice_1_0_tt_um_stereo_slice |       1289 |       1245 |      20 |   24 |  653 |      0 |      0 |          0 |
++----------------------+------------------------------------------------------+------------+------------+---------+------+------+--------+--------+------------+
+* Note: The sum of lower-level cells may be larger than their parent cells total, due to cross-hierarchy LUT combining
+
+

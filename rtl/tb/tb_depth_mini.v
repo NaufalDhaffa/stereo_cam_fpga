@@ -184,7 +184,7 @@ module tb_depth_mini;
     end
     initial begin
         #(FRAMES * 150000000 + 300000000);          // something is stuck
-        $display("FAIL: timeout after %0d pixels (scheduler state %0d, row %0d, FIFO %0d, overrun %0d)", checked, dut.st, dut.y, dut.f_level, overrun);
+        $display("FAIL: timeout after %0d pixels (scheduler state %0d, row %0d, FIFO %0d, overrun %0d)", checked, dut.u_front.st, dut.u_front.y, dut.u_front.f_level, overrun);
         $finish;
     end
 endmodule

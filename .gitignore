@@ -14,3 +14,17 @@ __pycache__/
 /asic/tt/test/results.xml
 /asic/tt/test/*.fst
 /fx2/uvc/obj/
+!/build/mini1/
+!/build/golden_mini1sys/
+/build/mini1/vivado/
+# Vivado projects: the block design and the project file are kept, everything generated is not
+/hw/projects/*/*.cache/
+/hw/projects/*/*.gen/
+/hw/projects/*/*.hw/
+/hw/projects/*/*.ip_user_files/
+/hw/projects/*/*.runs/
+/hw/projects/*/*.sim/
+/hw/export/*/*.bif
+# Vitis workspaces: made by sw/scripts/create_workspace.py
+/sw/workspace_*/
+!/build/bootbin/

@@ -2,6 +2,8 @@
 
     python webcam.py             live view: left picture, depth, distance under the cross
     python webcam.py --probe     find the camera, grab a few frames, save build/webcam_probe.png
+    python webcam.py --slices 1  the board runs a chain of 1 slice (16 disparities): range and colours to match
+    python webcam.py --slices 1  the board runs a chain of 1 slice (16 disparities): distance range for that
 
 A frame is 400 x 148 YUY2: the left 200 columns are the left camera's
 picture (grey), the right 200 the disparity, exact to 1/16 pixel:
@@ -54,7 +56,10 @@ def main():
     f, base = float(cal["P1"][0, 0]), float(np.linalg.norm(cal["T"]))
     table = reconstruct.depth_table(f, base)
     okl = stream.left_mask(cal)
-    near, far = int(f * base / (P.D_MIN + P.DISPARITIES - 1)), int(f * base / P.D_MIN)
+    if "--slices" in sys.argv:
+        P.DISPARITIES = 16 * int(sys.argv[sys.argv.index("--slices") + 1])
+    slices = int(sys.argv[sys.argv.index("--slices") + 1]) if "--slices" in sys.argv else P.DISPARITIES // 16
+    near, far = int(f * base / (P.D_MIN + 16 * slices - 1)), int(f * base / P.D_MIN)
     cap = open_camera()
     probe = "--probe" in sys.argv
     t0, n, shown, rate = time.time(), 0, 0, 0.0
@@ -98,7 +103,7 @@ def main():
         cv2.putText(view, f"{rate:4.1f} fps   valid {100 * (depth > 0).mean():3.0f}%   tengah: "
                     + (f"{mid / 1000:.2f} m" if mid else "-") + f"   jangkauan {near / 1000:.2f}-{far / 1000:.2f} m",
                     (8, 17), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (240, 240, 240), 1, cv2.LINE_AA)
-        cv2.imshow("Stereo Depth Camera (webcam) - q keluar", view)
+        cv2.imshow(f"Stereo Depth Camera (webcam), {slices} irisan - q keluar", view)
         if (cv2.waitKey(1) & 0xFF) in (ord("q"), 27):
             break
     cap.release()
