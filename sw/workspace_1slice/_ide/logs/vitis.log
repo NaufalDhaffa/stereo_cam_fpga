@@ -25,3 +25,16 @@
 08:55:04 INFO  : scheduling shutdown timer for 2 seconds ...
 08:55:06 INFO  : Terminating Vitis C++ Server
 08:55:06 INFO  : Vitis C++ Server terminated
+09:35:22 INFO  : updated workspace path: D:\stereo-depth-cam\sw\workspace_1slice
+09:35:25 INFO  : [INFO]: Initializing repositories
+09:35:25 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+09:35:25 INFO  : Successfully created repository data at C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1979456194902522197
+09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal834757588482726185 -r C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1979456194902522197\.repo.yaml
+09:35:25 INFO  : Embedded Template List generated successfully
+09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1587041984808656371 -r D:\stereo-depth-cam\sw\workspace_1slice\_ide\.wsdata\.repo.yaml
+09:35:26 INFO  : Embedded Template List generated successfully
+09:36:51 INFO  : connection terminated
+09:36:51 INFO  : connection terminated
+09:36:51 INFO  : scheduling shutdown timer for 2 seconds ...
+09:36:53 INFO  : Terminating Vitis C++ Server
+09:36:53 INFO  : Vitis C++ Server terminated

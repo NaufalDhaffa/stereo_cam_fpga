@@ -1,0 +1,21 @@
+srcscan starts
+INFO: analyzing module system (VERI-9002)
+INFO: analyzing module tapeout_chain_imp_1EUHJCZ (VERI-9002)
+Listing tops:
+VeriTop library:xil_defaultlib mod:system
+END of tops
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(15): INFO: compiling module 'system_default' (VERI-1018)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(253): WARNING: Module <system_cam_input_0_0> not found while processing module instance <cam_input_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(289): WARNING: Module <system_chain_hub_0_0> not found while processing module instance <chain_hub_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(309): WARNING: Module <system_eth_rxd_concat_0> not found while processing module instance <eth_rxd_concat> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(313): WARNING: Module <system_eth_rxd_hi_0> not found while processing module instance <eth_rxd_hi> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(315): WARNING: Module <system_eth_txd_slice_0> not found while processing module instance <eth_txd_slice> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(318): WARNING: Module <system_eth_zero_0> not found while processing module instance <eth_zero> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(320): WARNING: Module <system_frame_format_0_0> not found while processing module instance <frame_format_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(337): WARNING: Module <system_processing_system7_0_0> not found while processing module instance <processing_system7_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(389): WARNING: Module <system_ps_status_0_0> not found while processing module instance <ps_status_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(402): WARNING: Module <system_rectify_census_0_0> not found while processing module instance <rectify_census_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(480): WARNING: Module <system_slice_0_0> not found while processing module instance <slice_0> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(487): WARNING: Module <system_slice_1_0> not found while processing module instance <slice_1> (VERI-1063)
+d:/stereo-depth-cam/hw/projects/stereo_2slice/stereo_2slice.gen/sources_1/bd/system/synth/system.v(433): WARNING: Module <system_usb_stream_0_0> not found while processing module instance <usb_stream_0> (VERI-1063)
+srcscan exits with return value 0

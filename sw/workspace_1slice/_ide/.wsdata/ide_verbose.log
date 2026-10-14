@@ -494,3 +494,313 @@
     at Socket.onend (node:internal/streams/readable:946:10)
     at Object.onceWrapper (node:events:633:28)
     at Socket.emit (node:events:531:35) 
+2026-10-14 09:35:21 [debug] : --------------------------------------------------------------------------------- 
+2026-10-14 09:35:21 [debug] : D:\stereo-depth-cam\sw\workspace_1slice 
+2026-10-14 09:35:21 [debug] : --------------------------------------------------------------------------------- 
+2026-10-14 09:35:21 [debug] : [Logger] Previous user logs are stored in the file - C:\Users\naufal\.Xilinx\Vitis\2025.2\logs\ide.log 
+2026-10-14 09:35:21 [debug] : [Logger] Previous debug logs are stored in the file - C:\Users\naufal\.Xilinx\Vitis\2025.2\.wsdata\ide_verbose.log 
+2026-10-14 09:35:21 [debug] : [Repository Server] Executing method:getEmbeddedExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:21 [debug] : [Application Examples Provider]  updating the embedded templates on workspace event. 
+2026-10-14 09:35:21 [debug] : [Application Examples Provider] refresh requested. 
+2026-10-14 09:35:21 [debug] : Received event from notification service: ON_DID_UPDATE_WORKSPACE. 
+2026-10-14 09:35:21 [debug] : [Logger Client] log levelchanged to  {"0":"Info"}
+2026-10-14 09:35:21 [debug] : [Logger UI]  Update Log Level  called 
+2026-10-14 09:35:21 [debug] : [Application Examples Provider] common calling method requested. 
+2026-10-14 09:35:21 [debug] : [Application Examples Provider] Repositories model update requested. 
+2026-10-14 09:35:21 [debug] : [Application Examples Provider] Repositories model update completed. 
+2026-10-14 09:35:21 [debug] : [Application Examples Provider] Templates model update requested. 
+2026-10-14 09:35:21 [debug] : [Repository Service] Executing method:getEmbeddedExampleTemplateTree from frontend. {"0":"request:"}
+2026-10-14 09:35:21 [debug] : [Logger UI]  Update Log Level success {"0":{"success":true,"error":""}}
+2026-10-14 09:35:22 [debug] : RIGEL SERVER 09:35:22 INFO  : created .gitignore file for the project D:\stereo-depth-cam\sw\workspace_1slice 
+2026-10-14 09:35:22 [debug] : RIGEL SERVER 09:35:22 INFO  : updated workspace path: D:\stereo-depth-cam\sw\workspace_1slice 
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_DID_OPEN_COMPONENT. 
+2026-10-14 09:35:22 [debug] : Event posted using notification server in backend. {"0":{"wrappers_":{},"arrayIndexOffset_":-1,"array":["6cd3f47c-e419-42a2-9cd3-fe695aa3f99a",null,54,null,null,null,null,"refresh-summaries"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_DID_REFRESH_WORKSPACE_SUMMARIES. 
+2026-10-14 09:35:22 [debug] : [ProjectCache] fetching projects for project-cache 
+2026-10-14 09:35:22 [debug] : Received event from notification service: ON_STOP_ANALYSIS_PROGRESS. 
+2026-10-14 09:35:22 [debug] : [ProjectDecorator] tree decoration updated 
+2026-10-14 09:35:22 [debug] : [ProjectCache] Project location updated to D:\stereo-depth-cam\sw\workspace_1slice\ebaz4205_stereo 
+2026-10-14 09:35:22 [debug] : [ProjectDecorator] tree decoration updated 
+2026-10-14 09:35:22 [debug] : [Platform Server] Executing method:[getPartFromXSA] with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":["D:\\stereo-depth-cam\\sw\\workspace_1slice\\ebaz4205_stereo"],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.doSync - exit - cancelled while looking for a resource {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 28,
+        "startColumn": 1,
+        "endLineNumber": 28,
+        "endColumn": 1
+      },
+      "rangeLength": 0,
+      "text": "09:35:22 INFO  : updated workspace path: D:\\stereo-depth-cam\\sw\\workspace_1slice\r\n",
+      "rangeOffset": 2402,
+      "forceMoveMarkers": true
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 2,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.markAsDirty - exit - ignoring dirty changes enabled {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:22 [debug] : MonacoEditorModel.doSync - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : RIGEL SERVER 09:35:25 INFO  : [INFO]: Initializing repositories 
+2026-10-14 09:35:25 [debug] : RIGEL SERVER 09:35:25 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.
+09:35:25 INFO  : Successfully created repository data at C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1979456194902522197 
+2026-10-14 09:35:25 [debug] : RIGEL SERVER 09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal834757588482726185 -r C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1979456194902522197\.repo.yaml 
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.doSync - exit - cancelled while looking for a resource {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 29,
+        "startColumn": 1,
+        "endLineNumber": 29,
+        "endColumn": 1
+      },
+      "rangeLength": 0,
+      "text": "09:35:25 INFO  : [INFO]: Initializing repositories\r\n09:35:25 INFO  : [INFO]: Successfully set the EmbeddedSW path, refer .repo.yaml for more details.\r\n09:35:25 INFO  : Successfully created repository data at C:\\Users\\naufal\\AppData\\Local\\Temp\\rigel_lopper_naufal1979456194902522197\r\n09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\\Users\\naufal\\AppData\\Local\\Temp\\rigel_lopper_naufal834757588482726185 -r C:\\Users\\naufal\\AppData\\Local\\Temp\\rigel_lopper_naufal1979456194902522197\\.repo.yaml\r\n",
+      "rangeOffset": 2484,
+      "forceMoveMarkers": true
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 3,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.markAsDirty - exit - ignoring dirty changes enabled {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : MonacoEditorModel.doSync - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:35:25 [debug] : RIGEL SERVER 09:35:25 INFO  : Embedded Template List generated successfully 
+2026-10-14 09:35:25 [debug] : RIGEL SERVER 09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\Users\naufal\AppData\Local\Temp\rigel_lopper_naufal1587041984808656371 -r D:\stereo-depth-cam\sw\workspace_1slice\_ide\.wsdata\.repo.yaml 
+2026-10-14 09:35:25 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-10-14 09:35:25 [debug] : [Application Examples Provider] common calling method completed. 
+2026-10-14 09:35:25 [debug] : [Application Examples Provider] refresh completed. 
+2026-10-14 09:35:26 [debug] : RIGEL SERVER 09:35:26 INFO  : Embedded Template List generated successfully 
+2026-10-14 09:35:26 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-10-14 09:35:26 [debug] : [Application Examples Provider] common calling method completed. 
+2026-10-14 09:35:26 [debug] : [Application Examples Provider] refresh completed. 
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:listHlsExampleRepos. {"0":"result:","1":[{"id":"vitis_hls_examples","name":"Vitis HLS Introductory Examples","description":"Basic examples for Vitis HLS.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_hls_examples","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_hls_examples","gitUrl":"https://github.com/Xilinx/Vitis-HLS-Introductory-Examples.git","gitBranch":"2025.2","gitSubfoldersList":[],"type":4,"preScript":""},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_libraries","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2025.2","gitSubfoldersList":["blas","data_mover","dsp","motor_control","security","solver","ultrasound","utils","vision"],"type":1,"preScript":""}]}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:listAppRepos. {"0":"result:","1":[{"id":"vitis_examples","name":"Vitis Accel Examples Repository","description":"This repository contains examples to showcase various features of the Vitis tools and platforms. The examples illustrate specific scenarios related to host code and kernel programming through small working examples.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_examples","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_examples","gitUrl":"https://github.com/Xilinx/Vitis_Accel_Examples.git","gitBranch":"2025.2","gitSubfoldersList":[],"type":2,"preScript":""},{"id":"installed_examples","name":"Installed Examples Repository","description":"This repository contains some simple examples.","installDirectory":"D:/Xilinx/2025.2/Vitis/installed_examples","localDirectory":"D:/Xilinx/2025.2/Vitis/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":2,"preScript":""},{"id":"ai_engine_test_harness","name":"AI Engine Test Harness","description":"AIE (AI Engine) Test Harness is designed to assist AIE application designers in verifying and benchmarking their designs on the Versal platforms such as the VCK190, with the ease of a software simulator. Most importantly, AIE Test Harness allows the developers to conduct testing across diverse host systems, including x86 and ARM.","installDirectory":"D:/Xilinx/2025.2/Vitis/ai_engine_test_harness","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/ai_engine_test_harness","gitUrl":"https://github.com/Xilinx/AI-Engine-Test-Harness.git","gitBranch":"main","gitSubfoldersList":[],"type":2,"preScript":"bin/download.sh"},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_libraries","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2025.2","gitSubfoldersList":["blas","data_mover","dsp","motor_control","security","solver","ultrasound","utils","vision"],"type":1,"preScript":""}]}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:listAppRepos. {"0":"result:","1":[{"id":"vitis_examples","name":"Vitis Accel Examples Repository","description":"This repository contains examples to showcase various features of the Vitis tools and platforms. The examples illustrate specific scenarios related to host code and kernel programming through small working examples.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_examples","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_examples","gitUrl":"https://github.com/Xilinx/Vitis_Accel_Examples.git","gitBranch":"2025.2","gitSubfoldersList":[],"type":2,"preScript":""},{"id":"installed_examples","name":"Installed Examples Repository","description":"This repository contains some simple examples.","installDirectory":"D:/Xilinx/2025.2/Vitis/installed_examples","localDirectory":"D:/Xilinx/2025.2/Vitis/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":2,"preScript":""},{"id":"ai_engine_test_harness","name":"AI Engine Test Harness","description":"AIE (AI Engine) Test Harness is designed to assist AIE application designers in verifying and benchmarking their designs on the Versal platforms such as the VCK190, with the ease of a software simulator. Most importantly, AIE Test Harness allows the developers to conduct testing across diverse host systems, including x86 and ARM.","installDirectory":"D:/Xilinx/2025.2/Vitis/ai_engine_test_harness","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/ai_engine_test_harness","gitUrl":"https://github.com/Xilinx/AI-Engine-Test-Harness.git","gitBranch":"main","gitSubfoldersList":[],"type":2,"preScript":"bin/download.sh"},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_libraries","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2025.2","gitSubfoldersList":["blas","data_mover","dsp","motor_control","security","solver","ultrasound","utils","vision"],"type":1,"preScript":""}]}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:listAieExampleRepos. {"0":"result:","1":[{"id":"installed_aie_examples","name":"Installed AI Engine Examples","description":"This repository contains some simple AI Engine examples.","installDirectory":"D:/Xilinx/2025.2/Vitis/installed_aie_examples","localDirectory":"D:/Xilinx/2025.2/Vitis/samples","gitUrl":"","gitBranch":"","gitSubfoldersList":[],"type":3,"preScript":""},{"id":"vitis_libraries","name":"Vitis Accelerated Libraries Repository","description":"The Vitis software development platform includes an extensive set of open-source, performance-optimized libraries that offer out-of-the-box acceleration with minimal to zero-code changes to your existing applications.","installDirectory":"D:/Xilinx/2025.2/Vitis/vitis_libraries","localDirectory":"C:/Users/naufal/.Xilinx/Vitis/2025.2/vitis_libraries","gitUrl":"https://github.com/Xilinx/Vitis_Libraries.git","gitBranch":"2025.2","gitSubfoldersList":["blas","data_mover","dsp","motor_control","security","solver","ultrasound","utils","vision"],"type":1,"preScript":""}]}
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_hls_examples","repoType":4}}
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_hls_examples","repoType":4}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_examples","repoType":2}}
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_examples","repoType":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_examples 
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"ai_engine_test_harness","repoType":2}}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_libraries 
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"ai_engine_test_harness","repoType":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAieExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] installed_aie_examples:true 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] vitis_libraries:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Repositories model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update requested. 
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAieExampleTemplateTree from frontend. {"0":"request:"}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_hls_examples 
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getHlsExampleTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":null,"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_libraries 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] vitis_hls_examples:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] vitis_libraries:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Repositories model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update requested. 
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getHlsExampleTemplateTree from frontend. {"0":"request:"}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:ai_engine_test_harness 
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppRepoState with connection:(object). {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppRepoState from frontend. {"0":"request:","1":{"repoId":"vitis_libraries","repoType":1}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executed method:getAppRepoState. {"0":"result:","1":{"repoId":"","status":2}}
+2026-10-14 09:35:34 [debug] : [Repository Server] Executing method:getAppTemplateTree with connection:(object). {"0":"request:","1":{"wrappers_":{},"arrayIndexOffset_":-1,"array":[],"pivot_":1.7976931348623157e+308,"convertedPrimitiveFields_":{}}}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider]  Application repository status:2 for id:vitis_libraries 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] vitis_examples:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] installed_examples:true 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] ai_engine_test_harness:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] vitis_libraries:false 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Repositories model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update requested. 
+2026-10-14 09:35:34 [debug] : [Repository Service] Executing method:getAppTemplateTree from frontend. {"0":"request:"}
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] common calling method completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] refresh completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] common calling method completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] refresh completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] Templates model update completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] common calling method completed. 
+2026-10-14 09:35:34 [debug] : [Application Examples Provider] refresh completed. 
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.cancelSync {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.doSync - exit - cancelled while looking for a resource {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.doSync - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.fireDidChangeContent - enter - {
+  "changes": [
+    {
+      "range": {
+        "startLineNumber": 33,
+        "startColumn": 1,
+        "endLineNumber": 33,
+        "endColumn": 1
+      },
+      "rangeLength": 0,
+      "text": "09:35:25 INFO  : Embedded Template List generated successfully\r\n09:35:25 INFO  : cmd.exe, /C, empyro.bat get_template_data -d C:\\Users\\naufal\\AppData\\Local\\Temp\\rigel_lopper_naufal1587041984808656371 -r D:\\stereo-depth-cam\\sw\\workspace_1slice\\_ide\\.wsdata\\.repo.yaml\r\n09:35:26 INFO  : Embedded Template List generated successfully\r\n",
+      "rangeOffset": 2991,
+      "forceMoveMarkers": true
+    }
+  ],
+  "eol": "\r\n",
+  "isEolChange": false,
+  "versionId": 4,
+  "isUndoing": false,
+  "isRedoing": false,
+  "isFlush": false
+} {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.markAsDirty - enter {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.markAsDirty - exit - ignoring dirty changes enabled {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.fireDidChangeContent - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:15 [debug] : MonacoEditorModel.doSync - exit {"0":"file:///d:/stereo-depth-cam/sw/workspace_1slice/_ide/logs/vitis.log"}
+2026-10-14 09:36:50 [debug] : socket closed 
+2026-10-14 09:36:50 [debug] : closing connection for 1 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/localization-server'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/os'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/commands'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/logger'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/messageService'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/rigel-utils'. 
+2026-10-14 09:36:50 [debug] : [Rigel Utils Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/ChannelCloseService'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/remote-filesystem'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/envs'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/startup-workspace'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/rigel-workspace'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/workspace'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/keyboard'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/stopwatch'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/application'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/i18n'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/quickInput'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/project'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/component'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/feature-registry'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/debugger'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/debug'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/shell-terminal'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/quickPick'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/task'. 
+2026-10-14 09:36:50 [debug] : a client has disconnected - removed from list: 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/search'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hostedPlugin'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/plugin-ext'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/plugin-paths'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/vsx-environment'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/request-service'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/cli-preferences'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/server'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/repository'. 
+2026-10-14 09:36:50 [debug] : [Repository Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/program_flash'. 
+2026-10-14 09:36:50 [debug] : [Program Flash Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/build'. 
+2026-10-14 09:36:50 [debug] : [Build Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/notification'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path 'services/rigel-backend-helper'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/aie'. 
+2026-10-14 09:36:50 [debug] : [AIE Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/analysis'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/recent-summaries'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/rigel_explorer'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/linker-script'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/rigel-logger'. 
+2026-10-14 09:36:50 [debug] : [Logger Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/platform'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/vitis-hls'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/device'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/mini-browser-service'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/flow_navigator'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/common/data/info'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/common/file/service'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/report'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/dataflow/info'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/l1library/service'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/directive'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls_flow'. 
+2026-10-14 09:36:50 [debug] : [Hls Flow Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/search-in-workspace'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/open-ai/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/mcpservermanager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/languageModelRegistryDelegatePath'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/languageModelDelegatePath'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/rigel-ai/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/anthropic/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/google/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/huggingface/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/llamafilemanager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/ollama/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/vercel-ai/language-model-manager'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/config-file'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/elf-reader'. 
+2026-10-14 09:36:50 [debug] : [Elf Reader Server] Disposing objects in backend. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/project-utils'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/bootgen'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/cdo-utils'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/report-model'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls/wave/open'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/scanoss/service'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/hls-config'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/keyStore'. 
+2026-10-14 09:36:50 [debug] : Closing channel on service path '/services/languagePackService'. 
+2026-10-14 09:36:51 [debug] : Uncaught Exception:  {"0":"Error: spawn wmic.exe ENOENT"}
+2026-10-14 09:36:51 [debug] : Error: spawn wmic.exe ENOENT
+    at ChildProcess._handle.onexit (node:internal/child_process:286:19)
+    at onErrorNT (node:internal/child_process:484:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21) 
+2026-10-14 09:36:51 [debug] : Uncaught Exception:  {"0":"TypeError: Cannot read properties of undefined (reading 'forEach')"}
+2026-10-14 09:36:51 [debug] : TypeError: Cannot read properties of undefined (reading 'forEach')
+    at Stream.<anonymous> (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4071231)
+    at Stream.emit (node:events:519:28)
+    at Stream.s (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:1543096)
+    at Stream.emit (node:events:531:35)
+    at I (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4299347)
+    at i.write (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:4299702)
+    at Stream.ondata (node:internal/streams/legacy:21:31)
+    at Stream.emit (node:events:519:28)
+    at p (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693470)
+    at u.queue.u.push (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693687)
+    at u (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:2128932)
+    at Stream.<anonymous> (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:2129191)
+    at u.end (D:\Xilinx\2025.2\Vitis\ide\electron-app\win64\resources\app\lib\backend\384.js:2:5693884)
+    at Socket.onend (node:internal/streams/readable:946:10)
+    at Object.onceWrapper (node:events:633:28)
+    at Socket.emit (node:events:531:35) 
