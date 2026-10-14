@@ -44,6 +44,20 @@ ditentukan oleh bitstream di papan. (`stereo stream` sama dengan `stereo webcam`
     stereo rviz --no-rviz           RViz dan node jembatan sudah berjalan
     stereo rviz --usb               sumber: tiga stream alat PC (firmware stream FX2LP), bukan webcam
 
+Posisi titik 3D selalu benar, dengan atau tanpa `--slices`: jarak tiap titik dihitung langsung
+dari disparitas FPGA (jarak = f x B / d; dari kalibrasi f = 262,5 px, B = 54,5 mm). `--slices`
+mengatur skala warna gambar `/stereo/depth_color` (dan penampil `stereo stream`) supaya sesuai
+rentang bitstream di papan; tanpa opsi itu skala dianggap 2 irisan.
+
+| | Disparitas | Terdekat | Terjauh |
+|---|---|---|---|
+| 1 irisan | 7 sampai 22 px | 0,65 m | 2,04 m |
+| 2 irisan | 7 sampai 38 px | 0,38 m | 2,04 m |
+
+Batas jauh sama karena disparitas minimumnya sama; benda yang lebih dekat dari batas dekat tidak
+mendapat titik. Sudut pandang awal RViz (`host/ros/mini.rviz`) sama untuk kedua versi dan bisa
+digeser dengan mouse.
+
 Windows memegang USB, ROS berjalan di WSL (Ubuntu-24.04, ROS 2 Jazzy). Topik: `/stereo/points`,
 `/stereo/left`, `/stereo/depth_color`. Berhenti dengan menutup RViz atau Ctrl+C.
 Hanya satu program yang bisa memegang webcam: tutup `stereo stream` dulu.
