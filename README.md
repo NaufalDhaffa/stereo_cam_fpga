@@ -364,16 +364,22 @@ Asumsi (misalnya kurs saat membayar) dan seluruh anggaran ikut berubah.
 | Desain 4x2, 8 petak x €70 (dibayar sekali) | €560 | €560 |
 | Devkit (demo board + breakout berisi 1 chip), €300 | €300 | €600 |
 | Ongkir Worldwide Economy, €15 per devkit | €15 | €30 |
-| **Dibayar ke Tiny Tapeout** | **Rp 17.937.500** | **Rp 24.395.000** |
-| Pajak impor (bea masuk 7,5%, PPN 11%, PPh 10% dengan NPWP) | Rp 1.942.093 | Rp 3.884.186 |
-| Biaya kartu / selisih kurs (3%) | Rp 538.125 | Rp 731.850 |
+| **Dibayar ke Tiny Tapeout** | **Rp 18.834.375** | **Rp 25.614.750** |
+| Pajak impor (bea masuk 7,5%, PPN 11%, PPh 10% dengan NPWP) | Rp 2.039.198 | Rp 4.078.396 |
+| Biaya kartu / selisih kurs (3%) | Rp 565.031 | Rp 768.443 |
 | Papan interface ke EBAZ4205 | Rp 460.000 | Rp 660.000 |
-| **Total dengan NPWP** | **Rp 20.877.718** | **Rp 29.671.036** |
-| Total tanpa NPWP (PPh 20%) | Rp 21.571.899 | Rp 31.059.399 |
+| **Total dengan NPWP** | **Rp 21.898.604** | **Rp 31.121.588** |
+| Total tanpa NPWP (PPh 20%) | Rp 22.627.494 | Rp 32.579.369 |
+| di dalamnya: cadangan margin kenaikan kurs | Rp 1.020.886 | Rp 1.450.552 |
 
-Kurs dianggap Rp 20.500 per euro. Biaya desain hanya sekali: setiap devkit berisi satu chip bersama
-yang memuat irisan kita, dan karena di chip itu hanya satu proyek aktif pada satu waktu, rantai 2
-irisan butuh 2 chip fisik, yaitu 2 devkit.
+Kurs dasar Rp 20.500 per euro, ditambah margin kenaikan kurs 5%: semua konversi memakai
+Rp 21.525 per euro. Margin ini cadangan bila rupiah melemah sebelum dibayar; devkit dibayar saat
+memesan, sedangkan pajak impor baru dibayar saat chip tiba (sekitar Juni 2027). Besarnya bisa
+diubah di lembar Asumsi. Tanpa margin, totalnya Rp 20.877.718 (1 IC) dan Rp 29.671.036 (2 IC).
+
+Biaya desain hanya sekali: setiap devkit berisi satu chip bersama yang memuat irisan kita, dan
+karena di chip itu hanya satu proyek aktif pada satu waktu, rantai 2 irisan butuh 2 chip fisik,
+yaitu 2 devkit.
 
 Yang perlu dicek sebelum memesan: harga dan ketersediaan 4x2 di kalkulator saat itu, harga early
 bird (tidak dihitung), ongkir bila 2 devkit dikirim satu paket, tarif pajak terhadap PMK 50/2026,
