@@ -14,10 +14,11 @@ webcam "Stereo Depth Camera" (gambar kiri dan disparitas berdampingan, 400 x 148
 2. [Algoritma: dari kamera sampai USB](#algoritma-dari-kamera-sampai-usb)
 3. [Format data USB dan cara membacanya](#format-data-usb-dan-cara-membacanya)
 4. [Anggaran tapeout](#anggaran-tapeout)
-5. [Fungsi setiap folder](#fungsi-setiap-folder)
-6. [Fungsi setiap berkas](#fungsi-setiap-berkas)
-7. [Membangun ulang](#membangun-ulang)
-8. [Catatan dan batasan](#catatan-dan-batasan)
+5. [Chip mandiri (die bebas, wire bonding)](#chip-mandiri-die-bebas-wire-bonding)
+6. [Fungsi setiap folder](#fungsi-setiap-folder)
+7. [Fungsi setiap berkas](#fungsi-setiap-berkas)
+8. [Membangun ulang](#membangun-ulang)
+9. [Catatan dan batasan](#catatan-dan-batasan)
 
 ## Perintah yang bisa dijalankan dari mana saja
 
@@ -397,6 +398,97 @@ Sumber:
 [kurs EUR/IDR](https://id.tradingeconomics.com/euridr:cur),
 [JLCPCB](https://jlcpcb.com/). Diakses 14 Oktober 2026.
 
+## Chip mandiri (die bebas, wire bonding)
+
+Selain versi Tiny Tapeout, irisan yang sama disiapkan sebagai chip sendiri di `asic/chip`: kelima
+modul irisan masing-masing menjadi satu makro persegi panjang, dikelilingi 32 pad IO sky130 untuk
+wire bonding ke paket QFN-32 (5 x 5 mm, pitch 0,5 mm). Ukuran die tidak lagi mengikuti petak Tiny
+Tapeout.
+
+![Layout chip mandiri](asic/chip/out/layout_small.png)
+
+### Logika lebih kecil, fungsi dan spesifikasi sama
+
+| Modul | Awal (um2) | Akhir (um2) | Selisih |
+|---|---|---|---|
+| ctrl | 6.391 | 6.287 | -2% |
+| cost | 37.013 | 27.180 | -27% |
+| path | 7.498 | 6.539 | -13% |
+| pick | 10.566 | 8.785 | -17% |
+| up | 11.144 | 8.212 | -26% |
+| **Total** | **72.613** | **57.003** | **-21,5%** |
+
+Luas sel standar hasil sintesis (yosys + abc, sky130_fd_sc_hd), dihitung dengan
+`asic/area/synth_stat.sh` dan `asic/chip/synth.sh`. Dua cara:
+
+1. Clock gating otomatis (`clockgate` di yosys, sel `sky130_fd_sc_hd__dlclkp_1`): flip-flop yang
+   berbagi enable mendapat satu clock gate bersama, bukan multiplexer per bit. RTL tidak berubah.
+2. Offset sub-piksel di `rtl/mini/ms_up.v`: 17 pembanding diganti pembagian pendek (3 bit hasil
+   ditambah batas jenuh). Versi lama dan baru dibandingkan untuk semua 2.097.152 masukan dan
+   hasilnya identik (`rtl/tb/tb_subpixel_equiv.v`; versi lama di `asic/area/ms_up_orig.v`).
+   Hasilnya disimpan satu clock lebih awal (`f_off_r`), sehingga pembagian punya satu clock penuh
+   sebelum register output tepi turun; tanpa itu setup di corner lambat kurang 5,4 ns. Berkas
+   ini juga dipakai FPGA; simulasi rantai penuh (`tb_depth_mini`) tetap identik dengan golden,
+   29.600 piksel.
+
+### Susunan
+
+Luas tiap makro = luas sintesis x 1,25 (cadangan buffer dan clock tree) / 0,5. Isi 50% tidak
+menambah luas die karena die ditentukan oleh pad, dan memberi ruang routing. Susunan kolom
+cost / path+ctrl / up+pick membentuk blok 390 x 390 um; clock dan reset masuk dari sisi bawah,
+masukan dari kiri, keluaran ke kanan. `plan.py` memilih susunan ini dari semua kombinasi kolom
+dengan skor panjang kawat antarmakro, jarak ke pad, dan kemiripan dengan persegi.
+
+Die 1151 x 1151 um (1,32 mm2). Ukurannya ditentukan pad, bukan logika, dan mengikuti aturan yang
+ditemukan dari DRC sel IO PDK:
+
+- antara dua pad gpio minimal 7 um: deep n-well pad gpio menonjol 0,3 um dari selnya, sedangkan
+  jarak antar deep n-well minimal 6,3 um (dnwell.2);
+- di kiri setiap pad clamp 1,8 V (VCCD, VSSD) ada 12 um kosong: overlay-nya menjorok 11,3 um ke
+  pad sebelahnya;
+- area core mulai 40 um dari pad: pad clamp membawa met1 sampai 10,5 um ke arah core, dan cincin
+  daya core harus bebas dari bus suplai pad.
+
+### Hasil
+
+| Pemeriksaan | Hasil |
+|---|---|
+| 5 makro (OpenLane 2.3.10) | LVS cocok, Magic DRC 0, routing 0; antena: 7 net di cost, 1 di path, sisanya 0 |
+| Routing chip (OpenROAD) | 0 pelanggaran |
+| DRC KLayout seluruh chip (`sky130A_mr.drc`) | core 0, pad ring 0; 5 `npc.2` di dalam makro cost (4) dan path (1), yang bersih di Magic |
+| STA chip, 25 MHz, tt / ss / ff | setup +14,39 / +0,39 / +16,56 ns; hold +0,33 / +0,75 / +0,20 ns |
+| Pad suplai ke cincin daya | 4 pad tersambung (strap met3 + via bertumpuk di cincin) |
+
+STA memakai model timing setiap makro hasil routing-nya, sehingga jalur ctrl -> cost -> pick
+dihitung utuh; 91 buffer hold ditambahkan di kawat antarmakro.
+
+### Pinout dan wire bonding
+
+| Pin QFN | Sinyal | Sisi die |
+|---|---|---|
+| 1-8 | `ui_in[0]` sampai `ui_in[7]` | kiri, atas ke bawah |
+| 9-16 | VSSD, VCCD, `clk`, `rst_n`, VSSIO, VDDIO, VCCD2, VSSD2 | bawah, kiri ke kanan |
+| 17-24 | `uo_out[0]` sampai `uo_out[7]` | kanan, bawah ke atas |
+| 25-32 | `uio_in[0]` sampai `uio_in[7]` | atas, kanan ke kiri |
+
+Koordinat setiap bond pad dan lead, serta panjang kawatnya (terpanjang 2167 um), ada di
+[`asic/chip/out/bonding.md`](asic/chip/out/bonding.md) dan `bonding.csv`; gambarnya di
+`bonding.png`. Simbol xschem chip berpaket (`stereo_slice_chip.sym`, nomor pin QFN) dan skematik
+pemakaian dengan kapasitor dekopling 100 nF (`stereo_slice_chip_tb.sch`) ada di
+`asic/chip/out/xschem`; buka dari folder itu dengan `xschem -r xschemrc stereo_slice_chip_tb.sch`.
+
+### Belum selesai
+
+- Bus suplai cincin pad VDDA, VSSA, VSWITCH, VCCHIB, VDDIO_Q dan VSSIO_Q belum punya sumber; chip
+  yang akan dibuat butuh pad atau slice penghubung untuk bus itu.
+- Sinyal kontrol 3,3 V setiap pad (ENABLE_H, HLD_H_N dan lainnya) diikat ke TIE_HI_ESD /
+  TIE_LO_ESD pad itu sendiri; belum ada rangkaian power-on reset.
+- Pelanggaran antena: 7 net di makro cost dan 1 di path, yang masih perlu diode tambahan.
+- LVS seluruh chip dan Magic DRC seluruh chip belum dijalankan (LVS dan Magic DRC tiap makro
+  bersih). STA chip memakai parasitik perkiraan dari placement, bukan hasil ekstraksi.
+- Ukuran makro `up` dihitung dari luas sebelum register `f_off_r` ditambahkan (8.254 vs 8.212
+  um2); isinya tetap sekitar 50%.
+
 ## Fungsi setiap folder
 
 | Folder | Fungsi |
@@ -489,6 +581,7 @@ dijelaskan per kelompok di bagian akhir.
 | `tb_mini.v` | Rantai 1 sampai 4 irisan terhadap model |
 | `tb_depth_mini.v` | Seluruh rantai depth mini (binning sampai byte keluar) terhadap model |
 | `tb_depth.v`, `tb_chip.v`, `tb_matcher.v`, `tb_census.v`, `tb_rectify.v` | Inti penuh dan bagian-bagiannya |
+| `tb_subpixel_equiv.v` | Offset sub-piksel lama (17 pembanding) dan baru (pembagian pendek) untuk semua 2.097.152 masukan |
 
 ### `hw/`
 
@@ -608,6 +701,17 @@ dijelaskan per kelompok di bagian akhir.
 | `out_tt_4x2/layout*.png` | Gambar layout: mentah, dengan judul dan legenda, dengan nama blok saja |
 | `out_tt_4x2/metrics.json`, `summary.txt`, `cells.json` | Metrik alur, ringkasan, posisi sel per blok |
 | `out_tt_4x2/precheck/` | Laporan precheck Tiny Tapeout |
+| `area/` | Luas per modul: `synth_stat.sh` (sintesis awal dan dengan clock gating), `breakdown.py` (rincian per jenis sel), `ms_up_orig.v` (sub-piksel versi lama) |
+| `chip/plan.py` | Rencana chip mandiri: ukuran makro, susunan kolom, pad dan jaraknya, ukuran die (`out/plan.*`) |
+| `chip/synth.sh` | Netlist gerbang kelima modul dengan clock gating (di WSL) |
+| `chip/flow.py`, `chip/wsl_flow.sh` | Hardening kelima makro dengan OpenLane (di WSL) |
+| `chip/padring.py` | Chip penuh di OpenROAD: netlist pad, P&R, STA, GDS, DRC, gambar (di WSL) |
+| `chip/bonding.py` | Tabel dan gambar wire bonding QFN-32, simbol dan skematik xschem |
+| `chip/out/stereo_slice_chip.gds.gz` | Layout chip penuh (gzip; `gunzip -k` untuk membukanya) |
+| `chip/out/gds/` | Layout kelima makro |
+| `chip/out/layout*.png`, `plan.png` | Gambar layout dan rencana susunan |
+| `chip/out/bonding.*`, `xschem/` | Pinout dan wire bonding, simbol dan skematik xschem |
+| `chip/out/sta.txt`, `drc.md`, `synth_area.txt` | Ringkasan timing, DRC, luas sintesis |
 
 ### `calib/`, `sensor/`, `docs/`, `constraints/`, `scripts/`
 
@@ -651,6 +755,7 @@ dijelaskan per kelompok di bagian akhir.
 | BOOT.BIN | di WSL: `bash /mnt/d/stereo-depth-cam/board/petalinux/bootbin.sh 1 2` |
 | Simulasi | `scripts\sim.ps1 tb_depth_mini -Golden build\golden_minisys` |
 | Chip (hardening, uji, precheck) | di WSL: `bash /mnt/d/stereo-depth-cam/asic/wsl_ttall.sh` |
+| Chip mandiri | `python asic/chip/plan.py`, lalu di WSL: `bash /mnt/d/stereo-depth-cam/asic/chip/synth.sh`, `bash /mnt/d/stereo-depth-cam/asic/chip/wsl_flow.sh blocks`, `python3 /mnt/d/stereo-depth-cam/asic/chip/padring.py`; terakhir `python asic/chip/bonding.py` |
 | Firmware FX2LP | di WSL: `bash fx2/uvc/build.sh` |
 
 Beberapa skrip WSL memuat path `/mnt/d/stereo-depth-cam`; kalau repo dipindah, path itu ikut

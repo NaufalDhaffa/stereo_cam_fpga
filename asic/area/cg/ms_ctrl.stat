@@ -1,0 +1,62 @@
+
+7. Printing statistics.
+
+=== ms_ctrl ===
+
+   Number of wires:                408
+   Number of wire bits:            661
+   Number of public wires:          39
+   Number of public wire bits:     292
+   Number of ports:                 26
+   Number of port bits:            169
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                545
+     sky130_fd_sc_hd__a2111oi_0      2
+     sky130_fd_sc_hd__a211o_1        1
+     sky130_fd_sc_hd__a211oi_1       2
+     sky130_fd_sc_hd__a21boi_0       1
+     sky130_fd_sc_hd__a21o_1         1
+     sky130_fd_sc_hd__a21oi_1       22
+     sky130_fd_sc_hd__a31o_1         1
+     sky130_fd_sc_hd__a31oi_1        1
+     sky130_fd_sc_hd__a32o_1        14
+     sky130_fd_sc_hd__a32oi_1        1
+     sky130_fd_sc_hd__and2_0         3
+     sky130_fd_sc_hd__and3_1         5
+     sky130_fd_sc_hd__and4_1         1
+     sky130_fd_sc_hd__clkinv_1      11
+     sky130_fd_sc_hd__dfxtp_1      174
+     sky130_fd_sc_hd__dlclkp_1      10
+     sky130_fd_sc_hd__lpflow_inputiso1p_1     11
+     sky130_fd_sc_hd__lpflow_isobufsrc_1     17
+     sky130_fd_sc_hd__maj3_1         4
+     sky130_fd_sc_hd__mux2_1        73
+     sky130_fd_sc_hd__mux2i_1        5
+     sky130_fd_sc_hd__nand2_1       47
+     sky130_fd_sc_hd__nand2b_1       5
+     sky130_fd_sc_hd__nand3_1       11
+     sky130_fd_sc_hd__nand3b_1       2
+     sky130_fd_sc_hd__nand4_1        3
+     sky130_fd_sc_hd__nand4b_1       2
+     sky130_fd_sc_hd__nor2_1        28
+     sky130_fd_sc_hd__nor3_1        11
+     sky130_fd_sc_hd__nor3b_1        1
+     sky130_fd_sc_hd__nor4_1         7
+     sky130_fd_sc_hd__nor4b_1        2
+     sky130_fd_sc_hd__nor4bb_1       2
+     sky130_fd_sc_hd__o21a_1         1
+     sky130_fd_sc_hd__o21ai_0       18
+     sky130_fd_sc_hd__o21ba_1        1
+     sky130_fd_sc_hd__o22ai_1        1
+     sky130_fd_sc_hd__o31ai_1        2
+     sky130_fd_sc_hd__or3_1          1
+     sky130_fd_sc_hd__xnor2_1       21
+     sky130_fd_sc_hd__xnor3_1        2
+     sky130_fd_sc_hd__xor2_1        16
+     sky130_fd_sc_hd__xor3_1         1
+
+   Chip area for module '\ms_ctrl': 6267.260800
+     of which used for sequential elements: 3483.340800 (55.58%)
+

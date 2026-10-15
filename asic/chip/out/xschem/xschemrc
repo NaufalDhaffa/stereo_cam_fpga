@@ -1,0 +1,2 @@
+# xschem -r xschemrc stereo_slice_chip_tb.sch  (from this folder)
+append XSCHEM_LIBRARY_PATH :[file dirname [info script]]

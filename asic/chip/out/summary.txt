@@ -1,0 +1,210 @@
+{
+ "blocks": {
+  "ctrl": {
+   "exit": 2,
+   "size": [
+    86.02,
+    130.56
+   ],
+   "pins": {
+    "N": 15,
+    "S": 2,
+    "E": 4,
+    "W": 5
+   }
+  }
+ }
+}
+{
+ "blocks": {
+  "ctrl": {
+   "exit": 2,
+   "size": [
+    86.02,
+    130.56
+   ],
+   "pins": {
+    "N": 15,
+    "S": 2,
+    "E": 4,
+    "W": 5
+   }
+  }
+ }
+}
+{
+ "blocks": {
+  "ctrl": {
+   "exit": 2,
+   "size": [
+    86.02,
+    130.56
+   ],
+   "pins": {
+    "N": 18,
+    "S": 2,
+    "E": 4,
+    "W": 2
+   }
+  }
+ }
+}
+{
+ "blocks": {
+  "ctrl": {
+   "exit": 2,
+   "size": [
+    91.08,
+    138.72
+   ],
+   "pins": {
+    "N": 16,
+    "S": 2,
+    "E": 4,
+    "W": 4
+   }
+  }
+ }
+}
+{
+ "blocks": {
+  "cost": {
+   "exit": 2,
+   "size": [
+    174.34,
+    388.96
+   ],
+   "pins": {
+    "N": 0,
+    "S": 0,
+    "E": 10,
+    "W": 0
+   }
+  }
+ }
+}
+{
+ "blocks": {
+  "ctrl": {
+   "exit": 0,
+   "size": [
+    86.02,
+    182.24
+   ],
+   "pins": {
+    "N": 8,
+    "S": 2,
+    "E": 11,
+    "W": 5
+   },
+   "design__instance__count": 837,
+   "design__instance__area": 8732.12,
+   "design__instance__utilization": 0.66334,
+   "timing__setup__ws": 24.082393649790575,
+   "timing__hold__ws": 0.11474876928998683,
+   "route__wirelength": 20095,
+   "route__drc_errors": 0,
+   "magic__drc_error__count": 0,
+   "klayout__drc_error__count": 0,
+   "design__lvs_error__count": 0,
+   "antenna__violating__nets": 0,
+   "design__max_slew_violation__count": 45,
+   "design__max_cap_violation__count": 0
+  },
+  "path": {
+   "exit": 2,
+   "size": [
+    86.02,
+    190.4
+   ],
+   "pins": {
+    "N": 0,
+    "S": 10,
+    "E": 8,
+    "W": 1
+   }
+  },
+  "pick": {
+   "exit": 0,
+   "size": [
+    114.08,
+    193.12
+   ],
+   "pins": {
+    "N": 7,
+    "S": 0,
+    "E": 0,
+    "W": 10
+   },
+   "design__instance__count": 1210,
+   "design__instance__area": 11431,
+   "design__instance__utilization": 0.598062,
+   "timing__setup__ws": 26.723655156281104,
+   "timing__hold__ws": 0.11329842940074933,
+   "route__wirelength": 31404,
+   "route__drc_errors": 0,
+   "magic__drc_error__count": 0,
+   "klayout__drc_error__count": 0,
+   "design__lvs_error__count": 0,
+   "antenna__violating__nets": 0,
+   "design__max_slew_violation__count": 18,
+   "design__max_cap_violation__count": 0
+  },
+  "up": {
+   "exit": 0,
+   "size": [
+    114.08,
+    182.24
+   ],
+   "pins": {
+    "N": 0,
+    "S": 15,
+    "E": 1,
+    "W": 7
+   },
+   "design__instance__count": 1495,
+   "design__instance__area": 11626.2,
+   "design__instance__utilization": 0.646895,
+   "timing__setup__ws": -5.392454635453263,
+   "timing__hold__ws": 0.16661955620165603,
+   "route__wirelength": 34473,
+   "route__drc_errors": 0,
+   "magic__drc_error__count": 0,
+   "klayout__drc_error__count": 0,
+   "design__lvs_error__count": 0,
+   "antenna__violating__nets": 0,
+   "design__max_slew_violation__count": 35,
+   "design__max_cap_violation__count": 0
+  }
+ }
+}
+{
+ "blocks": {
+  "up": {
+   "exit": 0,
+   "size": [
+    114.08,
+    182.24
+   ],
+   "pins": {
+    "N": 0,
+    "S": 15,
+    "E": 1,
+    "W": 7
+   },
+   "design__instance__count": 1470,
+   "design__instance__area": 11051.8,
+   "design__instance__utilization": 0.61494,
+   "timing__setup__ws": 2.5657503514688638,
+   "timing__hold__ws": 0.16527840674997854,
+   "route__wirelength": 30321,
+   "route__drc_errors": 0,
+   "magic__drc_error__count": 0,
+   "klayout__drc_error__count": 0,
+   "design__lvs_error__count": 0,
+   "antenna__violating__nets": 0,
+   "design__max_slew_violation__count": 4,
+   "design__max_cap_violation__count": 0
+  }
+ }
+}

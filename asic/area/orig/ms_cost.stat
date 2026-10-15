@@ -1,0 +1,68 @@
+
+6. Printing statistics.
+
+=== ms_cost ===
+
+   Number of wires:               2209
+   Number of wire bits:           3340
+   Number of public wires:          59
+   Number of public wire bits:    1190
+   Number of ports:                 10
+   Number of port bits:            106
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:               3113
+     sky130_fd_sc_hd__a211oi_1       4
+     sky130_fd_sc_hd__a21bo_1        1
+     sky130_fd_sc_hd__a21boi_0       4
+     sky130_fd_sc_hd__a21o_1         5
+     sky130_fd_sc_hd__a21oi_1      252
+     sky130_fd_sc_hd__a221oi_1      23
+     sky130_fd_sc_hd__a222oi_1     135
+     sky130_fd_sc_hd__a22o_1        13
+     sky130_fd_sc_hd__a22oi_1      194
+     sky130_fd_sc_hd__a311oi_1       1
+     sky130_fd_sc_hd__a31oi_1        4
+     sky130_fd_sc_hd__a41oi_1        1
+     sky130_fd_sc_hd__and2_0        22
+     sky130_fd_sc_hd__and3_1         5
+     sky130_fd_sc_hd__and3b_1        1
+     sky130_fd_sc_hd__and4_1         6
+     sky130_fd_sc_hd__and4b_1        4
+     sky130_fd_sc_hd__clkinv_1      31
+     sky130_fd_sc_hd__dfxtp_1      957
+     sky130_fd_sc_hd__lpflow_inputiso1p_1      5
+     sky130_fd_sc_hd__lpflow_isobufsrc_1     10
+     sky130_fd_sc_hd__maj3_1        35
+     sky130_fd_sc_hd__mux2_1       751
+     sky130_fd_sc_hd__mux2i_1        2
+     sky130_fd_sc_hd__nand2_1      100
+     sky130_fd_sc_hd__nand2b_1      11
+     sky130_fd_sc_hd__nand3_1       40
+     sky130_fd_sc_hd__nand4_1       32
+     sky130_fd_sc_hd__nor2_1       233
+     sky130_fd_sc_hd__nor2b_1        1
+     sky130_fd_sc_hd__nor3_1         5
+     sky130_fd_sc_hd__nor4_1         7
+     sky130_fd_sc_hd__nor4b_1        4
+     sky130_fd_sc_hd__nor4bb_1       6
+     sky130_fd_sc_hd__o21a_1         3
+     sky130_fd_sc_hd__o21ai_0       31
+     sky130_fd_sc_hd__o21bai_1       6
+     sky130_fd_sc_hd__o22a_1         2
+     sky130_fd_sc_hd__o22ai_1       12
+     sky130_fd_sc_hd__o2bb2ai_1      1
+     sky130_fd_sc_hd__o31ai_1        2
+     sky130_fd_sc_hd__o32a_1         1
+     sky130_fd_sc_hd__o41a_1         1
+     sky130_fd_sc_hd__or3_1          1
+     sky130_fd_sc_hd__or4_1          5
+     sky130_fd_sc_hd__xnor2_1       58
+     sky130_fd_sc_hd__xnor3_1       11
+     sky130_fd_sc_hd__xor2_1        53
+     sky130_fd_sc_hd__xor3_1        21
+
+   Chip area for module '\ms_cost': 37012.998400
+     of which used for sequential elements: 19158.374400 (51.76%)
+

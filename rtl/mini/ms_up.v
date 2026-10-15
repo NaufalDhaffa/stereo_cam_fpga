@@ -41,17 +41,23 @@ module ms_up (
     wire        f_uniq = f_margin >= f_second * uq;
     wire signed [16:0] pbs = $signed({6'b000000, f_b});
     wire signed [16:0] pt  = f_a * 17'sd16 + ((f_a > 0) ? pbs : (f_a < 0) ? -pbs : 17'sd0);
-    reg  [16:0] fits;
-    reg  [4:0]  fit;
-    integer q5;
-    always @* begin
-        fit = 5'd0;
-        for (q5 = 0; q5 < 17; q5 = q5 + 1) begin
-            fits[q5] = ((q5 - 8) * 2 * pbs <= pt);
-            if (fits[q5]) fit = q5 + 1;
-        end
-    end
-    wire signed [5:0] f_off = (f_b == 11'd0) ? 6'sd0 : (fit == 5'd0) ? -6'sd8 : $signed({1'b0, fit}) - 6'sd9;
+    // offset = floor(pt / (2 pbs)), limited to -8 .. 8: a short division (the quotient needs only
+    // three bits once "8 or more" is known), instead of comparing pt with all 17 candidates
+    wire        p_neg = pt[16];
+    wire [16:0] p_mag = p_neg ? -pt : pt;
+    wire [12:0] p_dv  = {1'b0, f_b, 1'b0};                                     // 2 pbs
+    wire [17:0] p_u   = {1'b0, p_mag} + (p_neg ? {5'd0, p_dv} - 18'd1 : 18'd0); // ceiling for negative pt
+    wire        p_sat = p_u >= {2'b00, p_dv, 3'b000};
+    wire        p_b2  = p_u >= {3'b000, p_dv, 2'b00};
+    wire [17:0] p_r2  = p_b2 ? p_u - {3'b000, p_dv, 2'b00} : p_u;
+    wire        p_b1  = p_r2 >= {4'b0000, p_dv, 1'b0};
+    wire [17:0] p_r1  = p_b1 ? p_r2 - {4'b0000, p_dv, 1'b0} : p_r2;
+    wire        p_b0  = p_r1 >= {5'b00000, p_dv};
+    wire [3:0]  p_q   = p_sat ? 4'd8 : {1'b0, p_b2, p_b1, p_b0};
+    wire signed [5:0] f_off = (f_b == 11'd0) ? 6'sd0 : p_neg ? -$signed({2'b00, p_q}) : $signed({2'b00, p_q});
+    // its inputs settle two clocks before it is sent: kept one clock in a register, so that the
+    // division has a whole clock instead of the half before the negative-edge output register
+    reg [4:0] f_off_r;
 
     reg [7:0] ucomb;
     always @* begin
@@ -70,13 +76,14 @@ module ms_up (
             else if (bi == 7'd7 + n7)       ucomb = (!bottom && uio_r[7]) ? uio_r : s0;
             else if (bi == 7'd8 + n7)       ucomb = (!bottom && uio_r[7]) ? uio_r : s2;
             else if (bi == 7'd9 + n7)       ucomb = top ? {f_uniq, pw_k} : 8'h00;
-            else                            ucomb = top ? {3'b000, f_off[4:0]} : 8'h00;
+            else                            ucomb = top ? {3'b000, f_off_r} : 8'h00;
         end
     end
     always @(negedge clk) uo <= rst ? 8'h00 : ucomb;
 
     always @(posedge clk) begin
         uio_r <= uio;
+        f_off_r <= f_off[4:0];
         if (load) begin
             pw_s <= mw_s;
             pw_k <= mw_k;
