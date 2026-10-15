@@ -35,9 +35,10 @@ for job in c["jobs"]:
     box = top.dbbox()
     view.zoom_box(box)
     view.save_image(job["full"], job["px"], int(job["px"] * box.height() / box.width()))
-    cx, cy, h = box.center().x, box.center().y, c["zoom"] / 2
-    view.zoom_box(pya.DBox(cx - h, cy - h, cx + h, cy + h))
-    view.save_image(job["zoom"], 900, 900)
+    for z in job.get("zooms") or [dict(png=job["zoom"], centre=[box.center().x, box.center().y], size=c["zoom"])]:
+        (cx, cy), h = z["centre"], z["size"] / 2
+        view.zoom_box(pya.DBox(cx - h, cy - h, cx + h, cy + h))
+        view.save_image(z["png"], 900, 900)
     print("RENDERED", job["full"])
 """
 
@@ -47,6 +48,17 @@ def main():
     os.makedirs(d, exist_ok=True)
     jobs = [dict(gds=os.path.join(OUT, "gds", f"slice_{b}.gds"), full=os.path.join(d, f"{b}.png"),
                  zoom=os.path.join(d, f"{b}_zoom.png"), px=1400) for b in BLOCKS]
+    # the whole chip: all of it, the junction of the channels between the macros (the planned,
+    # straight wires) and a ZOOM window there
+    chip_gds = os.path.expanduser("~/ic/chip/top/stereo_slice_chip.gds")
+    if os.path.exists(chip_gds):
+        plan = json.load(open(os.path.join(OUT, "plan.json")))
+        ox, oy = plan["core_origin"]
+        x, y, w, h = plan["macros"]["ctrl"]            # its top right corner: where the channels meet
+        jx, jy = ox + x + w + 4, oy + y + h + 8
+        jobs.append(dict(gds=chip_gds, full=os.path.join(d, "chip.png"), px=2400, zooms=[
+            dict(png=os.path.join(d, "chip_channels.png"), centre=[jx, jy], size=120.0),
+            dict(png=os.path.join(d, "chip_zoom.png"), centre=[jx, jy], size=ZOOM)]))
     cfg = os.path.join(d, "render.json")
     json.dump(dict(lyp=f"{PDK}/libs.tech/klayout/tech/sky130A.lyp", zoom=ZOOM, jobs=jobs), open(cfg, "w"))
     script = os.path.join(d, "render.py")
