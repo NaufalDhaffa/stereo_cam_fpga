@@ -67,6 +67,61 @@ def main():
     print("\n".join(l for l in (r.stdout + r.stderr).splitlines() if "RENDERED" in l or "rror" in l))
     os.remove(cfg)
     os.remove(script)
+    if os.path.exists(os.path.join(d, "chip.png")):
+        annotate(os.path.join(d, "chip.png"), os.path.join(d, "chip_annotated.png"))
+
+
+def annotate(src, dst):
+    """The whole chip with its parts named: macros, pads, core ring, supply slice and jumpers."""
+    from PIL import Image, ImageDraw, ImageFont
+    plan = json.load(open(os.path.join(OUT, "plan.json")))
+    die = plan["die"]
+    im = Image.open(src).convert("RGB")
+    px = im.size[0]
+    k = px / die
+    P = lambda x, y: (x * k, px - y * k)                       # die um -> picture
+    d = ImageDraw.Draw(im)
+    try:
+        big = ImageFont.truetype("DejaVuSans-Bold.ttf", 30)
+        mid = ImageFont.truetype("DejaVuSans-Bold.ttf", 20)
+        small = ImageFont.truetype("DejaVuSans.ttf", 16)
+    except OSError:
+        big = mid = small = ImageFont.load_default()
+
+    def label(xy, text, font, box=(255, 255, 255), fg=(0, 0, 0), anchor="mm"):
+        l, t, r, b = d.multiline_textbbox(xy, text, font=font, anchor=anchor, align="center")
+        d.rectangle([l - 6, t - 4, r + 6, b + 4], fill=box, outline=fg, width=1)
+        d.multiline_text(xy, text, font=font, fill=fg, anchor=anchor, align="center")
+
+    ox, oy = plan["core_origin"]
+    # macros
+    for b, (x, y, w, h) in plan["macros"].items():
+        d.rectangle([*P(ox + x, oy + y + h), *P(ox + x + w, oy + y)], outline=(0, 0, 0), width=5)
+        label(P(ox + x + w / 2, oy + y + h / 2), f"{b}\n{w:.0f} x {h:.0f} um", big)
+    # the core power ring (4 + 10 + 3 + 10 um outside the core, which starts 40 um past the pads)
+    inner = 20 + 197.965 + 40
+    for off, name in ((4 + 5, "vssd"), (4 + 10 + 3 + 5, "vccd")):
+        e = inner - off
+        d.rectangle([*P(e, die - e), *P(die - e, e)], outline=(30, 90, 200), width=2)
+    label(P(die / 2, die - inner + 13.5), "core power ring: VCCD (outer) / VSSD (inner), met4 + met5", mid,
+          box=(225, 235, 255), fg=(20, 60, 160))
+    # pads
+    for p in plan["pads"]:
+        label(P(p["x"], p["y"]), f"{p['pin']}\n{p['name']}", small)
+    # supply slice and VDDA / VSSA jumpers on the south row
+    for r in plan["ring"]:
+        x0, x1 = r["x"], r["x"] + r["width"]
+        y0, y1 = 20, 20 + 197.965
+        d.rectangle([*P(x0, y1), *P(x1, y0)], outline=(200, 30, 30), width=4)
+        text = "VCCHIB->VCCD\nVSWITCH->VDDIO\nslice" if r["kind"] == "slice" else "VDDA->VDDIO\nVSSA->VSSIO\njumper"
+        label(P((x0 + x1) / 2, y1 + 30), text, small, box=(255, 230, 230), fg=(170, 20, 20))
+    # corners and the die
+    for cx, cy in ((120, 122), (die - 120, 122), (120, die - 122), (die - 120, die - 122)):
+        label(P(cx, cy), "corner", small, box=(240, 240, 240))
+    label(P(die / 2, die - 8), f"stereo_slice_chip  {die:.0f} x {die:.0f} um  sky130A  QFN-32", mid,
+          box=(255, 255, 210))
+    im.save(dst)
+    print("ANNOTATED", dst)
 
 
 if __name__ == "__main__":
