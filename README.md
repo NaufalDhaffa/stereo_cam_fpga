@@ -722,6 +722,7 @@ dijelaskan per kelompok di bagian akhir.
 | `chip/flow.py`, `chip/wsl_flow.sh` | Hardening kelima makro dengan OpenLane (di WSL) |
 | `chip/padring.py` | Chip penuh: netlist pad, P&R, ekstraksi OpenRCX dan STA, LVS (Magic + netgen), GDS, DRC KLayout dan Magic, gambar (di WSL) |
 | `chip/bonding.py` | Tabel dan gambar wire bonding QFN-32, simbol dan skematik xschem |
+| `chip/render_3d.py` | Gambar 3D isometrik chip dari GDS gabungan: setiap layer (difusi dan poly, li1, met1 sampai met5, bukaan pad) dirasterkan dari poligonnya dan ditumpuk terpisah di atas silikon (`out/modules/chip_3d.png`) (di WSL) |
 | `chip/render_modules.py` | Gambar KLayout tiap makro dengan warna layer sky130: utuh (`out/modules/<modul>.png`) dan diperbesar 12 x 12 um di tengahnya (`<modul>_zoom.png`); chip penuh (`chip.png`, dengan anotasi makro, pad, cincin daya, slice dan jumper suplai: `chip_annotated.png`), persimpangan kanal antarmakro 120 um (`chip_channels.png`) dan 12 um (`chip_zoom.png`) (di WSL) |
 | `chip/out/stereo_slice_chip.gds.gz` | Layout chip penuh (gzip; `gunzip -k` untuk membukanya) |
 | `chip/out/gds/` | Layout kelima makro |
