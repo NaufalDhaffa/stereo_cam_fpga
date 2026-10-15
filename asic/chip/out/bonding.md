@@ -12,14 +12,14 @@ Die 1151.0 x 1151.0 um di tengah pad ekspos QFN-32 5 x 5 mm (pitch 0,5 mm). Koor
 | 6 | ui_in[5] | masuk | W | sky130_ef_io__gpiov2_pad | 84.2, 445.0 | 400.0, 1750.0 | 1724 |
 | 7 | ui_in[6] | masuk | W | sky130_ef_io__gpiov2_pad | 84.2, 358.0 | 400.0, 1250.0 | 1912 |
 | 8 | ui_in[7] | masuk | W | sky130_ef_io__gpiov2_pad | 84.2, 271.0 | 400.0, 750.0 | 2163 |
-| 9 | VSSD | ground inti | S | sky130_ef_io__vssd_lvc_clamped_pad | 276.8, 84.2 | 750.0, 400.0 | 2167 |
-| 10 | VCCD | daya inti 1,8 V | S | sky130_ef_io__vccd_lvc_clamped_pad | 367.2, 84.2 | 1250.0, 400.0 | 1917 |
-| 11 | clk | masuk | S | sky130_ef_io__gpiov2_pad | 450.0, 84.2 | 1750.0, 400.0 | 1726 |
-| 12 | rst_n | masuk (aktif rendah) | S | sky130_ef_io__gpiov2_pad | 540.3, 84.2 | 2250.0, 400.0 | 1623 |
-| 13 | VSSIO | ground pad | S | sky130_ef_io__vssio_hvc_clamped_pad | 623.2, 84.2 | 2750.0, 400.0 | 1621 |
-| 14 | VDDIO | daya pad 3,3 V | S | sky130_ef_io__vddio_hvc_clamped_pad | 703.5, 84.2 | 3250.0, 400.0 | 1725 |
-| 15 | VCCD2 | daya inti 1,8 V | S | sky130_ef_io__vccd_lvc_clamped_pad | 793.8, 84.2 | 3750.0, 400.0 | 1911 |
-| 16 | VSSD2 | ground inti | S | sky130_ef_io__vssd_lvc_clamped_pad | 884.2, 84.2 | 4250.0, 400.0 | 2160 |
+| 9 | VSSD | ground inti | S | sky130_ef_io__vssd_lvc_clamped_pad | 274.5, 84.2 | 750.0, 400.0 | 2165 |
+| 10 | VCCD | daya inti 1,8 V | S | sky130_ef_io__vccd_lvc_clamped_pad | 362.5, 84.2 | 1250.0, 400.0 | 1914 |
+| 11 | clk | masuk | S | sky130_ef_io__gpiov2_pad | 443.0, 84.2 | 1750.0, 400.0 | 1723 |
+| 12 | rst_n | masuk (aktif rendah) | S | sky130_ef_io__gpiov2_pad | 532.0, 84.2 | 2250.0, 400.0 | 1622 |
+| 13 | VSSIO | ground pad | S | sky130_ef_io__vssio_hvc_clamped_pad | 612.5, 84.2 | 2750.0, 400.0 | 1623 |
+| 14 | VDDIO | daya pad 3,3 V | S | sky130_ef_io__vddio_hvc_clamped_pad | 710.5, 84.2 | 3250.0, 400.0 | 1722 |
+| 15 | VCCD2 | daya inti 1,8 V | S | sky130_ef_io__vccd_lvc_clamped_pad | 798.5, 84.2 | 3750.0, 400.0 | 1909 |
+| 16 | VSSD2 | ground inti | S | sky130_ef_io__vssd_lvc_clamped_pad | 886.5, 84.2 | 4250.0, 400.0 | 2158 |
 | 17 | uo_out[0] | keluar | E | sky130_ef_io__gpiov2_pad | 1066.8, 271.0 | 4600.0, 750.0 | 2163 |
 | 18 | uo_out[1] | keluar | E | sky130_ef_io__gpiov2_pad | 1066.8, 358.0 | 4600.0, 1250.0 | 1912 |
 | 19 | uo_out[2] | keluar | E | sky130_ef_io__gpiov2_pad | 1066.8, 445.0 | 4600.0, 1750.0 | 1724 |
@@ -37,4 +37,4 @@ Die 1151.0 x 1151.0 um di tengah pad ekspos QFN-32 5 x 5 mm (pitch 0,5 mm). Koor
 | 31 | uio_in[6] | masuk | N | sky130_ef_io__gpiov2_pad | 358.0, 1066.8 | 1250.0, 4600.0 | 1912 |
 | 32 | uio_in[7] | masuk | N | sky130_ef_io__gpiov2_pad | 271.0, 1066.8 | 750.0, 4600.0 | 2163 |
 
-Kawat terpanjang 2167 um (emas 25 um umumnya sampai sekitar 3 mm). Pad ekspos (bawah paket) disambung ke VSSD/VSSIO di PCB.
+Kawat terpanjang 2165 um (emas 25 um umumnya sampai sekitar 3 mm). Pad ekspos (bawah paket) disambung ke VSSD/VSSIO di PCB.

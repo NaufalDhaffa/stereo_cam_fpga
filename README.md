@@ -431,36 +431,47 @@ Luas sel standar hasil sintesis (yosys + abc, sky130_fd_sc_hd), dihitung dengan
    ini juga dipakai FPGA; simulasi rantai penuh (`tb_depth_mini`) tetap identik dengan golden,
    29.600 piksel.
 
-### Susunan
+### Susunan dan rencana pin
 
-Luas tiap makro = luas sintesis x 1,25 (cadangan buffer dan clock tree) / 0,5. Isi 50% tidak
-menambah luas die karena die ditentukan oleh pad, dan memberi ruang routing. Susunan kolom
-cost / path+ctrl / up+pick membentuk blok 390 x 390 um; clock dan reset masuk dari sisi bawah,
-masukan dari kiri, keluaran ke kanan. `plan.py` memilih susunan ini dari semua kombinasi kolom
-dengan skor panjang kawat antarmakro, jarak ke pad, dan kemiripan dengan persegi.
+Luas tiap makro = luas sintesis x 1,25 / 0,5; cost diberi 0,4 (lebih lebar, tinggi sama) karena
+dengan buffer kawat dan diode antena routing-nya tidak konvergen pada 0,5. Susunan kolom
+cost / path+ctrl / up+pick (`plan.py`). Die 1151 x 1151 um (1,32 mm2), ditentukan pad:
 
-Die 1151 x 1151 um (1,32 mm2). Ukurannya ditentukan pad, bukan logika, dan mengikuti aturan yang
-ditemukan dari DRC sel IO PDK:
+- antara dua pad gpio minimal 7 um (deep n-well menonjol 0,3 um, jarak antar deep n-well 6,3 um);
+- di kiri setiap pad clamp 1,8 V ada 12 um kosong (overlay-nya menjorok 11,3 um);
+- core mulai 40 um dari pad (met1 pad clamp 10,5 um ke dalam, cincin daya bebas dari bus pad).
 
-- antara dua pad gpio minimal 7 um: deep n-well pad gpio menonjol 0,3 um dari selnya, sedangkan
-  jarak antar deep n-well minimal 6,3 um (dnwell.2);
-- di kiri setiap pad clamp 1,8 V (VCCD, VSSD) ada 12 um kosong: overlay-nya menjorok 11,3 um ke
-  pad sebelahnya;
-- area core mulai 40 um dari pad: pad clamp membawa met1 sampai 10,5 um ke arah core, dan cincin
-  daya core harus bebas dari bus suplai pad.
+Posisi setiap pin makro dihitung sebelum hardening (`pins.py`, dari sambungan bit demi bit di
+`out/conn.txt`): pin yang tersambung ke makro sebelahnya diletakkan berhadapan dalam urutan
+yang sama, sehingga kawatnya lurus melintasi kanal (`out/pins.png`); pin lain ke sisi yang
+menghadap pasangannya, semuanya di track. Hasilnya diberikan ke OpenLane sebagai DEF template.
+Panjang kawat rencana antarmakro dan pad turun dari 40,4 mm ke 17,7 mm, kawat hasil routing
+tingkat chip dari 166 mm ke 79 mm, dan slack setup di corner lambat naik dari +0,39 ke +2,24 ns.
+
+### Suplai cincin pad
+
+Setiap bus cincin pad punya sumber, tanpa pad tambahan (QFN-32 tetap):
+
+- VDDIO_Q dan VSSIO_Q diikat ke VDDIO dan VSSIO di dalam pad VDDIO / VSSIO (model PDK);
+- VCCHIB ke VCCD dan VSWITCH ke VDDIO lewat slice PDK `connect_vcchib_vccd_and_vswitch_vddio`;
+- VDDA ke VDDIO dan VSSA ke VSSIO lewat jumper met3 di bawah bus cincin (via3 hanya di dua bus
+  yang disambung, seperti slice PDK), di celah antara pad clk dan rst_n;
+- pad VCCD / VSSD tersambung ke cincin daya core lewat strap met3 dan via bertumpuk di cincin.
 
 ### Hasil
 
 | Pemeriksaan | Hasil |
 |---|---|
-| 5 makro (OpenLane 2.3.10) | LVS cocok, Magic DRC 0, routing 0; antena: 7 net di cost, 1 di path, sisanya 0 |
+| 5 makro (OpenLane 2.3.10) | LVS cocok, Magic DRC 0, routing 0, antena 0, slew terburuk 1,37 ns (batas library 1,5 ns) |
 | Routing chip (OpenROAD) | 0 pelanggaran |
-| DRC KLayout seluruh chip (`sky130A_mr.drc`) | core 0, pad ring 0; 5 `npc.2` di dalam makro cost (4) dan path (1), yang bersih di Magic |
-| STA chip, 25 MHz, tt / ss / ff | setup +14,39 / +0,39 / +16,56 ns; hold +0,33 / +0,75 / +0,20 ns |
-| Pad suplai ke cincin daya | 4 pad tersambung (strap met3 + via bertumpuk di cincin) |
+| STA chip, 25 MHz, parasitik ekstraksi OpenRCX | setup +14,08 / +2,24 / +16,29 ns, hold +0,15 / +0,33 / +0,10 ns (tt / ss / ff) |
+| LVS chip (Magic + netgen, makro dan sel IO sebagai abstrak) | Circuits match uniquely |
+| DRC KLayout seluruh chip | core 0, pad ring 0; 4 `npc.2` di dalam makro cost dan up, yang bersih di Magic |
+| DRC Magic seluruh chip | 0 di makro dan logika core; semua penanda ada di sel IO PDK |
 
-STA memakai model timing setiap makro hasil routing-nya, sehingga jalur ctrl -> cost -> pick
-dihitung utuh; 91 buffer hold ditambahkan di kawat antarmakro.
+Penanda Magic di sel IO berasal dari GDS sel IO PDK sendiri: satu `sky130_ef_io__gpiov2_pad`
+yang diperiksa terpisah dengan aturan yang sama sudah memberi 2979 penanda (Magic juga
+melaporkan boundary yang tidak tertutup dan layer yang tidak dikenal saat membacanya).
 
 ### Pinout dan wire bonding
 
@@ -471,23 +482,26 @@ dihitung utuh; 91 buffer hold ditambahkan di kawat antarmakro.
 | 17-24 | `uo_out[0]` sampai `uo_out[7]` | kanan, bawah ke atas |
 | 25-32 | `uio_in[0]` sampai `uio_in[7]` | atas, kanan ke kiri |
 
-Koordinat setiap bond pad dan lead, serta panjang kawatnya (terpanjang 2167 um), ada di
-[`asic/chip/out/bonding.md`](asic/chip/out/bonding.md) dan `bonding.csv`; gambarnya di
-`bonding.png`. Simbol xschem chip berpaket (`stereo_slice_chip.sym`, nomor pin QFN) dan skematik
-pemakaian dengan kapasitor dekopling 100 nF (`stereo_slice_chip_tb.sch`) ada di
+Koordinat bond pad dan lead serta panjang kawat (terpanjang 2165 um) ada di
+[`asic/chip/out/bonding.md`](asic/chip/out/bonding.md) dan `bonding.csv`; gambarnya
+`bonding.png`. Simbol xschem chip berpaket dan skematik pemakaian dengan dekopling 100 nF ada di
 `asic/chip/out/xschem`; buka dari folder itu dengan `xschem -r xschemrc stereo_slice_chip_tb.sch`.
 
-### Belum selesai
+### Power-on reset dan urutan catu daya
 
-- Bus suplai cincin pad VDDA, VSSA, VSWITCH, VCCHIB, VDDIO_Q dan VSSIO_Q belum punya sumber; chip
-  yang akan dibuat butuh pad atau slice penghubung untuk bus itu.
-- Sinyal kontrol 3,3 V setiap pad (ENABLE_H, HLD_H_N dan lainnya) diikat ke TIE_HI_ESD /
-  TIE_LO_ESD pad itu sendiri; belum ada rangkaian power-on reset.
-- Pelanggaran antena: 7 net di makro cost dan 1 di path, yang masih perlu diode tambahan.
-- LVS seluruh chip dan Magic DRC seluruh chip belum dijalankan (LVS dan Magic DRC tiap makro
-  bersih). STA chip memakai parasitik perkiraan dari placement, bukan hasil ekstraksi.
-- Ukuran makro `up` dihitung dari luas sebelum register `f_off_r` ditambahkan (8.254 vs 8.212
-  um2); isinya tetap sekitar 50%.
+Sinyal kontrol 3,3 V setiap pad (ENABLE_H, HLD_H_N dan lainnya) diikat ke TIE_HI_ESD / TIE_LO_ESD
+pad itu sendiri: pad selalu aktif, tanpa rangkaian power-on reset (sky130 tidak punya sel POR
+digital). Akibatnya papan harus:
+
+- menaikkan VCCD (1,8 V) bersamaan dengan atau sebelum VDDIO (3,3 V), dan mematikannya sesudah;
+- menahan `rst_n` rendah sampai kedua catu stabil dan beberapa siklus `clk` berjalan (misalnya
+  dengan IC supervisor reset); reset masuk ke core lewat synchroniser dua flip-flop.
+
+### Yang masih di luar alur ini
+
+- LVS chip membandingkan sambungan tingkat atas; isi makro diperiksa LVS-nya sendiri, isi sel IO
+  dan sel standar adalah milik PDK (PDK ini tidak menyertakan netlist SPICE sel IO).
+- Bus mux analog (AMUXBUS_A / B) tidak dipakai dan dibiarkan mengambang.
 
 ## Fungsi setiap folder
 
@@ -702,16 +716,17 @@ dijelaskan per kelompok di bagian akhir.
 | `out_tt_4x2/metrics.json`, `summary.txt`, `cells.json` | Metrik alur, ringkasan, posisi sel per blok |
 | `out_tt_4x2/precheck/` | Laporan precheck Tiny Tapeout |
 | `area/` | Luas per modul: `synth_stat.sh` (sintesis awal dan dengan clock gating), `breakdown.py` (rincian per jenis sel), `ms_up_orig.v` (sub-piksel versi lama) |
-| `chip/plan.py` | Rencana chip mandiri: ukuran makro, susunan kolom, pad dan jaraknya, ukuran die (`out/plan.*`) |
+| `chip/plan.py` | Rencana chip mandiri: ukuran makro, susunan kolom, pad dan jaraknya, slice dan jumper suplai, ukuran die (`out/plan.*`) |
+| `chip/pins.py` | Rencana pin makro dari sambungan chip (`out/conn.txt`): DEF template `out/pins/`, `out/pins.png`, `out/pins.json` |
 | `chip/synth.sh` | Netlist gerbang kelima modul dengan clock gating (di WSL) |
 | `chip/flow.py`, `chip/wsl_flow.sh` | Hardening kelima makro dengan OpenLane (di WSL) |
-| `chip/padring.py` | Chip penuh di OpenROAD: netlist pad, P&R, STA, GDS, DRC, gambar (di WSL) |
+| `chip/padring.py` | Chip penuh: netlist pad, P&R, ekstraksi OpenRCX dan STA, LVS (Magic + netgen), GDS, DRC KLayout dan Magic, gambar (di WSL) |
 | `chip/bonding.py` | Tabel dan gambar wire bonding QFN-32, simbol dan skematik xschem |
 | `chip/out/stereo_slice_chip.gds.gz` | Layout chip penuh (gzip; `gunzip -k` untuk membukanya) |
 | `chip/out/gds/` | Layout kelima makro |
 | `chip/out/layout*.png`, `plan.png` | Gambar layout dan rencana susunan |
 | `chip/out/bonding.*`, `xschem/` | Pinout dan wire bonding, simbol dan skematik xschem |
-| `chip/out/sta.txt`, `drc.md`, `synth_area.txt` | Ringkasan timing, DRC, luas sintesis |
+| `chip/out/sta.txt`, `lvs.txt`, `drc.md`, `mdrc.md`, `synth_area.txt` | Ringkasan timing, LVS, DRC KLayout dan Magic, luas sintesis |
 
 ### `calib/`, `sensor/`, `docs/`, `constraints/`, `scripts/`
 
@@ -755,7 +770,7 @@ dijelaskan per kelompok di bagian akhir.
 | BOOT.BIN | di WSL: `bash /mnt/d/stereo-depth-cam/board/petalinux/bootbin.sh 1 2` |
 | Simulasi | `scripts\sim.ps1 tb_depth_mini -Golden build\golden_minisys` |
 | Chip (hardening, uji, precheck) | di WSL: `bash /mnt/d/stereo-depth-cam/asic/wsl_ttall.sh` |
-| Chip mandiri | `python asic/chip/plan.py`, lalu di WSL: `bash /mnt/d/stereo-depth-cam/asic/chip/synth.sh`, `bash /mnt/d/stereo-depth-cam/asic/chip/wsl_flow.sh blocks`, `python3 /mnt/d/stereo-depth-cam/asic/chip/padring.py`; terakhir `python asic/chip/bonding.py` |
+| Chip mandiri | `python asic/chip/plan.py`, lalu di WSL: `bash /mnt/d/stereo-depth-cam/asic/chip/synth.sh`, `python3 /mnt/d/stereo-depth-cam/asic/chip/pins.py`, `bash /mnt/d/stereo-depth-cam/asic/chip/wsl_flow.sh blocks`, `python3 /mnt/d/stereo-depth-cam/asic/chip/padring.py`; terakhir `python asic/chip/bonding.py` |
 | Firmware FX2LP | di WSL: `bash fx2/uvc/build.sh` |
 
 Beberapa skrip WSL memuat path `/mnt/d/stereo-depth-cam`; kalau repo dipindah, path itu ikut

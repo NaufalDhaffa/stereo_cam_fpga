@@ -27,7 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "out")
 
 # ------------------------------------------------------------------ inputs
-SYNTH = {"ctrl": 6287.3, "cost": 27179.8, "path": 6538.8, "pick": 8784.7, "up": 8254.2}   # um2, asic/chip/synth.sh
+SYNTH = {"ctrl": 6287.3, "cost": 27179.8, "path": 6538.8, "pick": 8784.7, "up": 8211.6}   # um2, asic/chip/synth.sh
 GROWTH = 1.25            # tap cells, clock tree, timing and hold buffers (blocks hardened before: 1.03 to 1.33)
 UTIL = 0.50              # of the macro's whole area. The die is set by the pad ring (32 pads of 80 um), not by
                          # the logic: the ring leaves about 650 um inside, so the macros may as well have room
@@ -61,11 +61,21 @@ MIN_GAP = 2.0       # between two pads at least: abutting IO cells overlap along
 # the gpio pad's deep n-well reaches 0.3 µm past its sides (n-well and hvi up to 0.94 µm): next to
 # another gpio pad, or a corner, it needs 6.3 µm of deep n-well spacing (dnwell.2) plus both overhangs
 GPIO_GAP = 7.0
+# ring slices that need a place of their own between two pads (left pad: name, width): the PDK
+# slice that ties VCCHIB to VCCD and VSWITCH to VDDIO, with 1 µm of filler on each side
+SLICES = {"VSSIO": ("sky130_ef_io__connect_vcchib_vccd_and_vswitch_vddio_slice_20um", 20.0)}
+# met3 jumpers from VDDA to VDDIO and from VSSA to VSSIO across the ring buses, 4 µm wide, in the
+# gap right of this pad (no own pads for the analog supplies: QFN-32 stays)
+JUMPER_AFTER, JUMPER_W = "clk", 4.0
 
 
 def gap(left, right):
     """Free room between two neighbours on a row (None: the corner)."""
     g = MIN_GAP
+    if left in SLICES:
+        g = max(g, SLICES[left][1] + 2.0)
+    if left == JUMPER_AFTER:
+        g = max(g, JUMPER_W + 2 * MIN_GAP)
     if right in LEFT_REACH:
         g = max(g, LEFT_REACH[right] + 0.7)
     if (left is None or left not in POWER) and (right is None or right not in POWER):
@@ -82,8 +92,30 @@ def gaps(names):
 EXT = {"ctrl": ("W", 10), "up": ("N", 8), "up_out": ("E", 8)}
 
 
+# per macro, after the search: cost gets more room, wider at the same height, and the columns
+# right of it move over. With the buffers on long wires, the repair after global routing and the
+# antenna diodes it reached 63% and its detailed routing no longer converged
+UTIL_OF = {"cost": 0.40}
+
+
 def macro_area(b):
     return SYNTH[b] * GROWTH / UTIL
+
+
+def widen(rects):
+    """Make the macros of UTIL_OF wider (same height, width on the site grid); move what is
+    right of them. Returns the extra width of the block."""
+    extra = 0.0
+    for b, util in UTIL_OF.items():
+        x, y, w, h = rects[b]
+        new_w = grid(SYNTH[b] * GROWTH / util / h + SITE / 2, SITE)
+        d = round(new_w - w, 2)
+        rects[b] = (x, y, new_w, h)
+        for o, (ox, oy, ow, oh) in list(rects.items()):
+            if o != b and ox >= x + w - 1e-6:
+                rects[o] = (round(ox + d, 2), oy, ow, oh)
+        extra += d
+    return extra
 
 
 def grid(v, step):
@@ -93,6 +125,22 @@ def grid(v, step):
 def die_size():
     side_len = max(sum(PWR_W if p in POWER else PAD_W for p in pads) + sum(gaps(pads)) for pads in SIDES.values())
     return 2 * SEAL + 2 * CORNER + side_len
+
+
+def ring_extras(pad_list):
+    """Where the connect slices and the supply jumpers go (south row, die x of their left edge)."""
+    by = {p["name"]: p for p in pad_list}
+    out = []
+    for left, (cell, w) in SLICES.items():
+        p = by[left]
+        assert p["side"] == "S"
+        out.append(dict(kind="slice", cell=cell, name="slice_after_" + left.lower(),
+                        x=round(p["x"] + p["width"] / 2 + 1.0, 3), width=w))
+    p = by[JUMPER_AFTER]
+    assert p["side"] == "S"
+    out.append(dict(kind="jumper", name="jumper_after_" + JUMPER_AFTER.lower(),
+                    x=round(p["x"] + p["width"] / 2 + MIN_GAP, 3), width=JUMPER_W))
+    return out
 
 
 def pads(die):
@@ -225,6 +273,8 @@ def draw(plan, path):
 def main():
     best = search()
     total, cols, rects, bw, bh, parts = best[0]
+    rects = dict(rects)
+    bw += widen(rects)
     die = die_size()
     core_w, core_h = bw + 2 * MARGIN, bh + 2 * MARGIN
     core_origin = ((die - core_w) / 2, (die - core_h) / 2)
@@ -232,6 +282,7 @@ def main():
     plan = dict(die=round(die, 2), core=[round(core_w, 2), round(core_h, 2)],
                 core_origin=[round(core_origin[0], 2), round(core_origin[1], 2)],
                 columns=cols, macros=macros, pads=pads(die), parts=parts, sides=SIDES)
+    plan["ring"] = ring_extras(plan["pads"])
     os.makedirs(OUT, exist_ok=True)
     json.dump(plan, open(os.path.join(OUT, "plan.json"), "w"), indent=1)
     draw(plan, os.path.join(OUT, "plan.png"))

@@ -1,0 +1,300 @@
+VERSION 5.8 ;
+DIVIDERCHAR "/" ;
+BUSBITCHARS "[]" ;
+DESIGN slice_path ;
+UNITS DISTANCE MICRONS 1000 ;
+DIEAREA ( 0 0 ) ( 86020 190400 ) ;
+PINS 97 ;
+    - b_first + NET b_first + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 7140 ) N ;
+    - b_real + NET b_real + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 79350 2000 ) N ;
+    - best_j[0] + NET best_j[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 73780 ) N ;
+    - best_j[1] + NET best_j[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 75140 ) N ;
+    - best_j[2] + NET best_j[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 76500 ) N ;
+    - best_j[3] + NET best_j[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 77860 ) N ;
+    - best_s[0] + NET best_s[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 79220 ) N ;
+    - best_s[1] + NET best_s[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 80580 ) N ;
+    - best_s[2] + NET best_s[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 81940 ) N ;
+    - best_s[3] + NET best_s[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 83300 ) N ;
+    - best_s[4] + NET best_s[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 84660 ) N ;
+    - best_s[5] + NET best_s[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 86020 ) N ;
+    - best_s[6] + NET best_s[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 87380 ) N ;
+    - best_s[7] + NET best_s[7] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 88740 ) N ;
+    - clk + NET clk + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 6670 2000 ) N ;
+    - cost[0] + NET cost[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 91460 ) N ;
+    - cost[1] + NET cost[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 92820 ) N ;
+    - cost[2] + NET cost[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 94180 ) N ;
+    - cost[3] + NET cost[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 95540 ) N ;
+    - cost[4] + NET cost[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 96900 ) N ;
+    - cost[5] + NET cost[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 2000 98260 ) N ;
+    - dn_edge[0] + NET dn_edge[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 90100 ) N ;
+    - dn_edge[1] + NET dn_edge[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 91460 ) N ;
+    - dn_edge[2] + NET dn_edge[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 92820 ) N ;
+    - dn_edge[3] + NET dn_edge[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 94180 ) N ;
+    - dn_edge[4] + NET dn_edge[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 95540 ) N ;
+    - dn_edge[5] + NET dn_edge[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 96900 ) N ;
+    - dn_edge[6] + NET dn_edge[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 98260 ) N ;
+    - gmin[0] + NET gmin[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 30590 2000 ) N ;
+    - gmin[1] + NET gmin[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 31510 2000 ) N ;
+    - gmin[2] + NET gmin[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 32430 2000 ) N ;
+    - gmin[3] + NET gmin[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 33350 2000 ) N ;
+    - gmin[4] + NET gmin[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 34270 2000 ) N ;
+    - gmin[5] + NET gmin[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 35190 2000 ) N ;
+    - gmin[6] + NET gmin[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 36110 2000 ) N ;
+    - j[0] + NET j[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 57270 2000 ) N ;
+    - j[1] + NET j[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 56350 2000 ) N ;
+    - j[2] + NET j[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 58190 2000 ) N ;
+    - j[3] + NET j[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 59110 2000 ) N ;
+    - l_bot[0] + NET l_bot[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 99620 ) N ;
+    - l_bot[1] + NET l_bot[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 100980 ) N ;
+    - l_bot[2] + NET l_bot[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 102340 ) N ;
+    - l_bot[3] + NET l_bot[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 103700 ) N ;
+    - l_bot[4] + NET l_bot[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 105060 ) N ;
+    - l_bot[5] + NET l_bot[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 106420 ) N ;
+    - l_bot[6] + NET l_bot[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 107780 ) N ;
+    - l_new[0] + NET l_new[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 7140 ) N ;
+    - l_new[1] + NET l_new[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 8500 ) N ;
+    - l_new[2] + NET l_new[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 9860 ) N ;
+    - l_new[3] + NET l_new[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 11220 ) N ;
+    - l_new[4] + NET l_new[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 12580 ) N ;
+    - l_new[5] + NET l_new[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 13940 ) N ;
+    - l_new[6] + NET l_new[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 15300 ) N ;
+    - l_top[0] + NET l_top[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 109140 ) N ;
+    - l_top[1] + NET l_top[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 110500 ) N ;
+    - l_top[2] + NET l_top[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 111860 ) N ;
+    - l_top[3] + NET l_top[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 113220 ) N ;
+    - l_top[4] + NET l_top[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 114580 ) N ;
+    - l_top[5] + NET l_top[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 115940 ) N ;
+    - l_top[6] + NET l_top[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 117300 ) N ;
+    - lmin[0] + NET lmin[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 118660 ) N ;
+    - lmin[1] + NET lmin[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 120020 ) N ;
+    - lmin[2] + NET lmin[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 121380 ) N ;
+    - lmin[3] + NET lmin[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 122740 ) N ;
+    - lmin[4] + NET lmin[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 124100 ) N ;
+    - lmin[5] + NET lmin[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 125460 ) N ;
+    - lmin[6] + NET lmin[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 126820 ) N ;
+    - load + NET load + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 60030 2000 ) N ;
+    - old[0] + NET old[0] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 16660 ) N ;
+    - old[1] + NET old[1] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 18020 ) N ;
+    - old[2] + NET old[2] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 19380 ) N ;
+    - old[3] + NET old[3] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 20740 ) N ;
+    - old[4] + NET old[4] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 22100 ) N ;
+    - old[5] + NET old[5] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 23460 ) N ;
+    - old[6] + NET old[6] + DIRECTION OUTPUT + USE SIGNAL
+      + PORT + LAYER met3 ( -2000 -300 ) ( 2000 300 )
+        + PLACED ( 84020 24820 ) N ;
+    - p1[0] + NET p1[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 37030 2000 ) N ;
+    - p1[1] + NET p1[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 37950 2000 ) N ;
+    - p1[2] + NET p1[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 38870 2000 ) N ;
+    - p1[3] + NET p1[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 39790 2000 ) N ;
+    - p1[4] + NET p1[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 40710 2000 ) N ;
+    - p1[5] + NET p1[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 41630 2000 ) N ;
+    - p1[6] + NET p1[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 42550 2000 ) N ;
+    - p2[0] + NET p2[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 43470 2000 ) N ;
+    - p2[1] + NET p2[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 44390 2000 ) N ;
+    - p2[2] + NET p2[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 45310 2000 ) N ;
+    - p2[3] + NET p2[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 46230 2000 ) N ;
+    - p2[4] + NET p2[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 47150 2000 ) N ;
+    - p2[5] + NET p2[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 48070 2000 ) N ;
+    - p2[6] + NET p2[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 48990 2000 ) N ;
+    - scan + NET scan + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 25070 2000 ) N ;
+    - up_edge[0] + NET up_edge[0] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 49910 2000 ) N ;
+    - up_edge[1] + NET up_edge[1] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 50830 2000 ) N ;
+    - up_edge[2] + NET up_edge[2] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 51750 2000 ) N ;
+    - up_edge[3] + NET up_edge[3] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 52670 2000 ) N ;
+    - up_edge[4] + NET up_edge[4] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 53590 2000 ) N ;
+    - up_edge[5] + NET up_edge[5] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 54510 2000 ) N ;
+    - up_edge[6] + NET up_edge[6] + DIRECTION INPUT + USE SIGNAL
+      + PORT + LAYER met2 ( -140 -2000 ) ( 140 2000 )
+        + PLACED ( 55430 2000 ) N ;
+END PINS
+END DESIGN

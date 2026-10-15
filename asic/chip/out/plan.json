@@ -1,11 +1,11 @@
 {
  "die": 1151.0,
  "core": [
-  414.44,
+  458.14,
   414.0
  ],
  "core_origin": [
-  368.28,
+  346.43,
   368.5
  ],
  "columns": [
@@ -25,31 +25,31 @@
   "cost": [
    12.0,
    13.04,
-   174.34,
+   218.5,
    388.96
   ],
   "path": [
-   194.34,
+   238.5,
    211.6,
    86.02,
    190.4
   ],
   "ctrl": [
-   194.34,
+   238.5,
    13.36,
    86.02,
    182.24
   ],
   "up": [
-   288.36,
-   219.76,
-   114.08,
-   182.24
+   332.52,
+   222.48,
+   113.62,
+   179.52
   ],
   "pick": [
-   288.36,
-   10.64,
-   114.08,
+   332.52,
+   13.36,
+   113.62,
    193.12
   ]
  },
@@ -130,7 +130,7 @@
    "pin": 9,
    "name": "VSSD",
    "side": "S",
-   "x": 276.83,
+   "x": 274.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vssd_lvc_clamped_pad",
    "width": 75.0
@@ -139,7 +139,7 @@
    "pin": 10,
    "name": "VCCD",
    "side": "S",
-   "x": 367.17,
+   "x": 362.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vccd_lvc_clamped_pad",
    "width": 75.0
@@ -148,7 +148,7 @@
    "pin": 11,
    "name": "clk",
    "side": "S",
-   "x": 450.0,
+   "x": 443.0,
    "y": 118.98,
    "cell": "sky130_ef_io__gpiov2_pad",
    "width": 80.0
@@ -157,7 +157,7 @@
    "pin": 12,
    "name": "rst_n",
    "side": "S",
-   "x": 540.33,
+   "x": 532.0,
    "y": 118.98,
    "cell": "sky130_ef_io__gpiov2_pad",
    "width": 80.0
@@ -166,7 +166,7 @@
    "pin": 13,
    "name": "VSSIO",
    "side": "S",
-   "x": 623.17,
+   "x": 612.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vssio_hvc_clamped_pad",
    "width": 75.0
@@ -175,7 +175,7 @@
    "pin": 14,
    "name": "VDDIO",
    "side": "S",
-   "x": 703.5,
+   "x": 710.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vddio_hvc_clamped_pad",
    "width": 75.0
@@ -184,7 +184,7 @@
    "pin": 15,
    "name": "VCCD2",
    "side": "S",
-   "x": 793.83,
+   "x": 798.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vccd_lvc_clamped_pad",
    "width": 75.0
@@ -193,7 +193,7 @@
    "pin": 16,
    "name": "VSSD2",
    "side": "S",
-   "x": 884.17,
+   "x": 886.5,
    "y": 118.98,
    "cell": "sky130_ef_io__vssd_lvc_clamped_pad",
    "width": 75.0
@@ -344,10 +344,10 @@
   }
  ],
  "parts": {
-  "wire": 62049.37,
-  "ext": 6400.46,
-  "clock": 1421.5500000000002,
-  "skew": 314.45000000000005,
+  "wire": 62060.6,
+  "ext": 6398.619999999999,
+  "clock": 1425.86,
+  "skew": 315.58000000000004,
   "penalty": 0.0
  },
  "sides": {
@@ -391,5 +391,20 @@
    "uio_in[6]",
    "uio_in[7]"
   ]
- }
+ },
+ "ring": [
+  {
+   "kind": "slice",
+   "cell": "sky130_ef_io__connect_vcchib_vccd_and_vswitch_vddio_slice_20um",
+   "name": "slice_after_vssio",
+   "x": 651.0,
+   "width": 20.0
+  },
+  {
+   "kind": "jumper",
+   "name": "jumper_after_clk",
+   "x": 485.0,
+   "width": 4.0
+  }
+ ]
 }

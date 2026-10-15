@@ -3,12 +3,12 @@
 | Modul | Logika (um2) | Makro (um) | Luas makro (um2) | Isi perkiraan |
 |---|---|---|---|---|
 | ctrl | 6287 | 86.02 x 182.24 | 15676 | 50% |
-| cost | 27180 | 174.34 x 388.96 | 67811 | 50% |
+| cost | 27180 | 218.50 x 388.96 | 84988 | 40% |
 | path | 6539 | 86.02 x 190.40 | 16378 | 50% |
-| pick | 8785 | 114.08 x 193.12 | 22031 | 50% |
-| up | 8254 | 114.08 x 182.24 | 20790 | 50% |
+| pick | 8785 | 113.62 x 193.12 | 21942 | 50% |
+| up | 8212 | 113.62 x 179.52 | 20397 | 50% |
 
-Blok makro 390.4 x 390.0 um; inti 414.4 x 414.0 um; die 1151.0 x 1151.0 um (1.32 mm2). Susunan kolom: cost / path+ctrl / up+pick.
+Blok makro 434.1 x 390.0 um; inti 458.1 x 414.0 um; die 1151.0 x 1151.0 um (1.32 mm2). Susunan kolom: cost / path+ctrl / up+pick.
 
 Lima susunan terbaik:
 
@@ -16,9 +16,9 @@ Lima susunan terbaik:
 |---|---|---|---|---|---|
 | 1 | cost / path+ctrl / up+pick | 390 x 390 | 62k | 6.4k | 179k |
 | 2 | cost / pick+ctrl / up+path | 390 x 390 | 62k | 6.6k | 180k |
-| 3 | up+pick / path+ctrl / cost | 390 x 390 | 62k | 8.0k | 181k |
-| 4 | up+path / pick+ctrl / cost | 390 x 390 | 62k | 8.2k | 181k |
-| 5 | cost / ctrl+path / pick+up | 390 x 390 | 62k | 8.1k | 181k |
+| 3 | cost / ctrl+path / pick+up | 390 x 390 | 62k | 8.1k | 181k |
+| 4 | up+pick / path+ctrl / cost | 390 x 390 | 62k | 8.0k | 181k |
+| 5 | pick+path / up+ctrl / cost | 390 x 390 | 65k | 6.4k | 181k |
 
 Pad (urutan pin QFN-32):
 
@@ -32,14 +32,14 @@ Pad (urutan pin QFN-32):
 | 6 | ui_in[5] | W | sky130_ef_io__gpiov2_pad | 119.0, 445.0 |
 | 7 | ui_in[6] | W | sky130_ef_io__gpiov2_pad | 119.0, 358.0 |
 | 8 | ui_in[7] | W | sky130_ef_io__gpiov2_pad | 119.0, 271.0 |
-| 9 | VSSD | S | sky130_ef_io__vssd_lvc_clamped_pad | 276.8, 119.0 |
-| 10 | VCCD | S | sky130_ef_io__vccd_lvc_clamped_pad | 367.2, 119.0 |
-| 11 | clk | S | sky130_ef_io__gpiov2_pad | 450.0, 119.0 |
-| 12 | rst_n | S | sky130_ef_io__gpiov2_pad | 540.3, 119.0 |
-| 13 | VSSIO | S | sky130_ef_io__vssio_hvc_clamped_pad | 623.2, 119.0 |
-| 14 | VDDIO | S | sky130_ef_io__vddio_hvc_clamped_pad | 703.5, 119.0 |
-| 15 | VCCD2 | S | sky130_ef_io__vccd_lvc_clamped_pad | 793.8, 119.0 |
-| 16 | VSSD2 | S | sky130_ef_io__vssd_lvc_clamped_pad | 884.2, 119.0 |
+| 9 | VSSD | S | sky130_ef_io__vssd_lvc_clamped_pad | 274.5, 119.0 |
+| 10 | VCCD | S | sky130_ef_io__vccd_lvc_clamped_pad | 362.5, 119.0 |
+| 11 | clk | S | sky130_ef_io__gpiov2_pad | 443.0, 119.0 |
+| 12 | rst_n | S | sky130_ef_io__gpiov2_pad | 532.0, 119.0 |
+| 13 | VSSIO | S | sky130_ef_io__vssio_hvc_clamped_pad | 612.5, 119.0 |
+| 14 | VDDIO | S | sky130_ef_io__vddio_hvc_clamped_pad | 710.5, 119.0 |
+| 15 | VCCD2 | S | sky130_ef_io__vccd_lvc_clamped_pad | 798.5, 119.0 |
+| 16 | VSSD2 | S | sky130_ef_io__vssd_lvc_clamped_pad | 886.5, 119.0 |
 | 17 | uo_out[0] | E | sky130_ef_io__gpiov2_pad | 1032.0, 271.0 |
 | 18 | uo_out[1] | E | sky130_ef_io__gpiov2_pad | 1032.0, 358.0 |
 | 19 | uo_out[2] | E | sky130_ef_io__gpiov2_pad | 1032.0, 445.0 |

@@ -1,9 +1,9 @@
-CORNER tt setup 14.390 ns, hold 0.331 ns
-CORNER ss setup 0.390 ns, hold 0.746 ns
-CORNER ff setup 16.560 ns, hold 0.198 ns
+CORNER tt setup 14.075 ns, hold 0.153 ns
+CORNER ss setup 2.238 ns, hold 0.329 ns
+CORNER ff setup 16.286 ns, hold 0.097 ns
 Startpoint: u_ctrl (rising edge-triggered flip-flop clocked by clk)
 Endpoint: u_pick (rising edge-triggered flip-flop clocked by clk)
-                   0.390   slack (MET)
+                   2.238   slack (MET)
 Startpoint: u_ctrl (rising edge-triggered flip-flop clocked by clk)
-Endpoint: u_cost (rising edge-triggered flip-flop clocked by clk)
-            0.198   slack (MET)
+Endpoint: u_path (rising edge-triggered flip-flop clocked by clk)
+            0.097   slack (MET)
